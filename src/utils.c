@@ -377,92 +377,6 @@ uint8_t Fu8__copying_string_to_allocated_string(uint8_t *ptr_u8_pssd_source_str,
     return (RETURN_SUCCESS);
     }
 
-void Fv__print_blob(uint8_t *ptr_u8_pssd_blob, uint64_t u64_pssd_blob_length)
-    {
-    /**
-    * Assertion of argument
-    */
-
-    /**
-    * Check if the pointer to the blob passed as an argument to the function is correctly pointing passed as an argument of the function
-    */
-    if(ptr_u8_pssd_blob == NULL)
-        {
-        /**
-        * Treat the case when the pointer to the blob passed as an argument to the function is not correctly pointing passed as an argument of the function
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the pointer to the blob passed as an argument to the function is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return to indicate the pointer to the blob passed as an argument to the function is not correctly pointing passed as an argument of the function
-        */
-        return ;
-        }
-    else
-        {
-        /**
-        * Treat the case when the pointer to the blob passed as an argument to the function is correctly pointing passed as an argument of the function
-        */
-        } 
-
-    /**
-    * Creation of local variable
-    */
-    uint64_t u64_lcl_cnt;
-
-    /**
-    * Initialization of local variable
-    */
-    u64_lcl_cnt = 0;
-
-    /**
-    * Print all the data of the blob passed in argument of the function
-    */ 
-    u64_lcl_cnt = 0;
-    while(u64_lcl_cnt < u64_pssd_blob_length)
-        {
-        ft_printf("%c", ptr_u8_pssd_blob[u64_lcl_cnt]);
-
-        /**
-        * Checking for overflow
-        */
-        if(u64_lcl_cnt < UINT64_MAX)
-            {
-            u64_lcl_cnt++;
-            }
-        else
-            {
-            #ifdef DEVELOPEMENT
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
-            #endif
-
-            #ifdef DEMO
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-            #endif
-
-            #ifdef PRODUCTION
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-            #endif
-
-            /**
-            * Return to indicate the counter variable overflow
-            */ 
-            return ;
-            } 
-        }
-    }
-
 void Fv__print_blob_in_hexadecimal(uint8_t *ptr_u8_pssd_blob, uint64_t u64_pssd_blob_length)
     {
     /**
@@ -976,7 +890,7 @@ uint8_t Fu8__reverse_endianness_of_bytes_array(uint8_t *ptr_u8_pssd_array, uint6
             */
 
             #ifdef DEVELOPEMENT
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to reverse the order of the actual byte of the array passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to reverse the order of the actual byte of the array passed in argument of the function failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
@@ -1104,4 +1018,694 @@ uint32_t Fu8__reverse_byte_of_u32(uint32_t ptr_u32_pssd_variable_to_reverse)
     ((uint8_t *) &u32_lcl_avriable_reversed)[0] = ((uint8_t *) &ptr_u32_pssd_variable_to_reverse)[3];
 
     return (u32_lcl_avriable_reversed);
+    }
+
+uint8_t Fu8__string_to_array(uint8_t *ptr_u8_pssd_str, int32_t *ptr_s32_pssd_program_argument_number, uint8_t ***ptr_dbl_ptr_u8_pssd_program_arguments)
+    {
+    /**
+    * Assertion of argument
+    */
+
+    /**
+    * Check if the string to transform to array passed in argument of the function is correctly pointing passed as an argument of the function
+    */
+    if(ptr_u8_pssd_str == NULL)
+        {
+        /**
+        * Treat the case when the string to transform to array passed in argument of the function is not correctly pointing passed as an argument of the function
+        */
+
+        #ifdef DEVELOPEMENT
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the string to transform to array passed in argument of the function is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        #endif
+
+        #ifdef DEMO
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        #endif
+
+        #ifdef PRODUCTION
+        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        #endif
+
+        /**
+        * Return failure to indicate the string to transform to array passed in argument of the function is not correctly pointing passed as an argument of the function
+        */
+        return (RETURN_FAILURE);
+        }
+    else
+        {
+        /**
+        * Treat the case when the string to transform to array passed in argument of the function is correctly pointing passed as an argument of the function
+        */
+        } 
+
+    /**
+    * Check if the address of the number of program argumnet to return is correctly pointing passed as an argument of the function
+    */
+    if(ptr_s32_pssd_program_argument_number == NULL)
+        {
+        /**
+        * Treat the case when the address of the number of program argumnet to return is not correctly pointing passed as an argument of the function
+        */
+
+        #ifdef DEVELOPEMENT
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the address of the number of program argumnet to return is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        #endif
+
+        #ifdef DEMO
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        #endif
+
+        #ifdef PRODUCTION
+        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        #endif
+
+        /**
+        * Return failure to indicate the address of the number of program argumnet to return is not correctly pointing passed as an argument of the function
+        */
+        return (RETURN_FAILURE);
+        }
+    else
+        {
+        /**
+        * Treat the case when the address of the number of program argumnet to return is correctly pointing passed as an argument of the function
+        */
+        }
+
+    /**
+    * Check if the address of the array of program argument is correctly pointing passed as an argument of the function
+    */
+    if(ptr_dbl_ptr_u8_pssd_program_arguments == NULL)
+        {
+        /**
+        * Treat the case when the address of the array of program argument is not correctly pointing passed as an argument of the function
+        */
+
+        #ifdef DEVELOPEMENT
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the address of the array of program argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        #endif
+
+        #ifdef DEMO
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        #endif
+
+        #ifdef PRODUCTION
+        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        #endif
+
+        /**
+        * Return failure to indicate the address of the array of program argument is not correctly pointing passed as an argument of the function
+        */
+        return (RETURN_FAILURE);
+        }
+    else
+        {
+        /**
+        * Treat the case when the address of the array of program argument is correctly pointing passed as an argument of the function
+        */
+        }
+
+    /**
+    * Creation of local variable
+    */
+    int32_t   s32_pssd_program_argument_number;
+    uint64_t  u64_lcl_cnt;
+    uint64_t  u64_lcl_position_in_string;
+    uint64_t  u64_lcl_length_of_actual_argument;
+    uint8_t  *ptr_u8_lcl_address_of_actual_argument_in_str;
+
+    /**
+    * Initialization of local variable
+    */
+    ptr_u8_lcl_address_of_actual_argument_in_str = NULL;
+    s32_pssd_program_argument_number             = 0;
+    u64_lcl_cnt                                  = 0;
+    u64_lcl_length_of_actual_argument            = 0;
+    u64_lcl_position_in_string                   = 0;
+
+    /**
+    * Count the number of word in the string to transform passed in argument of the function
+    */ 
+    u64_lcl_cnt = 0;
+    s32_pssd_program_argument_number = 0;
+    while(ptr_u8_pssd_str[u64_lcl_cnt] != '\0')
+        {
+        while((ptr_u8_pssd_str[u64_lcl_cnt] != '\0') && (ft_isspace(ptr_u8_pssd_str[u64_lcl_cnt]) == TRUE))
+            {
+            /**
+            * Checking for overflow
+            */
+            if(u64_lcl_cnt < UINT64_MAX)
+                {
+                u64_lcl_cnt++;
+                }
+            else
+                {
+                #ifdef DEVELOPEMENT
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                #endif
+
+                #ifdef DEMO
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                #endif
+
+                #ifdef PRODUCTION
+                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                #endif
+
+                /**
+                * Return a failure to indicate the counter variable overflow
+                */ 
+                return (RETURN_FAILURE);
+                } 
+            }
+
+        if(ptr_u8_pssd_str[u64_lcl_cnt] == '\0')
+            {
+            break;
+            }
+        else
+            {
+            /**
+            * Checking for overflow
+            */
+            if(s32_pssd_program_argument_number < INT32_MAX)
+                {
+                s32_pssd_program_argument_number++;
+                }
+            else
+                {
+                #ifdef DEVELOPEMENT
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The signed 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                #endif
+
+                #ifdef DEMO
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                #endif
+
+                #ifdef PRODUCTION
+                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                #endif
+
+                /**
+                * Return a failure to indicate the counter variable overflow
+                */
+                return (RETURN_FAILURE);
+                } 
+            }
+
+        while((ptr_u8_pssd_str[u64_lcl_cnt] != '\0') && (ft_isspace(ptr_u8_pssd_str[u64_lcl_cnt]) == FALSE))
+            {
+            /**
+            * Checking for overflow
+            */
+            if(u64_lcl_cnt < UINT64_MAX)
+                {
+                u64_lcl_cnt++;
+                }
+            else
+                {
+                #ifdef DEVELOPEMENT
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                #endif
+
+                #ifdef DEMO
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                #endif
+
+                #ifdef PRODUCTION
+                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                #endif
+
+                /**
+                * Return a failure to indicate the counter variable overflow
+                */ 
+                return (RETURN_FAILURE);
+                } 
+            }
+        }
+
+    (*ptr_s32_pssd_program_argument_number) = s32_pssd_program_argument_number;
+
+    /**
+    * Checking for overflow
+    */
+    if(s32_pssd_program_argument_number < INT32_MAX)
+        {
+        s32_pssd_program_argument_number++;
+        }
+    else
+        {
+        #ifdef DEVELOPEMENT
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The signed 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+        #endif
+
+        #ifdef DEMO
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        #endif
+
+        #ifdef PRODUCTION
+        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        #endif
+
+        /**
+        * Return a failure to indicate the counter variable overflow
+        */
+        return (RETURN_FAILURE);
+        } 
+
+    /**
+    * Check if the number of program argument from stdin is inferior or equals to zero
+    */
+    if(s32_pssd_program_argument_number <= 0)
+        {
+        /**
+        * Treat the case when the number of program argument from stdin is inferior or equals to zero
+        */
+
+        #ifdef DEVELOPEMENT
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the number of program argument from stdin is inferior or equals to zero\n", __FILE__, __func__, __LINE__);
+        #endif
+
+        #ifdef DEMO
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        #endif
+
+        #ifdef PRODUCTION
+        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        #endif
+
+        /**
+        * Return failure to indicate the number of program argument from stdin is inferior or equals to zero
+        */
+        return (RETURN_FAILURE);
+        }
+    else
+        {
+        /**
+        * Treat the case when the number of program argument from stdin is not inferior or equals to zero
+        */
+        }
+
+    /**
+    * Allocating the array of program argument from stdin
+    */
+    (*ptr_dbl_ptr_u8_pssd_program_arguments) = NULL;
+    (*ptr_dbl_ptr_u8_pssd_program_arguments) = (uint8_t **) malloc(sizeof(uint8_t *) * s32_pssd_program_argument_number);
+
+    /**
+    * Check if the allocation of the array of program argument from stdin failed
+    */
+    if((*ptr_dbl_ptr_u8_pssd_program_arguments) == NULL)
+        {
+        /**
+        * Treat the case when the allocation of the array of program argument from stdin failed
+        */
+
+        #ifdef DEVELOPEMENT
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The allocation of the array of program argument from stdin failed\n", __FILE__, __func__, __LINE__);
+        #endif
+
+        #ifdef DEMO
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        #endif
+
+        #ifdef PRODUCTION
+        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        #endif
+
+        /**
+        * Return failure to indicate the allocation of the array of program argument from stdin failed
+        */
+        return (RETURN_FAILURE);
+        }
+    else
+        {
+        /**
+        * Treat the case when the allocation of the array of program argument from stdin succeeded
+        */
+
+        /**
+        * Setting all the element of the array of program argument from stdin to NULL
+        */
+        u64_lcl_cnt = 0;
+        while(u64_lcl_cnt < (uint64_t) s32_pssd_program_argument_number)
+            {
+            (*ptr_dbl_ptr_u8_pssd_program_arguments)[u64_lcl_cnt] = NULL;
+
+            /**
+            * Checking for overflow
+            */
+            if(u64_lcl_cnt < UINT64_MAX)
+                {
+                u64_lcl_cnt++;
+                }
+            else
+                {
+                #ifdef DEVELOPEMENT
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                #endif
+
+                #ifdef DEMO
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                #endif
+
+                #ifdef PRODUCTION
+                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                #endif
+
+                /**
+                * Return a failure to indicate the counter variable overflow
+                */ 
+                return (RETURN_FAILURE);
+                } 
+            }
+        }
+
+    /**
+    * Filling the array of program argument from stdin with all the argument form the string passed in argument of the program
+    */
+    u64_lcl_position_in_string = 0;
+    s32_pssd_program_argument_number = 0;
+    while(ptr_u8_pssd_str[u64_lcl_position_in_string] != '\0')
+        {
+        while((ptr_u8_pssd_str[u64_lcl_position_in_string] != '\0') && (ft_isspace(ptr_u8_pssd_str[u64_lcl_position_in_string]) == TRUE))
+            {
+            /**
+            * Checking for overflow
+            */
+            if(u64_lcl_position_in_string < UINT64_MAX)
+                {
+                u64_lcl_position_in_string++;
+                }
+            else
+                {
+                #ifdef DEVELOPEMENT
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                #endif
+
+                #ifdef DEMO
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                #endif
+
+                #ifdef PRODUCTION
+                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                #endif
+
+                /**
+                * Return a failure to indicate the counter variable overflow
+                */ 
+                return (RETURN_FAILURE);
+                } 
+            }
+
+        if(ptr_u8_pssd_str[u64_lcl_position_in_string] == '\0')
+            {
+            break;
+            }
+        else
+            {
+            }
+
+        /**
+        * Saving the address of the start of the actual program argument
+        */
+        ptr_u8_lcl_address_of_actual_argument_in_str = (ptr_u8_pssd_str + u64_lcl_position_in_string);
+
+        /**
+        * Count the number of not space character in the actual word of the string passed in argument of the function
+        */
+        u64_lcl_length_of_actual_argument = 0;
+        while((ptr_u8_pssd_str[u64_lcl_position_in_string] != '\0') && (ft_isspace(ptr_u8_pssd_str[u64_lcl_position_in_string]) == FALSE))
+            {
+            /**
+            * Checking for overflow
+            */
+            if(u64_lcl_length_of_actual_argument < UINT64_MAX)
+                {
+                u64_lcl_length_of_actual_argument++;
+                }
+            else
+                {
+                #ifdef DEVELOPEMENT
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                #endif
+
+                #ifdef DEMO
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                #endif
+
+                #ifdef PRODUCTION
+                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                #endif
+
+                /**
+                * Return a failure to indicate the counter variable overflow
+                */ 
+                return (RETURN_FAILURE);
+                } 
+
+            /**
+            * Checking for overflow
+            */
+            if(u64_lcl_position_in_string < UINT64_MAX)
+                {
+                u64_lcl_position_in_string++;
+                }
+            else
+                {
+                #ifdef DEVELOPEMENT
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                #endif
+
+                #ifdef DEMO
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                #endif
+
+                #ifdef PRODUCTION
+                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                #endif
+
+                /**
+                * Return a failure to indicate the counter variable overflow
+                */ 
+                return (RETURN_FAILURE);
+                } 
+            }
+
+        /**
+        * Check if the length of the actual program argument is zero
+        */
+        if(u64_lcl_length_of_actual_argument == 0)
+            {
+            /**
+            * Treat the case when the length of the actual program argument is zero
+            */
+
+            #ifdef DEVELOPEMENT
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the length of the actual program argument is zero\n", __FILE__, __func__, __LINE__);
+            #endif
+
+            #ifdef DEMO
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            #endif
+
+            #ifdef PRODUCTION
+            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            #endif
+
+            /**
+            * Return failure to indicate the length of the actual program argument is zero
+            */
+            return (RETURN_FAILURE);
+            }
+        else
+            {
+            /**
+            * Treat the case when the length of the actual program argument is not zero
+            */
+            }
+
+        /**
+        * Check if the length of the actual program argument is at the maximum value and then can not be allocated
+        */
+        if(u64_lcl_length_of_actual_argument == UINT64_MAX)
+            {
+            /**
+            * Treat the case when the length of the actual program argument is at the maximum value and then can not be allocated
+            */
+
+            #ifdef DEVELOPEMENT
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the length of the actual program argument is at the maximum value and then can not be allocated\n", __FILE__, __func__, __LINE__);
+            #endif
+
+            #ifdef DEMO
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            #endif
+
+            #ifdef PRODUCTION
+            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            #endif
+
+            /**
+            * Return failure to indicate the length of the actual program argument is at the maximum value and then can not be allocated
+            */
+            return (RETURN_FAILURE);
+            }
+        else
+            {
+            /**
+            * Treat the case when the length of the actual program argument is not at the maximum value and then can be allocated
+            */
+            } 
+
+        /**
+        * Allocating the actual program argument string
+        */
+        (*ptr_dbl_ptr_u8_pssd_program_arguments)[s32_pssd_program_argument_number] = NULL;
+        (*ptr_dbl_ptr_u8_pssd_program_arguments)[s32_pssd_program_argument_number] = (uint8_t *) malloc(sizeof(uint8_t) * (u64_lcl_length_of_actual_argument + 1));
+
+        /**
+        * Check if the allocation of the actual program argument string failed
+        */
+        if((*ptr_dbl_ptr_u8_pssd_program_arguments)[s32_pssd_program_argument_number] == NULL)
+            {
+            /**
+            * Treat the case when the allocation of the actual program argument string failed
+            */
+
+            #ifdef DEVELOPEMENT
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The allocation of the actual program argument string failed\n", __FILE__, __func__, __LINE__);
+            #endif
+
+            #ifdef DEMO
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            #endif
+
+            #ifdef PRODUCTION
+            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            #endif
+
+            /**
+            * Return failure to indicate the allocation of the actual program argument string failed
+            */
+            return (RETURN_FAILURE);
+            }
+        else
+            {
+            /**
+            * Treat the case when the allocation of the actual program argument string succeeded
+            */
+
+            /**
+            * Setting all the character of the actual program argument string to NIL
+            */
+            u64_lcl_cnt = 0;
+            while(u64_lcl_cnt < u64_lcl_length_of_actual_argument)
+                {
+                (*ptr_dbl_ptr_u8_pssd_program_arguments)[s32_pssd_program_argument_number][u64_lcl_cnt] = NIL;
+
+                /**
+                * Checking for overflow
+                */
+                if(u64_lcl_cnt < UINT64_MAX)
+                    {
+                    u64_lcl_cnt++;
+                    }
+                else
+                    {
+                    #ifdef DEVELOPEMENT
+                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                    #endif
+
+                    #ifdef DEMO
+                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    #endif
+
+                    #ifdef PRODUCTION
+                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    #endif
+
+                    /**
+                    * Return a failure to indicate the counter variable overflow
+                    */ 
+                    return (RETURN_FAILURE);
+                    } 
+                }
+
+            (*ptr_dbl_ptr_u8_pssd_program_arguments)[s32_pssd_program_argument_number][u64_lcl_cnt] = NIL;
+            }
+
+        /**
+        * Copying the content of the actual program argument in the string passed in argument of the function to the actual program argument string in the array of program argument from input
+        */ 
+        u64_lcl_cnt = 0;
+        while(u64_lcl_cnt < u64_lcl_length_of_actual_argument)
+            {
+            (*ptr_dbl_ptr_u8_pssd_program_arguments)[s32_pssd_program_argument_number][u64_lcl_cnt] = ptr_u8_lcl_address_of_actual_argument_in_str[u64_lcl_cnt];
+
+            /**
+            * Checking for overflow
+            */
+            if(u64_lcl_cnt < UINT64_MAX)
+                {
+                u64_lcl_cnt++;
+                }
+            else
+                {
+                #ifdef DEVELOPEMENT
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                #endif
+
+                #ifdef DEMO
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                #endif
+
+                #ifdef PRODUCTION
+                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                #endif
+
+                /**
+                * Return a failure to indicate the counter variable overflow
+                */ 
+                return (RETURN_FAILURE);
+                } 
+            }
+
+        (*ptr_dbl_ptr_u8_pssd_program_arguments)[s32_pssd_program_argument_number][u64_lcl_cnt] = NIL;
+
+        /**
+        * Checking for overflow
+        */
+        if(s32_pssd_program_argument_number < INT32_MAX)
+            {
+            s32_pssd_program_argument_number++;
+            }
+        else
+            {
+            #ifdef DEVELOPEMENT
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The signed 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            #endif
+
+            #ifdef DEMO
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            #endif
+
+            #ifdef PRODUCTION
+            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            #endif
+
+            /**
+            * Return a failure to indicate the counter variable overflow
+            */
+            return (RETURN_FAILURE);
+            } 
+        }
+
+    /**
+    * Setting NULL to the last element of the array of program argument from stdin to mark the end of the array
+    */
+    (*ptr_dbl_ptr_u8_pssd_program_arguments)[s32_pssd_program_argument_number] = NULL;
+
+    return (RETURN_SUCCESS);
     }

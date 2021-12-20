@@ -17,6 +17,264 @@ void    fv__usage(void)
     ft_printf("usage: ft_ssl command [flags] [file/string]\n");
     }
 
+void    fv__extra_argument_given(argument_t *ptr_sstc_pssd_argument)
+    {
+    /**
+    * Check if the structure argument is correctly pointing passed as an argument of the function
+    */
+    if(ptr_sstc_pssd_argument == NULL)
+        {
+        /**
+        * Treat the case when the structure argument is not correctly pointing passed as an argument of the function
+        */
+
+        #ifdef DEVELOPEMENT
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        #endif
+
+        #ifdef DEMO
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        #endif
+
+        #ifdef PRODUCTION
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+        #endif
+
+        /**
+        * Return failure to indicate the structure argument is not correctly pointing passed as an argument of the function
+        */
+        return;
+        }
+    else
+        {
+        /**
+        * Treat the case when the structure argument is correctly pointing passed as an argument of the function
+        */
+        }
+
+    /**
+    * Check if the structure argument passed in argument of the function is not already initialized
+    */
+    if((ptr_sstc_pssd_argument->u8_global_status_ & FIRST_BIT) == FALSE)
+        {
+        /**
+        * Treat the case when the structure argument passed in argument of the function is not already initialized
+        */
+
+        #ifdef DEVELOPEMENT
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
+        #endif
+
+        #ifdef DEMO
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        #endif
+
+        #ifdef PRODUCTION
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+        #endif
+
+        /**
+        * Return failure to indicate the structure argument passed in argument of the function is not already initialized
+        */
+        return;
+        }
+    else
+        {
+        /**
+        * Treat the case when  the structure argument passed in argument of the function is already initialized as expected
+        */
+        }
+
+    /**
+    * Check if the command in the structure arguments passed in arguments of the function is not a command
+    */
+    if((ptr_sstc_pssd_argument->u8_command_ == NOT_A_COMMAND) || (ptr_sstc_pssd_argument->u8_command_ >= ptr_sstc_pssd_argument->u8_command_number_))
+        {
+        /**
+        * Treat the case when the command in the structure arguments passed in arguments of the function is not a command
+        */
+
+        return;
+        }
+    else
+        {
+        /**
+        * Treat the case when the command in the structure arguments passed in arguments of the function is a command
+        */
+        }
+
+    ft_printf("Extra arguments given.\n");
+    ft_printf("%s: Use -help for summary.\n", ptr_sstc_pssd_argument->dbl_ptr_u8_addr_command_name_list_[ptr_sstc_pssd_argument->u8_command_]);
+    }
+
+void    fv__not_a_file(argument_t *ptr_sstc_pssd_argument, uint8_t *ptr_u8_pssd_file_path)
+    {
+    /**
+    * Check if the structure argument is correctly pointing passed as an argument of the function
+    */
+    if(ptr_sstc_pssd_argument == NULL)
+        {
+        /**
+        * Treat the case when the structure argument is not correctly pointing passed as an argument of the function
+        */
+
+        #ifdef DEVELOPEMENT
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        #endif
+
+        #ifdef DEMO
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        #endif
+
+        #ifdef PRODUCTION
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+        #endif
+
+        /**
+        * Return failure to indicate the structure argument is not correctly pointing passed as an argument of the function
+        */
+        return;
+        }
+    else
+        {
+        /**
+        * Treat the case when the structure argument is correctly pointing passed as an argument of the function
+        */
+        }
+
+    /**
+    * Check if the structure argument passed in argument of the function is not already initialized
+    */
+    if((ptr_sstc_pssd_argument->u8_global_status_ & FIRST_BIT) == FALSE)
+        {
+        /**
+        * Treat the case when the structure argument passed in argument of the function is not already initialized
+        */
+
+        #ifdef DEVELOPEMENT
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
+        #endif
+
+        #ifdef DEMO
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        #endif
+
+        #ifdef PRODUCTION
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+        #endif
+
+        /**
+        * Return failure to indicate the structure argument passed in argument of the function is not already initialized
+        */
+        return;
+        }
+    else
+        {
+        /**
+        * Treat the case when  the structure argument passed in argument of the function is already initialized as expected
+        */
+        }
+
+    /**
+    * Check if the file path is correctly pointing passed as an argument of the function
+    */
+    if(ptr_u8_pssd_file_path == NULL)
+        {
+        /**
+        * Treat the case when the file path is not correctly pointing passed as an argument of the function
+        */
+
+        #ifdef DEVELOPEMENT
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the file path is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        #endif
+
+        #ifdef DEMO
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        #endif
+
+        #ifdef PRODUCTION
+        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        #endif
+
+        /**
+        * Return to indicate the file path is not correctly pointing passed as an argument of the function
+        */
+        return;
+        }
+    else
+        {
+        /**
+        * Treat the case when the file path is correctly pointing passed as an argument of the function
+        */
+        } 
+
+    /**
+    * Check if the command in the structure arguments passed in arguments of the function is not a command
+    */
+    if((ptr_sstc_pssd_argument->u8_command_ == NOT_A_COMMAND) || (ptr_sstc_pssd_argument->u8_command_ >= ptr_sstc_pssd_argument->u8_command_number_))
+        {
+        /**
+        * Treat the case when the command in the structure arguments passed in arguments of the function is not a command
+        */
+
+        return;
+        }
+    else
+        {
+        /**
+        * Treat the case when the command in the structure arguments passed in arguments of the function is a command
+        */
+        }
+
+    ft_fprintf(STDERR_FILENO, "ft_ssl: %s: %s: No such file or directory\n", ptr_sstc_pssd_argument->dbl_ptr_u8_addr_command_name_list_[ptr_sstc_pssd_argument->u8_command_], ptr_u8_pssd_file_path);
+    }
+
+uint8_t Fu8__invalid_command(uint8_t *ptr_u8_pssd_invalid_command_str)
+    {
+    /**
+    * Assertion of argument
+    */
+
+    /**
+    * Check if the string invalid command is correctly pointing passed as an argument of the function
+    */
+    if(ptr_u8_pssd_invalid_command_str == NULL)
+        {
+        /**
+        * Treat the case when the string invalid command is not correctly pointing passed as an argument of the function
+        */
+
+        #ifdef DEVELOPEMENT
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the string invalid command is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        #endif
+
+        #ifdef DEMO
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        #endif
+
+        #ifdef PRODUCTION
+        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        #endif
+
+        /**
+        * Return failure to indicate the string invalid command is not correctly pointing passed as an argument of the function
+        */
+        return (RETURN_FAILURE);
+        }
+    else
+        {
+        /**
+        * Treat the case when the string invalid command is correctly pointing passed as an argument of the function
+        */
+        }
+
+    ft_printf("ft_ssl: Error: '%s' is an invalid command.\n\n", ptr_u8_pssd_invalid_command_str);
+
+    (void) fv__command_option_help();
+
+    return (RETURN_SUCCESS);
+    } 
+
 void    fv__command_option_help(void)
     {
     /**
@@ -29,15 +287,17 @@ void    fv__command_option_help(void)
     */
     u8_lcl_cnt = 0;
 
-    ft_printf("Commands:\n");
+    ft_printf("Standard commands:\n\n");
+
+    ft_printf("Message Digest commands:\n");
 
     /**
-    * Display all the command
+    * Display all the message digest command
     */ 
     u8_lcl_cnt = 0;
-    while(u8_lcl_cnt < COMMAND_NUMBER)
+    while(u8_lcl_cnt < HASH_COMMAND_NUMBER)
         {
-        ft_printf("%s\n", command_name[u8_lcl_cnt]);
+        ft_printf("%s\n", hash_command_name[u8_lcl_cnt]);
 
         /**
         * Checking for overflow
@@ -67,40 +327,15 @@ void    fv__command_option_help(void)
             } 
         }
 
-    ft_printf("\n");
-    ft_printf("Flags:\n");
+    ft_printf("\nCipher commands:\n");
 
     /**
-    * Display all the simple option
-    */ 
+    * Display all the base64 command
+    */
     u8_lcl_cnt = 0;
-    while(u8_lcl_cnt < SIMPLE_OPTION_NUMBER)
+    while(u8_lcl_cnt < BASE64_COMMAND_NUMBER)
         {
-        /**
-        * Check if the actual option is the first to be displayed
-        */
-        if(u8_lcl_cnt == 0)
-            {
-            /**
-            * Treat the case when the actual option is the first to be displayed
-            */
-
-            /**
-            * Display the other option without a space before
-            */ 
-            ft_printf("%s", simple_options[u8_lcl_cnt]);
-            }
-        else
-            {
-            /**
-            * Treat the case when the actual option is not the first to be displayed
-            */
-
-            /**
-            * Display the other option with a space before
-            */ 
-            ft_printf(" %s", simple_options[u8_lcl_cnt]);
-            } 
+        ft_printf("%s\n", base64_command_name[u8_lcl_cnt]);
 
         /**
         * Checking for overflow
@@ -131,36 +366,12 @@ void    fv__command_option_help(void)
         }
 
     /**
-    * Display all the argument option
+    * Display all the cipher commands
     */ 
     u8_lcl_cnt = 0;
-    while(u8_lcl_cnt < ARGUMENT_OPTION_NUMBER)
+    while(u8_lcl_cnt < DES_COMMAND_NUMBER)
         {
-        /**
-        * Check if the actual option is the first to be displayed
-        */
-        if((u8_lcl_cnt == 0) && (SIMPLE_OPTION_NUMBER == 0))
-            {
-            /**
-            * Treat the case when the actual option is the first to be displayed
-            */
-
-            /**
-            * Display the other option without a space before
-            */ 
-            ft_printf("%s", argument_options[u8_lcl_cnt]);
-            }
-        else
-            {
-            /**
-            * Treat the case when the actual option is not the first to be displayed
-            */
-
-            /**
-            * Display the other option with a space before
-            */ 
-            ft_printf(" %s", argument_options[u8_lcl_cnt]);
-            } 
+        ft_printf("%s\n", des_command_name[u8_lcl_cnt]);
 
         /**
         * Checking for overflow
@@ -189,6 +400,4 @@ void    fv__command_option_help(void)
             return ;
             } 
         }
-
-    ft_printf("\n\n");
     }

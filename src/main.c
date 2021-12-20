@@ -12,19 +12,22 @@
 
 #include "ssl.h"
 
-const   uint8_t *simple_options[SIMPLE_OPTION_NUMBER] =
+/**
+* HASH
+*/
+const   uint8_t *hash_simple_options[HASH_SIMPLE_OPTION_NUMBER] =
     {
     (uint8_t *) "-p",
     (uint8_t *) "-q",
     (uint8_t *) "-r",
     };
 
-const   uint8_t *argument_options[ARGUMENT_OPTION_NUMBER] =
+const   uint8_t *hash_argument_options[HASH_ARGUMENT_OPTION_NUMBER] =
     {
     (uint8_t *) "-s",
     };
 
-const   uint8_t *command_name[COMMAND_NUMBER] =
+const   uint8_t *hash_command_name[HASH_COMMAND_NUMBER] =
     {
     (uint8_t *) "md5",
     (uint8_t *) "sha224",
@@ -38,7 +41,7 @@ const   uint8_t *command_name[COMMAND_NUMBER] =
     (uint8_t *) "whirlpool",
     };
 
-const   uint8_t *uppercase_command_name[COMMAND_NUMBER] =
+const   uint8_t *hash_uppercase_command_name[HASH_COMMAND_NUMBER] =
     {
     (uint8_t *) "MD5",
     (uint8_t *) "SHA224",
@@ -52,7 +55,7 @@ const   uint8_t *uppercase_command_name[COMMAND_NUMBER] =
     (uint8_t *) "WHIRLPOOL",
     };
 
-uint8_t (*const command_function[COMMAND_NUMBER])(hash_input_t *ptr_sstc_pssd_hash_input, hash_output_t *ptr_sstc_pssd_hash_output) =
+uint8_t (*const hash_command_function[HASH_COMMAND_NUMBER])(hash_input_t *ptr_sstc_pssd_hash_input, hash_output_t *ptr_sstc_pssd_hash_output) =
     {
     Fu8__md5,
     Fu8__sha224,
@@ -66,29 +69,94 @@ uint8_t (*const command_function[COMMAND_NUMBER])(hash_input_t *ptr_sstc_pssd_ha
     Fu8__whirlpool,
     };
 
+/**
+* BASE64
+*/
+const   uint8_t *base64_simple_options[BASE64_SIMPLE_OPTION_NUMBER] =
+    {
+    (uint8_t *) "-e",
+    (uint8_t *) "-d",
+    };
+
+const   uint8_t *base64_argument_options[BASE64_ARGUMENT_OPTION_NUMBER] =
+    {
+    (uint8_t *) "-i",
+    (uint8_t *) "-o",
+    };
+
+const   uint8_t *base64_command_name[BASE64_COMMAND_NUMBER] =
+    {
+    (uint8_t *) "base64"
+    };
+
+const   uint8_t *base64_uppercase_command_name[BASE64_COMMAND_NUMBER] =
+    {
+    (uint8_t *) "BASE64"
+    };
+
+uint8_t (*const base64_command_function[BASE64_COMMAND_NUMBER])(blob_t *ptr_sstc_pssd_blob_input, blob_t *ptr_sstc_pssd_blob_output, uint8_t u8_pssd_encode_flag) =
+    {
+    Fu8_base64,
+    };
+
+/**
+* DES
+*/
+const   uint8_t *des_simple_options[DES_SIMPLE_OPTION_NUMBER] =
+    {
+    (uint8_t *) "-a",
+    (uint8_t *) "-e",
+    (uint8_t *) "-d",
+    };
+
+const   uint8_t *des_argument_options[DES_ARGUMENT_OPTION_NUMBER] =
+    {
+    (uint8_t *) "-i",
+    (uint8_t *) "-o",
+    (uint8_t *) "-k",
+    (uint8_t *) "-p",
+    (uint8_t *) "-s",
+    (uint8_t *) "-v",
+    };
+
+const   uint8_t *des_command_name[DES_COMMAND_NUMBER] =
+    {
+    (uint8_t *) "des",
+    (uint8_t *) "des-cbc",
+    };
+
+const   uint8_t *des_uppercase_command_name[DES_COMMAND_NUMBER] =
+    {
+    (uint8_t *) "DES",
+    (uint8_t *) "DES-CBC",
+    };
+
+//uint8_t (*const des_command_function[DES_COMMAND_NUMBER])(hash_input_t *ptr_sstc_pssd_hash_input, hash_output_t *ptr_sstc_pssd_hash_output) =
+//    {
+//    Fu8_des,
+//    };
+
 int main(int32_t s32_pssd_program_argument_number, char **dbl_ptr_s8_pssd_program_arguments)
     {
     /**
     * Creation of local variable
     */
     argument_t sstc_lcl_argument_data;
-    uint8_t    u8_lcl_return_from_function;
-    uint8_t    u8_lcl_program_argument_status;
     uint8_t    u8_lcl_program_return;
+    uint8_t    u8_lcl_return_from_function;
 
     /**
     * Initialization of local variable
     */
     sstc_lcl_argument_data.u8_global_status_  = 0;
-    u8_lcl_return_from_function               = 0;
-    u8_lcl_program_argument_status            = ARGUMENT_CONTINUE;
     u8_lcl_program_return                     = EXIT_SUCCESS;
+    u8_lcl_return_from_function               = 0;
 
     /**
     * Initialization of the structure argument data
     */
     u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function =  Fu8__structure_argument_init(&sstc_lcl_argument_data);
+    u8_lcl_return_from_function = Fu8__structure_argument_init(&sstc_lcl_argument_data);
 
     /**
     * Check if function to init of the structure argument data succeeded
@@ -100,7 +168,7 @@ int main(int32_t s32_pssd_program_argument_number, char **dbl_ptr_s8_pssd_progra
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init of the structure argument data  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init of the structure argument data failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
@@ -124,214 +192,119 @@ int main(int32_t s32_pssd_program_argument_number, char **dbl_ptr_s8_pssd_progra
         }
 
     /**
-    * Get all the option and display error message
+    * Check if the number of argument passed to the program is zero
     */
-    u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = Fu8__load_data_from_argument(&sstc_lcl_argument_data, s32_pssd_program_argument_number, (uint8_t **) dbl_ptr_s8_pssd_program_arguments, &u8_lcl_program_argument_status);
-
-    /**
-    * Check if the function to get all the options from the program arguments failed
-    */
-    if(u8_lcl_return_from_function != RETURN_SUCCESS)
+    if(s32_pssd_program_argument_number == 1)
         {
         /**
-        * Treat the case when the function to get all the options from the program arguments failed
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the function to get all the options from the program arguments failed\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate the function to get all the options from the program arguments failed
-        */
-        return (EXIT_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when the function to get all the options from the program arguments succeeded
-        */
-        }
-
-    /**
-    * Check if the argument of the program are not correctly formated
-    */
-    if(u8_lcl_program_argument_status == ARGUMENT_ERROR)
-        {
-        /**
-        * Treat the case when the argument of the program are not correctly formated
+        * Treat the case when the number of argument passed to the program is zero
         */
 
         /**
-        * arg close
+        * Reading the program argument form input and execute the command
         */
         u8_lcl_return_from_function = RETURN_FAILURE;
-        u8_lcl_return_from_function =  Fu8__structure_argument_close(&sstc_lcl_argument_data);
+        u8_lcl_return_from_function = Fu8__multiple_parse_argument_and_execute_command_from_stdin(&sstc_lcl_argument_data);
 
         /**
-        * Check if function to arg close succeeded
+        * Check if function to read the program argument form input and execute the command succeeded
         */
         if(u8_lcl_return_from_function != RETURN_SUCCESS)
             {
             /**
-            * Treat the case when the function to arg close failed
+            * Treat the case when the function to read the program argument form input and execute the command failed
             */
 
             #ifdef DEVELOPEMENT
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to arg close  failed\n", __FILE__, __func__, __LINE__);
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to read the program argument form input and execute the command failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
-            * Return failure to indicate the function to arg close failed
+            * Return failure to indicate the function to read the program argument form input and execute the command failed
             */
             return (RETURN_FAILURE);
             }
         else
             {
             /**
-            * Treat the case when function to arg close suucceeded
+            * Treat the case when function to read the program argument form input and execute the command suucceeded
             */
             } 
-
-        return (EXIT_FAILURE);
         }
     else
         {
         /**
-        * Treat the case when the argument of the program are correctly formated
+        * Treat the case when the number of argument passed to the program is zero
         */
 
         /**
-        * Check if their is no argument
+        * Parse and execute the command from the program argument
         */
-        if(u8_lcl_program_argument_status != ARGUMENT_CONTINUE)
+        u8_lcl_return_from_function = RETURN_FAILURE;
+        u8_lcl_return_from_function = Fu8__parse_argument_and_execute_command(&sstc_lcl_argument_data, s32_pssd_program_argument_number - 1, (uint8_t **) (dbl_ptr_s8_pssd_program_arguments + 1));
+
+        /**
+        * Check if function to parse and execute the command from the program argument succeeded
+        */
+        if(u8_lcl_return_from_function != RETURN_SUCCESS)
             {
             /**
-            * Treat the case when their is no argument
+            * Treat the case when the function to parse and execute the command from the program argument failed
             */
+
+            #ifdef DEVELOPEMENT
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to parse and execute the command from the program argument failed\n", __FILE__, __func__, __LINE__);
+            #endif
+
+            #ifdef DEMO
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            #endif
+
+            #ifdef PRODUCTION
+            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            #endif
 
             /**
-            * arg close
+            * Return failure to indicate the function to parse and execute the command from the program argument failed
             */
-            u8_lcl_return_from_function = RETURN_FAILURE;
-            u8_lcl_return_from_function =  Fu8__structure_argument_close(&sstc_lcl_argument_data);
-
-            /**
-            * Check if function to arg close succeeded
-            */
-            if(u8_lcl_return_from_function != RETURN_SUCCESS)
-                {
-                /**
-                * Treat the case when the function to arg close failed
-                */
-
-                #ifdef DEVELOPEMENT
-                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to arg close  failed\n", __FILE__, __func__, __LINE__);
-                #endif
-
-                #ifdef DEMO
-                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-                #endif
-
-                #ifdef PRODUCTION
-                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-                #endif
-
-                /**
-                * Return failure to indicate the function to arg close failed
-                */
-                return (RETURN_FAILURE);
-                }
-            else
-                {
-                /**
-                * Treat the case when function to arg close suucceeded
-                */
-                } 
-
-            return (EXIT_SUCCESS);
+            return (RETURN_FAILURE);
             }
         else
             {
             /**
-            * Treat the case when their is argument
+            * Treat the case when function to parse and execute the command from the program argument suucceeded
             */
-            }
-        }
-
-    /**
-    * execute command
-    */
-    u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = Fu8__execute_command(&sstc_lcl_argument_data);
-
-    /**
-    * Check if function to execute command succeeded
-    */
-    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-        {
-        /**
-        * Treat the case when the function to execute command failed
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to execute command failed\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate the function to execute command failed
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when function to execute command suucceeded
-        */
+            } 
         } 
 
     /**
-    * Check if an error occure during the execution of the passed command
+    * Check if argument error occur
     */
     if((sstc_lcl_argument_data.u8_global_status_ & SECOND_BIT) != FALSE)
         {
         /**
-        * Treat the case when an error occure during the execution of the passed command
+        * Treat the case when argument error occur
         */
 
+        /**
+        * Setting the program return status to failure
+        */
         u8_lcl_program_return = EXIT_FAILURE;
         }
     else
         {
         /**
-        * Treat the case when no error occure during the execution of the passed command
+        * Treat the case when no argument error occur
         */
-        } 
+        }
 
     /**
     * Closing the structure argument data
@@ -349,7 +322,7 @@ int main(int32_t s32_pssd_program_argument_number, char **dbl_ptr_s8_pssd_progra
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure argument data  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure argument data failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
@@ -370,7 +343,7 @@ int main(int32_t s32_pssd_program_argument_number, char **dbl_ptr_s8_pssd_progra
         /**
         * Treat the case when function to close the structure argument data suucceeded
         */
-        } 
+        }
 
     return (u8_lcl_program_return);
     }

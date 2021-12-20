@@ -12,7 +12,12 @@
 
 #include "ssl.h"
 
-uint8_t Fu8__execute_command_from_argument_string(argument_t *ptr_sstc_pssd_argument)
+/**
+* The program argument array is not composed of the first argument (the name of the program) soit
+* argv = (argv + 1) et
+* argc = (argc - 1)
+*/
+uint8_t Fu8__parse_argument_and_execute_command(argument_t *ptr_sstc_pssd_argument, int32_t s32_pssd_program_argument_number, uint8_t **dbl_ptr_u8_pssd_program_arguments)
     {
     /**
     * Assertion of argument
@@ -85,16 +90,37 @@ uint8_t Fu8__execute_command_from_argument_string(argument_t *ptr_sstc_pssd_argu
         }
 
     /**
-    * Check if the command type passed in the structure argument passed in the argument of the function does not exist
+    * Check if the number of argument of the program is zero
     */
-    if(ptr_sstc_pssd_argument->e_command_type_ >= COMMAND_NUMBER)
+    if(s32_pssd_program_argument_number == 0)
         {
         /**
-        * Treat the case when the command type passed in the structure argument passed in the argument of the function does not exist
+        * Treat the case when the number of argument of the program is zero
+        */
+
+        /**
+        * Return failure to indicate the number of argument of the program is zero
+        */
+        return (RETURN_SUCCESS);
+        }
+    else
+        {
+        /**
+        * Treat the case when the number of argument of the program is not zero
+        */
+        }
+
+    /**
+    * Check if the array of argument of the program passed in argument of the function is correctly pointing passed as an argument of the function
+    */
+    if(dbl_ptr_u8_pssd_program_arguments == NULL)
+        {
+        /**
+        * Treat the case when the array of argument of the program passed in argument of the function is not correctly pointing passed as an argument of the function
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the command type passed in the structure argument passed in the argument of the function does not exist\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the array of argument of the program passed in argument of the function is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
@@ -106,1025 +132,112 @@ uint8_t Fu8__execute_command_from_argument_string(argument_t *ptr_sstc_pssd_argu
         #endif
 
         /**
-        * Return failure to indicate the command type passed in the structure argument passed in the argument of the function does not exist
+        * Return failure to indicate the array of argument of the program passed in argument of the function is not correctly pointing passed as an argument of the function
         */
         return (RETURN_FAILURE);
         }
     else
         {
         /**
-        * Treat the case when the command type passed in the structure argument passed in the argument of the function does exist
+        * Treat the case when the array of argument of the program passed in argument of the function is correctly pointing passed as an argument of the function
         */
-        } 
+        }
 
     /**
     * Creation of local variable
     */
-    hash_input_t  sstc_lcl_hash_input;
-    hash_output_t sstc_lcl_hash_output;
-    uint8_t       u8_lcl_return_from_function;
+    uint8_t u8_lcl_return_from_function;
 
     /**
     * Initialization of local variable
     */
-    sstc_lcl_hash_input.u8_global_status_  = 0;
-    sstc_lcl_hash_output.u8_global_status_ = 0;
-    u8_lcl_return_from_function            = 0;
+    u8_lcl_return_from_function    = RETURN_FAILURE;
 
     /**
-    * Initialize the structure hash input
+    * Resetting without the input buffer the structure argument passed in argument of the function
     */
     u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = Fu8__structure_hash_input_init(&sstc_lcl_hash_input);
+    u8_lcl_return_from_function = Fu8__structure_argument_reset_without_input_buffer(ptr_sstc_pssd_argument);
 
     /**
-    * Check if function to init the structure hash input succeeded
+    * Check if function to reset without the input buffer the structure argument passed in argument of the function succeeded
     */
     if(u8_lcl_return_from_function != RETURN_SUCCESS)
         {
         /**
-        * Treat the case when the function to init the structure hash input failed
+        * Treat the case when the function to reset without the input buffer the structure argument passed in argument of the function failed
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init the structure hash input  failed\n", __FILE__, __func__, __LINE__);
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to reset without the input buffer the structure argument passed in argument of the function failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
-        * Return failure to indicate the function to init the structure hash input failed
+        * Return failure to indicate the function to reset without the input buffer the structure argument passed in argument of the function failed
         */
         return (RETURN_FAILURE);
         }
     else
         {
         /**
-        * Treat the case when function to init the structure hash input suucceeded
+        * Treat the case when function to reset without the input buffer the structure argument passed in argument of the function suucceeded
         */
         }
 
     /**
-    * Setting the input data in the structure input data to the string passed in argument of the function
+    * Finding the command type of the actual program argument
     */
     u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = Fu8__preset_input_data_of_structure_hash_input_from_passed_str(&sstc_lcl_hash_input, ptr_sstc_pssd_argument->dbl_ptr_u8_argument_option_value_str_[HASH_STR_ARG]);
+    u8_lcl_return_from_function = Fu8__find_command_type(ptr_sstc_pssd_argument, s32_pssd_program_argument_number, dbl_ptr_u8_pssd_program_arguments);
 
     /**
-    * Check if function to set the input data in the structure input data to the string passed in argument of the function succeeded
+    * Check if function to find the command type of the actual program argument succeeded
     */
     if(u8_lcl_return_from_function != RETURN_SUCCESS)
         {
         /**
-        * Treat the case when the function to set the input data in the structure input data to the string passed in argument of the function failed
+        * Treat the case when the function to find the command type of the actual program argument failed
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the input data in the structure input data to the string passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to find the command type of the actual program argument failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
-        * Return failure to indicate the function to set the input data in the structure input data to the string passed in argument of the function failed
+        * Return failure to indicate the function to find the command type of the actual program argument failed
         */
         return (RETURN_FAILURE);
         }
     else
         {
         /**
-        * Treat the case when function to set the input data in the structure input data to the string passed in argument of the function suucceeded
-        */
-        } 
-
-    /**
-    * Initialize the structure hash output
-    */
-    u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = Fu8__structure_hash_output_init(&sstc_lcl_hash_output);
-
-    /**
-    * Check if function to init the structure hash output succeeded
-    */
-    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-        {
-        /**
-        * Treat the case when the function to init the structure hash output failed
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init the structure hash output  failed\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate the function to init the structure hash output failed
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when function to init the structure hash output suucceeded
-        */
-        } 
-
-    /**
-    * Execute the command fonction passed in argument of the program
-    */
-    u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = command_function[ptr_sstc_pssd_argument->e_command_type_](&sstc_lcl_hash_input, &sstc_lcl_hash_output);
-
-    /**
-    * Check if function to execute the command fonction passed in argument of the program succeeded
-    */
-    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-        {
-        /**
-        * Treat the case when the function to execute the command fonction passed in argument of the program failed
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to execute the command fonction passed in argument of the program  failed\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate the function to execute the command fonction passed in argument of the program failed
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when function to execute the command fonction passed in argument of the program suucceeded
-        */
-        } 
-
-    /**
-    * Display the result of the command passed in argument of the program
-    * Check if the reverse option is not set
-    */
-    if(ptr_sstc_pssd_argument->ptr_u8_simple_options_[HASH_REVERSE] == FALSE)
-        {
-        /**
-        * Treat the case when the reverse option is not set
-        */
-
-        /**
-        * Check if the quiet option is not set
-        */
-        if(ptr_sstc_pssd_argument->ptr_u8_simple_options_[HASH_QUIET] == FALSE)
-            {
-            /**
-            * Treat the case when the quiet option is not set
-            */
-
-            /**
-            * Display the string hash input
-            */
-            ft_printf("%s (\"%s\") = ", uppercase_command_name[ptr_sstc_pssd_argument->e_command_type_], ptr_sstc_pssd_argument->dbl_ptr_u8_argument_option_value_str_[HASH_STR_ARG]);
-            }
-        else
-            {
-            /**
-            * Treat the case when the quiet option is set
-            */
-            } 
-
-        /**
-        * Display the hash output
-        */ 
-        Fv__print_blob_in_hexadecimal(sstc_lcl_hash_output.ptr_u8_hashed_data_blob_, sstc_lcl_hash_output.u64_length_hashed_data_);
-        }
-    else
-        {
-        /**
-        * Treat the case when the reverse option is set
-        */
-
-        /**
-        * Display the hash output
-        */ 
-        Fv__print_blob_in_hexadecimal(sstc_lcl_hash_output.ptr_u8_hashed_data_blob_, sstc_lcl_hash_output.u64_length_hashed_data_);
-
-        /**
-        * Check if the quiet option is not set
-        */
-        if(ptr_sstc_pssd_argument->ptr_u8_simple_options_[HASH_QUIET] == FALSE)
-            {
-            /**
-            * Treat the case when the quiet option is not set
-            */
-
-            /**
-            * Display the string hash input
-            */
-            ft_printf(" \"%s\"", ptr_sstc_pssd_argument->dbl_ptr_u8_argument_option_value_str_[HASH_STR_ARG]);
-            }
-        else
-            {
-            /**
-            * Treat the case when the quiet option is set
-            */
-            } 
-        } 
-
-    ft_printf("\n");
-
-    /**
-    * Closing the structure hash input
-    */
-    u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = Fu8__structure_hash_input_close(&sstc_lcl_hash_input);
-
-    /**
-    * Check if function to close the structure hash input succeeded
-    */
-    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-        {
-        /**
-        * Treat the case when the function to close the structure hash input failed
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure hash input  failed\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate the function to close the structure hash input failed
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when function to close the structure hash input suucceeded
+        * Treat the case when function to find the command type of the actual program argument suucceeded
         */
         }
 
     /**
-    * Closing the structure hash output
+    * Check if no command was found in the argument of the program
     */
-    u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = Fu8__structure_hash_output_close(&sstc_lcl_hash_output);
-
-    /**
-    * Check if function to close the structure hash output succeeded
-    */
-    if(u8_lcl_return_from_function != RETURN_SUCCESS)
+    if(ptr_sstc_pssd_argument->u8_command_ == NOT_A_COMMAND)
         {
         /**
-        * Treat the case when the function to close the structure hash output failed
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure hash output  failed\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate the function to close the structure hash output failed
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when function to close the structure hash output suucceeded
-        */
-        } 
-
-    return (RETURN_SUCCESS);
-    }
-
-uint8_t Fu8__execute_command_from_stdin(argument_t *ptr_sstc_pssd_argument)
-    {
-    /**
-    * Assertion of argument
-    */
-
-    /**
-    * Check if the structure argument is correctly pointing passed as an argument of the function
-    */
-    if(ptr_sstc_pssd_argument == NULL)
-        {
-        /**
-        * Treat the case when the structure argument is not correctly pointing passed as an argument of the function
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate the structure argument is not correctly pointing passed as an argument of the function
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when the structure argument is correctly pointing passed as an argument of the function
-        */
-        }
-
-    /**
-    * Check if the structure argument passed in argument of the function is not already initialized
-    */
-    if((ptr_sstc_pssd_argument->u8_global_status_ & FIRST_BIT) == FALSE)
-        {
-        /**
-        * Treat the case when the structure argument passed in argument of the function is not already initialized
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate the structure argument passed in argument of the function is not already initialized
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when  the structure argument passed in argument of the function is already initialized as expected
-        */
-        }
-
-    /**
-    * Check if the command type passed in the structure argument passed in the argument of the function does not exist
-    */
-    if(ptr_sstc_pssd_argument->e_command_type_ >= COMMAND_NUMBER)
-        {
-        /**
-        * Treat the case when the command type passed in the structure argument passed in the argument of the function does not exist
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the command type passed in the structure argument passed in the argument of the function does not exist\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate the command type passed in the structure argument passed in the argument of the function does not exist
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when the command type passed in the structure argument passed in the argument of the function does exist
-        */
-        } 
-
-    /**
-    * Creation of local variable
-    */
-    hash_input_t  sstc_lcl_hash_input;
-    hash_output_t sstc_lcl_hash_output;
-    uint64_t      u64_lcl_cnt;
-    uint8_t       u8_lcl_return_from_function;
-
-    /**
-    * Initialization of local variable
-    */
-    sstc_lcl_hash_input.u8_global_status_  = 0;
-    sstc_lcl_hash_output.u8_global_status_ = 0;
-    u64_lcl_cnt                            = 0;
-    u8_lcl_return_from_function            = 0;
-
-    /**
-    * Initialize the structure hash input
-    */
-    u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = Fu8__structure_hash_input_init(&sstc_lcl_hash_input);
-
-    /**
-    * Check if function to init the structure hash input succeeded
-    */
-    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-        {
-        /**
-        * Treat the case when the function to init the structure hash input failed
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init the structure hash input  failed\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate the function to init the structure hash input failed
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when function to init the structure hash input suucceeded
-        */
-        }
-
-    /**
-    * Setting the input blob in the structure input data to the value of the standard input
-    */
-    u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = Fu8__preset_input_data_of_structure_hash_input_from_opened_file(&sstc_lcl_hash_input, STDIN_FILENO);
-
-    /**
-    * Check if function to set the input blob in the structure input data to the value of the standard input succeeded
-    */
-    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-        {
-        /**
-        * Treat the case when the function to set the input blob in the structure input data to the value of the standard input failed
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the input blob in the structure input data to the value of the standard input  failed\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate the function to set the input blob in the structure input data to the value of the standard input failed
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when function to set the input blob in the structure input data to the value of the standard input suucceeded
-        */
-        } 
-
-    /**
-    * Initialize the structure hash output
-    */
-    u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = Fu8__structure_hash_output_init(&sstc_lcl_hash_output);
-
-    /**
-    * Check if function to init the structure hash output succeeded
-    */
-    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-        {
-        /**
-        * Treat the case when the function to init the structure hash output failed
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init the structure hash output  failed\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate the function to init the structure hash output failed
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when function to init the structure hash output suucceeded
-        */
-        } 
-
-    /**
-    * Execute the command fonction passed in argument of the program
-    */
-    u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = command_function[ptr_sstc_pssd_argument->e_command_type_](&sstc_lcl_hash_input, &sstc_lcl_hash_output);
-
-    /**
-    * Check if function to execute the command fonction passed in argument of the program succeeded
-    */
-    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-        {
-        /**
-        * Treat the case when the function to execute the command fonction passed in argument of the program failed
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to execute the command fonction passed in argument of the program  failed\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate the function to execute the command fonction passed in argument of the program failed
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when function to execute the command fonction passed in argument of the program suucceeded
-        */
-        } 
-
-    /**
-    * Display the result of the command passed in argument of the program
-    * Check if the quiet option is not set
-    */
-    if(ptr_sstc_pssd_argument->ptr_u8_simple_options_[HASH_QUIET] == FALSE)
-        {
-        /**
-        * Treat the case when the quiet option is not set
-        */
-
-        /**
-        * Check if the option echo stdin to stdout is not set
-        */
-        if(ptr_sstc_pssd_argument->ptr_u8_simple_options_[HASH_ECHO_STDIN_TO_STDOUT] == FALSE)
-            {
-            /**
-            * Treat the case when the option echo stdin to stdout is not set
-            */
-
-            ft_printf("(stdin)= ");
-            }
-        else
-            {
-            /**
-            * Treat the case when the option echo stdin to stdout is set
-            */
-
-            /**
-            * Display the standard input
-            */
-            ft_printf("(\"");
-
-            /**
-            * Print all the data of input blob but not the last new line
-            */ 
-            u64_lcl_cnt = 0;
-            while(u64_lcl_cnt < sstc_lcl_hash_input.u64_length_of_data_to_hash_)
-                {
-                /**
-                * Check if the actual character of the input blob is not the last new line
-                */
-                if((sstc_lcl_hash_input.u64_length_of_data_to_hash_ > 0) && ((u64_lcl_cnt < (sstc_lcl_hash_input.u64_length_of_data_to_hash_ - 1)) || (sstc_lcl_hash_input.ptr_u8_data_to_hash_blob_[u64_lcl_cnt] != '\n')))
-                    {
-                    /**
-                    * Treat the case when the actual character of the input blob is not the last new line
-                    */
-
-                    ft_printf("%c", sstc_lcl_hash_input.ptr_u8_data_to_hash_blob_[u64_lcl_cnt]);
-                    }
-                else
-                    {
-                    /**
-                    * Treat the case when the actual character of the input blob is the last new line
-                    */
-                    } 
-
-                /**
-                * Checking for overflow
-                */
-                if(u64_lcl_cnt < UINT64_MAX)
-                    {
-                    u64_lcl_cnt++;
-                    }
-                else
-                    {
-                    #ifdef DEVELOPEMENT
-                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
-                    #endif
-
-                    #ifdef DEMO
-                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-                    #endif
-
-                    #ifdef PRODUCTION
-                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-                    #endif
-
-                    /**
-                    * Return failure to indicate the counter variable overflow
-                    */ 
-                    return(RETURN_FAILURE);
-                    } 
-                }
-            ft_printf("\")= ");
-            }
-        }
-    else
-        {
-        /**
-        * Treat the case when the quiet option is set
-        */
-
-        /**
-        * Check if the option echo stdin to stdout is set
-        */
-        if(ptr_sstc_pssd_argument->ptr_u8_simple_options_[HASH_ECHO_STDIN_TO_STDOUT] != FALSE)
-            {
-            /**
-            * Treat the case when the option echo stdin to stdout is set
-            */
-
-            /**
-            * Display the standard input
-            */
-            (void) Fv__print_blob(sstc_lcl_hash_input.ptr_u8_data_to_hash_blob_, sstc_lcl_hash_input.u64_length_of_data_to_hash_);
-            }
-        else
-            {
-            /**
-            * Treat the case when the option echo stdin to stdout is not set
-            */
-            }
-        }
-
-    /**
-    * Display the hash output
-    */
-    Fv__print_blob_in_hexadecimal(sstc_lcl_hash_output.ptr_u8_hashed_data_blob_, sstc_lcl_hash_output.u64_length_hashed_data_);
-
-    ft_printf("\n");
-
-    /**
-    * Closing the structure hash input
-    */
-    u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = Fu8__structure_hash_input_close(&sstc_lcl_hash_input);
-
-    /**
-    * Check if function to close the structure hash input succeeded
-    */
-    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-        {
-        /**
-        * Treat the case when the function to close the structure hash input failed
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure hash input  failed\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate the function to close the structure hash input failed
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when function to close the structure hash input suucceeded
-        */
-        }
-
-    /**
-    * Closing the structure hash output
-    */
-    u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = Fu8__structure_hash_output_close(&sstc_lcl_hash_output);
-
-    /**
-    * Check if function to close the structure hash output succeeded
-    */
-    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-        {
-        /**
-        * Treat the case when the function to close the structure hash output failed
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure hash output  failed\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate the function to close the structure hash output failed
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when function to close the structure hash output suucceeded
-        */
-        } 
-
-    return (RETURN_SUCCESS);
-    }
-
-uint8_t Fu8__execute_command_from_file(argument_t *ptr_sstc_pssd_argument, uint8_t *ptr_u8_pssd_file_path)
-    {
-    /**
-    * Assertion of argument
-    */
-
-    /**
-    * Check if the structure argument is correctly pointing passed as an argument of the function
-    */
-    if(ptr_sstc_pssd_argument == NULL)
-        {
-        /**
-        * Treat the case when the structure argument is not correctly pointing passed as an argument of the function
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate the structure argument is not correctly pointing passed as an argument of the function
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when the structure argument is correctly pointing passed as an argument of the function
-        */
-        }
-
-    /**
-    * Check if the structure argument passed in argument of the function is not already initialized
-    */
-    if((ptr_sstc_pssd_argument->u8_global_status_ & FIRST_BIT) == FALSE)
-        {
-        /**
-        * Treat the case when the structure argument passed in argument of the function is not already initialized
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate the structure argument passed in argument of the function is not already initialized
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when  the structure argument passed in argument of the function is already initialized as expected
-        */
-        }
-
-    /**
-    * Check if the command type passed in the structure argument passed in the argument of the function does not exist
-    */
-    if(ptr_sstc_pssd_argument->e_command_type_ >= COMMAND_NUMBER)
-        {
-        /**
-        * Treat the case when the command type passed in the structure argument passed in the argument of the function does not exist
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the command type passed in the structure argument passed in the argument of the function does not exist\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate the command type passed in the structure argument passed in the argument of the function does not exist
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when the command type passed in the structure argument passed in the argument of the function does exist
-        */
-        } 
-
-    /**
-    * Check if file path is correctly pointing passed as an argument of the function
-    */
-    if(ptr_u8_pssd_file_path == NULL)
-        {
-        /**
-        * Treat the case when file path is not correctly pointing passed as an argument of the function
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    file path is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate file path is not correctly pointing passed as an argument of the function
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when file path is correctly pointing passed as an argument of the function
-        */
-        } 
-
-    /**
-    * Creation of local variable
-    */
-    hash_input_t  sstc_lcl_hash_input;
-    hash_output_t sstc_lcl_hash_output;
-    int32_t       s32_lcl_file_descriptor;
-    int32_t       s32_lcl_return_from_function;
-    uint8_t       u8_lcl_return_from_function;
-
-    /**
-    * Initialization of local variable
-    */
-    s32_lcl_file_descriptor                = -1;
-    sstc_lcl_hash_input.u8_global_status_  = 0;
-    sstc_lcl_hash_output.u8_global_status_ = 0;
-    u8_lcl_return_from_function            = 0;
-
-    /**
-    * Initialize the structure hash input
-    */
-    u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = Fu8__structure_hash_input_init(&sstc_lcl_hash_input);
-
-    /**
-    * Check if function to init the structure hash input succeeded
-    */
-    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-        {
-        /**
-        * Treat the case when the function to init the structure hash input failed
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init the structure hash input  failed\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate the function to init the structure hash input failed
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when function to init the structure hash input suucceeded
-        */
-        }
-
-    /**
-    * Openning the file passe in argument of the function
-    */ 
-    s32_lcl_file_descriptor = -1;
-    s32_lcl_file_descriptor = open((char *) ptr_u8_pssd_file_path, O_RDONLY);
-
-    /**
-    * Check if the openning of the file passed in argument of the function failed
-    */
-    if(s32_lcl_file_descriptor < 0)
-        {
-        /**
-        * Treat the case when the openning of the file passed in argument of the function failed
+        * Treat the case when no command was found in the argument of the program
         */
 
         /**
@@ -1132,638 +245,188 @@ uint8_t Fu8__execute_command_from_file(argument_t *ptr_sstc_pssd_argument, uint8
         */ 
         ptr_sstc_pssd_argument->u8_global_status_ |= SECOND_BIT;
 
-        ft_fprintf(STDERR_FILENO, "ft_ssl: md5: %s: No such file or directory\n", ptr_u8_pssd_file_path);
-
-        /**
-        * Closing the structure hash input
-        */
-        u8_lcl_return_from_function = RETURN_FAILURE;
-        u8_lcl_return_from_function = Fu8__structure_hash_input_close(&sstc_lcl_hash_input);
-
-        /**
-        * Check if function to close the structure hash input succeeded
-        */
-        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-            {
-            /**
-            * Treat the case when the function to close the structure hash input failed
-            */
-
-            #ifdef DEVELOPEMENT
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure hash input  failed\n", __FILE__, __func__, __LINE__);
-            #endif
-
-            #ifdef DEMO
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-            #endif
-
-            #ifdef PRODUCTION
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-            #endif
-
-            /**
-            * Return failure to indicate the function to close the structure hash input failed
-            */
-            return (RETURN_FAILURE);
-            }
-        else
-            {
-            /**
-            * Treat the case when function to close the structure hash input suucceeded
-            */
-            }
-
-        return(RETURN_SUCCESS);
+        return (RETURN_SUCCESS);
         }
     else
         {
         /**
-        * Treat the case when the openning of the file passed in argument of the function suucceeded
+        * Treat the case when command was found in the argument of the program
         */
         }
 
     /**
-    * Setting the input blob in the structure input data to the content of the file passed in argument of the function
+    * Loading data form program argument
     */
     u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = Fu8__preset_input_data_of_structure_hash_input_from_opened_file(&sstc_lcl_hash_input, s32_lcl_file_descriptor);
+    u8_lcl_return_from_function = Fu8__load_data_from_argument(ptr_sstc_pssd_argument, s32_pssd_program_argument_number - 1, dbl_ptr_u8_pssd_program_arguments + 1);
 
     /**
-    * Check if function to set the input blob in the structure input data to the content of the file passed in argument of the function succeeded
+    * Check if function to load data form program argument succeeded
     */
     if(u8_lcl_return_from_function != RETURN_SUCCESS)
         {
         /**
-        * Treat the case when the function to set the input blob in the structure input data to the content of the file passed in argument of the function failed
+        * Treat the case when the function to load data form program argument failed
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the input blob in the structure input data to the content of the file passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to load data form program argument failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
-        * Closing the opened file passed in argument of the function
-        */
-        s32_lcl_return_from_function = RETURN_FAILURE;
-        s32_lcl_return_from_function = close(s32_lcl_file_descriptor);
-
-        /**
-        * Check if function to close the opened file passed in argument of the function succeeded
-        */
-        if(s32_lcl_return_from_function != 0)
-            {
-            /**
-            * Treat the case when the function to close the opened file passed in argument of the function failed
-            */
-
-            #ifdef DEVELOPEMENT
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the opened file passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
-            #endif
-
-            #ifdef DEMO
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-            #endif
-
-            #ifdef PRODUCTION
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-            #endif
-
-            /**
-            * Return failure to indicate the function to close the opened file passed in argument of the function failed
-            */
-            return (RETURN_FAILURE);
-            }
-        else
-            {
-            /**
-            * Treat the case when function to close the opened file passed in argument of the function suucceeded
-            */
-            }
-
-        /**
-        * Closing the structure hash input
-        */
-        u8_lcl_return_from_function = RETURN_FAILURE;
-        u8_lcl_return_from_function = Fu8__structure_hash_input_close(&sstc_lcl_hash_input);
-
-        /**
-        * Check if function to close the structure hash input succeeded
-        */
-        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-            {
-            /**
-            * Treat the case when the function to close the structure hash input failed
-            */
-
-            #ifdef DEVELOPEMENT
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure hash input  failed\n", __FILE__, __func__, __LINE__);
-            #endif
-
-            #ifdef DEMO
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-            #endif
-
-            #ifdef PRODUCTION
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-            #endif
-
-            /**
-            * Return failure to indicate the function to close the structure hash input failed
-            */
-            return (RETURN_FAILURE);
-            }
-        else
-            {
-            /**
-            * Treat the case when function to close the structure hash input suucceeded
-            */
-            }
-
-        /**
-        * Return failure to indicate the function to set the input blob in the structure input data to the content of the file passed in argument of the function failed
+        * Return failure to indicate the function to load data form program argument failed
         */
         return (RETURN_FAILURE);
         }
     else
         {
         /**
-        * Treat the case when function to set the input blob in the structure input data to the content of the file passed in argument of the function suucceeded
+        * Treat the case when function to load data form program argument suucceeded
+        */
+        }
+
+    /**
+    * Check if command argument error
+    */
+    if((ptr_sstc_pssd_argument->u8_global_status_ & SECOND_BIT) != FALSE)
+        {
+        /**
+        * Treat the case when command argument error
+        */
+
+        return (RETURN_SUCCESS);
+        }
+    else
+        {
+        /**
+        * Treat the case when no command argument error
         */
         } 
 
-    /**
-    * Closing the opened file passed in argument of the function
-    */
-    s32_lcl_return_from_function = RETURN_FAILURE;
-    s32_lcl_return_from_function = close(s32_lcl_file_descriptor);
-
-    /**
-    * Check if function to close the opened file passed in argument of the function succeeded
-    */
-    if(s32_lcl_return_from_function != 0)
+    //TODO exec
+    if(ptr_sstc_pssd_argument->e_command_type_ == TYPE_OF_PROGRAM_OPTION_HASH)
         {
         /**
-        * Treat the case when the function to close the opened file passed in argument of the function failed
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the opened file passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Closing the structure hash input
+        * Execute the hash command
         */
         u8_lcl_return_from_function = RETURN_FAILURE;
-        u8_lcl_return_from_function = Fu8__structure_hash_input_close(&sstc_lcl_hash_input);
+        u8_lcl_return_from_function = Fu8__execute_hash_command(ptr_sstc_pssd_argument);
 
         /**
-        * Check if function to close the structure hash input succeeded
+        * Check if function to execute the hash command succeeded
         */
         if(u8_lcl_return_from_function != RETURN_SUCCESS)
             {
             /**
-            * Treat the case when the function to close the structure hash input failed
+            * Treat the case when the function to execute the hash command failed
             */
 
             #ifdef DEVELOPEMENT
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure hash input  failed\n", __FILE__, __func__, __LINE__);
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to execute the hash command failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
-            * Return failure to indicate the function to close the structure hash input failed
+            * Return failure to indicate the function to execute the hash command failed
             */
             return (RETURN_FAILURE);
             }
         else
             {
             /**
-            * Treat the case when function to close the structure hash input suucceeded
-            */
-            }
-
-        /**
-        * Return failure to indicate the function to close the opened file passed in argument of the function failed
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when function to close the opened file passed in argument of the function suucceeded
-        */
-        }
-
-    /**
-    * Initialize the structure hash output
-    */
-    u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = Fu8__structure_hash_output_init(&sstc_lcl_hash_output);
-
-    /**
-    * Check if function to init the structure hash output succeeded
-    */
-    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-        {
-        /**
-        * Treat the case when the function to init the structure hash output failed
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init the structure hash output  failed\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Closing the structure hash input
-        */
-        u8_lcl_return_from_function = RETURN_FAILURE;
-        u8_lcl_return_from_function = Fu8__structure_hash_input_close(&sstc_lcl_hash_input);
-
-        /**
-        * Check if function to close the structure hash input succeeded
-        */
-        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-            {
-            /**
-            * Treat the case when the function to close the structure hash input failed
-            */
-
-            #ifdef DEVELOPEMENT
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure hash input  failed\n", __FILE__, __func__, __LINE__);
-            #endif
-
-            #ifdef DEMO
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-            #endif
-
-            #ifdef PRODUCTION
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-            #endif
-
-            /**
-            * Return failure to indicate the function to close the structure hash input failed
-            */
-            return (RETURN_FAILURE);
-            }
-        else
-            {
-            /**
-            * Treat the case when function to close the structure hash input suucceeded
-            */
-            }
-
-        /**
-        * Return failure to indicate the function to init the structure hash output failed
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when function to init the structure hash output suucceeded
-        */
-        } 
-
-    /**
-    * Execute the command fonction passed in argument of the program
-    */
-    u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = command_function[ptr_sstc_pssd_argument->e_command_type_](&sstc_lcl_hash_input, &sstc_lcl_hash_output);
-
-    /**
-    * Check if function to execute the command fonction passed in argument of the program succeeded
-    */
-    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-        {
-        /**
-        * Treat the case when the function to execute the command fonction passed in argument of the program failed
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to execute the command fonction passed in argument of the program  failed\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Closing the structure hash input
-        */
-        u8_lcl_return_from_function = RETURN_FAILURE;
-        u8_lcl_return_from_function = Fu8__structure_hash_input_close(&sstc_lcl_hash_input);
-
-        /**
-        * Check if function to close the structure hash input succeeded
-        */
-        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-            {
-            /**
-            * Treat the case when the function to close the structure hash input failed
-            */
-
-            #ifdef DEVELOPEMENT
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure hash input  failed\n", __FILE__, __func__, __LINE__);
-            #endif
-
-            #ifdef DEMO
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-            #endif
-
-            #ifdef PRODUCTION
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-            #endif
-
-            /**
-            * Return failure to indicate the function to close the structure hash input failed
-            */
-            return (RETURN_FAILURE);
-            }
-        else
-            {
-            /**
-            * Treat the case when function to close the structure hash input suucceeded
-            */
-            }
-
-        /**
-        * Closing the structure hash output
-        */
-        u8_lcl_return_from_function = RETURN_FAILURE;
-        u8_lcl_return_from_function = Fu8__structure_hash_output_close(&sstc_lcl_hash_output);
-
-        /**
-        * Check if function to close the structure hash output succeeded
-        */
-        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-            {
-            /**
-            * Treat the case when the function to close the structure hash output failed
-            */
-
-            #ifdef DEVELOPEMENT
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure hash output  failed\n", __FILE__, __func__, __LINE__);
-            #endif
-
-            #ifdef DEMO
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-            #endif
-
-            #ifdef PRODUCTION
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-            #endif
-
-            /**
-            * Return failure to indicate the function to close the structure hash output failed
-            */
-            return (RETURN_FAILURE);
-            }
-        else
-            {
-            /**
-            * Treat the case when function to close the structure hash output suucceeded
+            * Treat the case when function to execute the hash command suucceeded
             */
             } 
-
-        /**
-        * Return failure to indicate the function to execute the command fonction passed in argument of the program failed
-        */
-        return (RETURN_FAILURE);
         }
-    else
+    else if (ptr_sstc_pssd_argument->e_command_type_ == TYPE_OF_PROGRAM_OPTION_BASE64)
         {
         /**
-        * Treat the case when function to execute the command fonction passed in argument of the program suucceeded
-        */
-        } 
-
-    /**
-    * Display the result of the command passed in argument of the program
-    * Check if the reverse option is not set
-    */
-    if(ptr_sstc_pssd_argument->ptr_u8_simple_options_[HASH_REVERSE] == FALSE)
-        {
-        /**
-        * Treat the case when the reverse option is not set
-        */
-
-        /**
-        * Check if the quiet option is not set
-        */
-        if(ptr_sstc_pssd_argument->ptr_u8_simple_options_[HASH_QUIET] == FALSE)
-            {
-            /**
-            * Treat the case when the quiet option is not set
-            */
-
-            /**
-            * Display the file path
-            */
-            ft_printf("%s (%s) = ", uppercase_command_name[ptr_sstc_pssd_argument->e_command_type_], ptr_u8_pssd_file_path);
-            }
-        else
-            {
-            /**
-            * Treat the case when the quiet option is set
-            */
-            }
-
-        /**
-        * Display the hash output
-        */
-        Fv__print_blob_in_hexadecimal(sstc_lcl_hash_output.ptr_u8_hashed_data_blob_, sstc_lcl_hash_output.u64_length_hashed_data_);
-        }
-    else
-        {
-        /**
-        * Treat the case when the reverse option is set
-        */
-
-        /**
-        * Display the hash output
-        */ 
-        Fv__print_blob_in_hexadecimal(sstc_lcl_hash_output.ptr_u8_hashed_data_blob_, sstc_lcl_hash_output.u64_length_hashed_data_);
-
-        /**
-        * Check if the quiet option is not set
-        */
-        if(ptr_sstc_pssd_argument->ptr_u8_simple_options_[HASH_QUIET] == FALSE)
-            {
-            /**
-            * Treat the case when the quiet option is not set
-            */
-
-            /**
-            * Display the file path
-            */
-            ft_printf(" %s", ptr_u8_pssd_file_path);
-            }
-        else
-            {
-            /**
-            * Treat the case when the quiet option is set
-            */
-            } 
-        } 
-
-    ft_printf("\n");
-
-    /**
-    * Closing the structure hash input
-    */
-    u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = Fu8__structure_hash_input_close(&sstc_lcl_hash_input);
-
-    /**
-    * Check if function to close the structure hash input succeeded
-    */
-    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-        {
-        /**
-        * Treat the case when the function to close the structure hash input failed
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure hash input  failed\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Closing the structure hash output
+        * Execute the base64 command
         */
         u8_lcl_return_from_function = RETURN_FAILURE;
-        u8_lcl_return_from_function = Fu8__structure_hash_output_close(&sstc_lcl_hash_output);
+        u8_lcl_return_from_function = Fu8__execute_base64_command(ptr_sstc_pssd_argument);
 
         /**
-        * Check if function to close the structure hash output succeeded
+        * Check if function to execute the base64 command succeeded
         */
         if(u8_lcl_return_from_function != RETURN_SUCCESS)
             {
             /**
-            * Treat the case when the function to close the structure hash output failed
+            * Treat the case when the function to execute the base64 command failed
             */
 
             #ifdef DEVELOPEMENT
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure hash output  failed\n", __FILE__, __func__, __LINE__);
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to execute the base64 command failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
-            * Return failure to indicate the function to close the structure hash output failed
+            * Return failure to indicate the function to execute the base64 command failed
             */
             return (RETURN_FAILURE);
             }
         else
             {
             /**
-            * Treat the case when function to close the structure hash output suucceeded
+            * Treat the case when function to execute the base64 command suucceeded
             */
             } 
-
-        /**
-        * Return failure to indicate the function to close the structure hash input failed
-        */
-        return (RETURN_FAILURE);
+        }
+    else if (ptr_sstc_pssd_argument->e_command_type_ == TYPE_OF_PROGRAM_OPTION_DES)
+        {
+        printf("EXEC DES\n");
+        //IF_FUNC(Execute the des command,`Fu8__execute_des_command(ptr_sstc_pssd_argument)`,execute the des command)
         }
     else
         {
         /**
-        * Treat the case when function to close the structure hash input suucceeded
-        */
-        }
-
-    /**
-    * Closing the structure hash output
-    */
-    u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = Fu8__structure_hash_output_close(&sstc_lcl_hash_output);
-
-    /**
-    * Check if function to close the structure hash output succeeded
-    */
-    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-        {
-        /**
-        * Treat the case when the function to close the structure hash output failed
+        * Treat the case when the command type of the actual command not exist
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure hash output  failed\n", __FILE__, __func__, __LINE__);
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the command type of the actual command not exist\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
-        * Return failure to indicate the function to close the structure hash output failed
+        * Return failure to indicate the command type of the actual command not exist
         */
         return (RETURN_FAILURE);
         }
-    else
-        {
-        /**
-        * Treat the case when function to close the structure hash output suucceeded
-        */
-        } 
 
     return (RETURN_SUCCESS);
     }
 
-uint8_t Fu8__execute_command(argument_t *ptr_sstc_pssd_argument)
+uint8_t Fu8__multiple_parse_argument_and_execute_command_from_stdin(argument_t *ptr_sstc_pssd_argument)
     {
     /**
     * Assertion of argument
@@ -1836,76 +499,49 @@ uint8_t Fu8__execute_command(argument_t *ptr_sstc_pssd_argument)
         }
 
     /**
-    * Check if the command type passed in the structure argument passed in the argument of the function does not exist
-    */
-    if(ptr_sstc_pssd_argument->e_command_type_ >= COMMAND_NUMBER)
-        {
-        /**
-        * Treat the case when the command type passed in the structure argument passed in the argument of the function does not exist
-        */
-
-        #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the command type passed in the structure argument passed in the argument of the function does not exist\n", __FILE__, __func__, __LINE__);
-        #endif
-
-        #ifdef DEMO
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-        #endif
-
-        #ifdef PRODUCTION
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-        #endif
-
-        /**
-        * Return failure to indicate the command type passed in the structure argument passed in the argument of the function does not exist
-        */
-        return (RETURN_FAILURE);
-        }
-    else
-        {
-        /**
-        * Treat the case when the command type passed in the structure argument passed in the argument of the function does exist
-        */
-        } 
-
-    /**
     * Creation of local variable
     */
-    uint64_t u64_lcl_cnt;
-    uint8_t  u8_lcl_return_from_function;
+    int32_t   s32_lcl_return_from_function;
+    int32_t   s32_pssd_program_argument_number;
+    uint64_t  u64_lcl_cnt;
+    uint8_t   u8_lcl_return_from_function;
+    uint8_t  *ptr_u8_lcl_command_str;
+    uint8_t **dbl_ptr_u8_lcl_program_arguments;
 
     /**
     * Initialization of local variable
     */
-    u64_lcl_cnt                 = 0;
-    u8_lcl_return_from_function = 0;
+    dbl_ptr_u8_lcl_program_arguments = NULL;
+    ptr_u8_lcl_command_str           = NULL;
+    s32_lcl_return_from_function     = 1;
+    s32_pssd_program_argument_number = 0;
+    u64_lcl_cnt                      = 0;
+    u8_lcl_return_from_function      = RETURN_FAILURE;
 
     /**
-    * Check if the message from the stdin must be read
+    * Readding line from stdandard input until a valide command is found or the end of the stdandard input is found
     */
-    if(((ptr_sstc_pssd_argument->u64_number_of_file_in_argument_ == 0) && (ptr_sstc_pssd_argument->ptr_u8_argument_options_[HASH_STR_ARG] == FALSE)) || (ptr_sstc_pssd_argument->ptr_u8_simple_options_[HASH_ECHO_STDIN_TO_STDOUT] != FALSE))
+    while(s32_lcl_return_from_function > 0)
         {
-        /**
-        * Treat the case when the message from the stdin must be read
-        */
+        ft_printf("ft_ssl> ");
 
         /**
-        * Compute and display the result of the command passed in argument of the program with the input of the program
+        * get the next line from the standard input
         */
-        u8_lcl_return_from_function = RETURN_FAILURE;
-        u8_lcl_return_from_function = Fu8__execute_command_from_stdin(ptr_sstc_pssd_argument);
+        s32_lcl_return_from_function = -1;
+        s32_lcl_return_from_function = get_next_line_with_buffer_passed_as_input(STDIN_FILENO, (char **) &ptr_u8_lcl_command_str, (char *) ptr_sstc_pssd_argument->u8_input_buffer_);
 
         /**
-        * Check if function to compute and display the result of the command passed in argument of the program with the input of the program succeeded
+        * Check if function to get the next line from the standard input succeeded
         */
-        if(u8_lcl_return_from_function != RETURN_SUCCESS)
+        if(s32_lcl_return_from_function < 0)
             {
             /**
-            * Treat the case when the function to compute and display the result of the command passed in argument of the program with the input of the program failed
+            * Treat the case when the function to get the next line from the standard input failed
             */
 
             #ifdef DEVELOPEMENT
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to compute and display the result of the command passed in argument of the program with the input of the program  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the next line from the standard input failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
@@ -1917,136 +553,58 @@ uint8_t Fu8__execute_command(argument_t *ptr_sstc_pssd_argument)
             #endif
 
             /**
-            * Return failure to indicate the function to compute and display the result of the command passed in argument of the program with the input of the program failed
+            * Return failure to indicate the function to get the next line from the standard input failed
             */
             return (RETURN_FAILURE);
             }
         else
             {
             /**
-            * Treat the case when function to compute and display the result of the command passed in argument of the program with the input of the program suucceeded
+            * Treat the case when function to get the next line from the standard input suucceeded
             */
-            } 
-        }
-    else
-        {
-        /**
-        * Treat the case when the message from the stdin must not be read
-        */
-        }
-
-    /**
-    * Check if the argument string option is set
-    */
-    if(ptr_sstc_pssd_argument->ptr_u8_argument_options_[HASH_STR_ARG] != FALSE)
-        {
-        /**
-        * Treat the case when the argument string option is set
-        */
+            }
 
         /**
-        * Compute and display the result of the command passed in argument of the program with the string passed in argument of the program
+        * Check if no more line in the input of the program
         */
-        u8_lcl_return_from_function = RETURN_FAILURE;
-        u8_lcl_return_from_function = Fu8__execute_command_from_argument_string(ptr_sstc_pssd_argument);
-
-        /**
-        * Check if function to compute and display the result of the command passed in argument of the program with the string passed in argument of the program succeeded
-        */
-        if(u8_lcl_return_from_function != RETURN_SUCCESS)
+        if(s32_lcl_return_from_function == 0)
             {
             /**
-            * Treat the case when the function to compute and display the result of the command passed in argument of the program with the string passed in argument of the program failed
+            * Treat the case when no more line in the input of the program
             */
-
-            #ifdef DEVELOPEMENT
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to compute and display the result of the command passed in argument of the program with the string passed in argument of the program  failed\n", __FILE__, __func__, __LINE__);
-            #endif
-
-            #ifdef DEMO
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-            #endif
-
-            #ifdef PRODUCTION
-            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-            #endif
 
             /**
-            * Return failure to indicate the function to compute and display the result of the command passed in argument of the program with the string passed in argument of the program failed
+            * Freeing and setting to NULL the local command string
             */
-            return (RETURN_FAILURE);
+            (void) free(ptr_u8_lcl_command_str);
+            ptr_u8_lcl_command_str = NULL;
+
+            return (RETURN_SUCCESS);
             }
         else
             {
             /**
-            * Treat the case when function to compute and display the result of the command passed in argument of the program with the string passed in argument of the program suucceeded
+            * Treat the case when more line in the input of the program
             */
-            } 
-        }
-    else
-        {
-        /**
-        * Treat the case when the argument string option is not set
-        */
-        }
+            }
 
-    /**
-    * Check if there is at least one file to read passed in argument of the program
-    */
-    if(ptr_sstc_pssd_argument->u64_number_of_file_in_argument_ != 0)
-        {
         /**
-        * Treat the case when there is at least one file to read passed in argument of the program
+        * Resetting the argument error status in the structure argument passed in argument of the function
         */
+        ptr_sstc_pssd_argument->u8_global_status_ &= NOT_SECOND_BIT;
 
-        u64_lcl_cnt = 0;
-        while(u64_lcl_cnt < ptr_sstc_pssd_argument->u64_number_of_file_in_argument_)
+        /**
+        * Count the number of character in the input buffer of the structure argument passed in argument of the function
+        */
+        ptr_sstc_pssd_argument->u64_length_of_input_buffer_ = 0;
+        while((ptr_sstc_pssd_argument->u8_input_buffer_[ptr_sstc_pssd_argument->u64_length_of_input_buffer_] != '\0') && (ptr_sstc_pssd_argument->u64_length_of_input_buffer_ < LIBFT_BUFFER_SIZE))
             {
-            /**
-            * Compute and display the result of the command passed in argument of the program with the content of the actual file passed in argument of the program
-            */
-            u8_lcl_return_from_function = RETURN_FAILURE;
-            u8_lcl_return_from_function = Fu8__execute_command_from_file(ptr_sstc_pssd_argument, ptr_sstc_pssd_argument->dbl_ptr_u8_file_path_str_[u64_lcl_cnt]);
-
-            /**
-            * Check if function to compute and display the result of the command passed in argument of the program with the content of the actual file passed in argument of the program succeeded
-            */
-            if(u8_lcl_return_from_function != RETURN_SUCCESS)
-                {
-                /**
-                * Treat the case when the function to compute and display the result of the command passed in argument of the program with the content of the actual file passed in argument of the program failed
-                */
-
-                #ifdef DEVELOPEMENT
-                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to compute and display the result of the command passed in argument of the program with the content of the actual file passed in argument of the program  failed\n", __FILE__, __func__, __LINE__);
-                #endif
-
-                #ifdef DEMO
-                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-                #endif
-
-                #ifdef PRODUCTION
-                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
-                #endif
-
-                /**
-                * Return failure to indicate the function to compute and display the result of the command passed in argument of the program with the content of the actual file passed in argument of the program failed
-                */
-                return (RETURN_FAILURE);
-                }
-            else
-                {
-                /**
-                * Treat the case when function to compute and display the result of the command passed in argument of the program with the content of the actual file passed in argument of the program suucceeded
-                */
-                } 
-
             /**
             * Checking for overflow
             */
-            if(u64_lcl_cnt < UINT64_MAX)
+            if(ptr_sstc_pssd_argument->u64_length_of_input_buffer_ < UINT64_MAX)
                 {
-                u64_lcl_cnt++;
+                ptr_sstc_pssd_argument->u64_length_of_input_buffer_++;
                 }
             else
                 {
@@ -2064,16 +622,144 @@ uint8_t Fu8__execute_command(argument_t *ptr_sstc_pssd_argument)
 
                 /**
                 * Return a failure to indicate the counter variable overflow
+                */
+                return (RETURN_FAILURE);
+                }
+            }
+
+        /**
+        * Tramsform string to array
+        */
+        u8_lcl_return_from_function = RETURN_FAILURE;
+        u8_lcl_return_from_function = Fu8__string_to_array(ptr_u8_lcl_command_str, &s32_pssd_program_argument_number, &dbl_ptr_u8_lcl_program_arguments);
+
+        /**
+        * Check if function to tramsform string to array succeeded
+        */
+        if(u8_lcl_return_from_function != RETURN_SUCCESS)
+            {
+            /**
+            * Treat the case when the function to tramsform string to array failed
+            */
+
+            #ifdef DEVELOPEMENT
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to tramsform string to array failed\n", __FILE__, __func__, __LINE__);
+            #endif
+
+            #ifdef DEMO
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            #endif
+
+            #ifdef PRODUCTION
+            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            #endif
+
+            /**
+            * Freeing and setting to NULL the local command string
+            */
+            (void) free(ptr_u8_lcl_command_str);
+            ptr_u8_lcl_command_str = NULL;
+
+            /**
+            * Return failure to indicate the function to tramsform string to array failed
+            */
+            return (RETURN_FAILURE);
+            }
+        else
+            {
+            /**
+            * Treat the case when function to tramsform string to array suucceeded
+            */
+            } 
+
+        /**
+        * Freeing and setting to NULL the local command string
+        */
+        (void) free(ptr_u8_lcl_command_str);
+        ptr_u8_lcl_command_str = NULL;
+
+        /**
+        * Parse and execute the command from the input
+        */
+        u8_lcl_return_from_function = RETURN_FAILURE;
+        u8_lcl_return_from_function = Fu8__parse_argument_and_execute_command(ptr_sstc_pssd_argument, s32_pssd_program_argument_number, dbl_ptr_u8_lcl_program_arguments);
+
+        /**
+        * Check if function to parse and execute the command from the input succeeded
+        */
+        if(u8_lcl_return_from_function != RETURN_SUCCESS)
+            {
+            /**
+            * Treat the case when the function to parse and execute the command from the input failed
+            */
+
+            #ifdef DEVELOPEMENT
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to parse and execute the command from the input failed\n", __FILE__, __func__, __LINE__);
+            #endif
+
+            #ifdef DEMO
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            #endif
+
+            #ifdef PRODUCTION
+            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            #endif
+
+            /**
+            * Return failure to indicate the function to parse and execute the command from the input failed
+            */
+            return (RETURN_FAILURE);
+            }
+        else
+            {
+            /**
+            * Treat the case when function to parse and execute the command from the input suucceeded
+            */
+            }
+
+        /**
+        * Freeing and setting to null all the element of the array of argument from input
+        */ 
+        u64_lcl_cnt = 0;
+        while((u64_lcl_cnt < (uint64_t) s32_pssd_program_argument_number) && (dbl_ptr_u8_lcl_program_arguments[u64_lcl_cnt] != NULL))
+            {
+            (void) free(dbl_ptr_u8_lcl_program_arguments[u64_lcl_cnt]);
+            dbl_ptr_u8_lcl_program_arguments[u64_lcl_cnt] = NULL;
+
+            /**
+            * Checking for overflow
+            */
+            if(u64_lcl_cnt < UINT64_MAX)
+                {
+                u64_lcl_cnt++;
+                }
+            else
+                {
+                #ifdef DEVELOPEMENT
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                #endif
+
+                #ifdef DEMO
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                #endif
+
+                #ifdef PRODUCTION
+                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                #endif
+
+                /**
+                * Return a failure to indicate the counter variable overflow
                 */ 
                 return (RETURN_FAILURE);
                 } 
             }
-        }
-    else
-        {
+
         /**
-        * Treat the case when  there is no file to read passed in argument of the program
-        */
+        * Freeing and setting to null the array of argument from input
+        */ 
+        (void) free(dbl_ptr_u8_lcl_program_arguments);
+        dbl_ptr_u8_lcl_program_arguments = NULL;
+        s32_pssd_program_argument_number  = 0;
         }
 
     return (RETURN_SUCCESS);
