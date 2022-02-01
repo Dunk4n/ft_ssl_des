@@ -2,6 +2,7 @@ ft_ssl
 .gitignore
 a.out
 TODO
+note
 build
 core
 *.o

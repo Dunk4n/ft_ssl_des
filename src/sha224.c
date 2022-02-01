@@ -33,7 +33,7 @@ const uint64_t SHA224_round_constants[SHA224_ROUND_NUMBER] =
     0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208, 0x90befffa, 0xa4506ceb, 0xbef9a3f7, 0xc67178f2
     };
 
-uint8_t Fu8__sha224(hash_input_t *ptr_sstc_pssd_hash_input, hash_output_t *ptr_sstc_pssd_hash_output)
+uint8_t Fu8__sha224(blob_t *ptr_sstc_pssd_blob_input, blob_t *ptr_sstc_pssd_blob_output)
     {
     /**
     * Assertion of argument
@@ -174,18 +174,18 @@ uint8_t Fu8__sha224(hash_input_t *ptr_sstc_pssd_hash_input, hash_output_t *ptr_s
     /**
     * Calculate the number of bits in the input message
     */
-    u64_lcl_number_of_bit_in_message = (uint64_t) (ptr_sstc_pssd_hash_input->u64_length_of_data_to_hash_ * 8);
+    u64_lcl_number_of_bit_in_message = (uint64_t) (ptr_sstc_pssd_blob_input->u64_length_data_blob_ * 8);
     u64_lcl_number_of_bit_in_message = Fu8__reverse_byte_of_u64(u64_lcl_number_of_bit_in_message);
 
     /**
     * Calculate the number of block in the input message
     */ 
-    u64_lcl_number_of_block_in_the_input_message = ptr_sstc_pssd_hash_input->u64_length_of_data_to_hash_ / SHA224_BLOCK_SIZE_IN_BYTE;
+    u64_lcl_number_of_block_in_the_input_message = ptr_sstc_pssd_blob_input->u64_length_data_blob_ / SHA224_BLOCK_SIZE_IN_BYTE;
 
     /**
     * Check if the modulo of the length of the input message by the sha224 block size is not zero
     */
-    if((ptr_sstc_pssd_hash_input->u64_length_of_data_to_hash_ % SHA224_BLOCK_SIZE_IN_BYTE) != 0)
+    if((ptr_sstc_pssd_blob_input->u64_length_data_blob_ % SHA224_BLOCK_SIZE_IN_BYTE) != 0)
         {
         /**
         * Treat the case when the modulo of the length of the input message by the sha224 block size is not zero
@@ -359,7 +359,7 @@ uint8_t Fu8__sha224(hash_input_t *ptr_sstc_pssd_hash_input, hash_output_t *ptr_s
                 /**
                 * Check if the position of the actual byte in the input message is after the end of the input message
                 */
-                if(((u64_lcl_actual_block_number * SHA224_BLOCK_SIZE_IN_BYTE) + u64_lcl_cnt) >= ptr_sstc_pssd_hash_input->u64_length_of_data_to_hash_)
+                if(((u64_lcl_actual_block_number * SHA224_BLOCK_SIZE_IN_BYTE) + u64_lcl_cnt) >= ptr_sstc_pssd_blob_input->u64_length_data_blob_)
                     {
                     /**
                     * Treat the case when the position of the actual byte in the input message is after the end of the input message
@@ -368,7 +368,7 @@ uint8_t Fu8__sha224(hash_input_t *ptr_sstc_pssd_hash_input, hash_output_t *ptr_s
                     /**
                     * Check if the position of the actual byte in the input message is just after the end of the input message
                     */
-                    if(((u64_lcl_actual_block_number * SHA224_BLOCK_SIZE_IN_BYTE) + u64_lcl_cnt) == ptr_sstc_pssd_hash_input->u64_length_of_data_to_hash_)
+                    if(((u64_lcl_actual_block_number * SHA224_BLOCK_SIZE_IN_BYTE) + u64_lcl_cnt) == ptr_sstc_pssd_blob_input->u64_length_data_blob_)
                         {
                         /**
                         * Treat the case when the position of the actual byte in the input message is just after the end of the input message
@@ -440,7 +440,7 @@ uint8_t Fu8__sha224(hash_input_t *ptr_sstc_pssd_hash_input, hash_output_t *ptr_s
                     * Treat the case when the position of the actual byte in the input message is not after the end of the input message
                     */
 
-                    u8_lcl_message_block[u64_lcl_cnt] = ptr_sstc_pssd_hash_input->ptr_u8_data_to_hash_blob_[(u64_lcl_actual_block_number * SHA224_BLOCK_SIZE_IN_BYTE) + u64_lcl_cnt];
+                    u8_lcl_message_block[u64_lcl_cnt] = ptr_sstc_pssd_blob_input->ptr_u8_data_blob_[(u64_lcl_actual_block_number * SHA224_BLOCK_SIZE_IN_BYTE) + u64_lcl_cnt];
                     }
 
                 /**
@@ -651,22 +651,22 @@ uint8_t Fu8__sha224(hash_input_t *ptr_sstc_pssd_hash_input, hash_output_t *ptr_s
     u32_lcl_H_block_data = Fu8__reverse_byte_of_u32(u32_lcl_H_block_data);
 
     /**
-    * Setting the seven block data of the digest to the structure hash output
+    * Setting the seven block data of the digest to the structure blob output
     */
     u8_lcl_return_from_function = RETURN_FAILURE;
-    u8_lcl_return_from_function = Fu8__preset_output_data_of_structure_hash_output_from_passed_seven_u32(ptr_sstc_pssd_hash_output, u32_lcl_A_block_data, u32_lcl_B_block_data, u32_lcl_C_block_data, u32_lcl_D_block_data, u32_lcl_E_block_data, u32_lcl_F_block_data, u32_lcl_G_block_data);
+    u8_lcl_return_from_function = Fu8__preset_data_of_structure_blob_from_passed_seven_u32(ptr_sstc_pssd_blob_output, u32_lcl_A_block_data, u32_lcl_B_block_data, u32_lcl_C_block_data, u32_lcl_D_block_data, u32_lcl_E_block_data, u32_lcl_F_block_data, u32_lcl_G_block_data);
 
     /**
-    * Check if function to set the seven block data of the digest to the structure hash output succeeded
+    * Check if function to set the seven block data of the digest to the structure blob output succeeded
     */
     if(u8_lcl_return_from_function != RETURN_SUCCESS)
         {
         /**
-        * Treat the case when the function to set the seven block data of the digest to the structure hash output failed
+        * Treat the case when the function to set the seven block data of the digest to the structure blob output failed
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the seven block data of the digest to the structure hash output failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the seven block data of the digest to the structure blob output failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
@@ -678,14 +678,14 @@ uint8_t Fu8__sha224(hash_input_t *ptr_sstc_pssd_hash_input, hash_output_t *ptr_s
         #endif
 
         /**
-        * Return failure to indicate the function to set the seven block data of the digest to the structure hash output failed
+        * Return failure to indicate the function to set the seven block data of the digest to the structure blob output failed
         */
         return (RETURN_FAILURE);
         }
     else
         {
         /**
-        * Treat the case when function to set the seven block data of the digest to the structure hash output suucceeded
+        * Treat the case when function to set the seven block data of the digest to the structure blob output suucceeded
         */
         } 
 

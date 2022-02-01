@@ -396,8 +396,85 @@ uint8_t Fu8__parse_argument_and_execute_command(argument_t *ptr_sstc_pssd_argume
         }
     else if (ptr_sstc_pssd_argument->e_command_type_ == TYPE_OF_PROGRAM_OPTION_DES)
         {
-        printf("EXEC DES\n");
-        //IF_FUNC(Execute the des command,`Fu8__execute_des_command(ptr_sstc_pssd_argument)`,execute the des command)
+        /**
+        * Execute the des command
+        */
+        u8_lcl_return_from_function = RETURN_FAILURE;
+        u8_lcl_return_from_function = Fu8__execute_des_command(ptr_sstc_pssd_argument);
+
+        /**
+        * Check if function to execute the des command succeeded
+        */
+        if(u8_lcl_return_from_function != RETURN_SUCCESS)
+            {
+            /**
+            * Treat the case when the function to execute the des command failed
+            */
+
+            #ifdef DEVELOPEMENT
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to execute the des command failed\n", __FILE__, __func__, __LINE__);
+            #endif
+
+            #ifdef DEMO
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            #endif
+
+            #ifdef PRODUCTION
+            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            #endif
+
+            /**
+            * Return failure to indicate the function to execute the des command failed
+            */
+            return (RETURN_FAILURE);
+            }
+        else
+            {
+            /**
+            * Treat the case when function to execute the des command suucceeded
+            */
+            } 
+        }
+    else if (ptr_sstc_pssd_argument->e_command_type_ == TYPE_OF_PROGRAM_OPTION_DES3)
+        {
+        /**
+        * Execute the des3 command
+        */
+        u8_lcl_return_from_function = RETURN_FAILURE;
+        u8_lcl_return_from_function = Fu8__execute_des3_command(ptr_sstc_pssd_argument);
+
+        /**
+        * Check if function to execute the des3 command succeeded
+        */
+        if(u8_lcl_return_from_function != RETURN_SUCCESS)
+            {
+            /**
+            * Treat the case when the function to execute the des3 command failed
+            */
+
+            #ifdef DEVELOPEMENT
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to execute the des3 command failed\n", __FILE__, __func__, __LINE__);
+            #endif
+
+            #ifdef DEMO
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            #endif
+
+            #ifdef PRODUCTION
+            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            #endif
+
+            /**
+            * Return failure to indicate the function to execute the des3 command failed
+            */
+            return (RETURN_FAILURE);
+            }
+        else
+            {
+            /**
+            * Treat the case when function to execute the des3 command suucceeded
+            */
+            } 
         }
     else
         {
@@ -504,6 +581,7 @@ uint8_t Fu8__multiple_parse_argument_and_execute_command_from_stdin(argument_t *
     int32_t   s32_lcl_return_from_function;
     int32_t   s32_pssd_program_argument_number;
     uint64_t  u64_lcl_cnt;
+    uint8_t   u8_lcl_error_occur;
     uint8_t   u8_lcl_return_from_function;
     uint8_t  *ptr_u8_lcl_command_str;
     uint8_t **dbl_ptr_u8_lcl_program_arguments;
@@ -516,6 +594,7 @@ uint8_t Fu8__multiple_parse_argument_and_execute_command_from_stdin(argument_t *
     s32_lcl_return_from_function     = 1;
     s32_pssd_program_argument_number = 0;
     u64_lcl_cnt                      = 0;
+    u8_lcl_error_occur               = FALSE;
     u8_lcl_return_from_function      = RETURN_FAILURE;
 
     /**
@@ -578,6 +657,24 @@ uint8_t Fu8__multiple_parse_argument_and_execute_command_from_stdin(argument_t *
             */
             (void) free(ptr_u8_lcl_command_str);
             ptr_u8_lcl_command_str = NULL;
+
+            /**
+            * Check if an error occur in the execution
+            */
+            if(u8_lcl_error_occur != FALSE)
+                {
+                /**
+                * Treat the case when an error occur in the execution
+                */
+
+                ptr_sstc_pssd_argument->u8_global_status_ |= SECOND_BIT;
+                }
+            else
+                {
+                /**
+                * Treat the case when no error occur in the execution
+                */
+                } 
 
             return (RETURN_SUCCESS);
             }
@@ -718,6 +815,24 @@ uint8_t Fu8__multiple_parse_argument_and_execute_command_from_stdin(argument_t *
             }
 
         /**
+        * Check if an error occur in the execution
+        */
+        if((ptr_sstc_pssd_argument->u8_global_status_ & SECOND_BIT) != FALSE)
+            {
+            /**
+            * Treat the case when an error occur in the execution
+            */
+
+            u8_lcl_error_occur = TRUE;
+            }
+        else
+            {
+            /**
+            * Treat the case when no error occur in the execution
+            */
+            } 
+
+        /**
         * Freeing and setting to null all the element of the array of argument from input
         */ 
         u64_lcl_cnt = 0;
@@ -761,6 +876,24 @@ uint8_t Fu8__multiple_parse_argument_and_execute_command_from_stdin(argument_t *
         dbl_ptr_u8_lcl_program_arguments = NULL;
         s32_pssd_program_argument_number  = 0;
         }
+
+    /**
+    * Check if an error occur in the execution
+    */
+    if(u8_lcl_error_occur != FALSE)
+        {
+        /**
+        * Treat the case when an error occur in the execution
+        */
+
+        ptr_sstc_pssd_argument->u8_global_status_ |= SECOND_BIT;
+        }
+    else
+        {
+        /**
+        * Treat the case when no error occur in the execution
+        */
+        } 
 
     return (RETURN_SUCCESS);
     }

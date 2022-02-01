@@ -432,7 +432,7 @@ void Fv__print_blob_in_hexadecimal(uint8_t *ptr_u8_pssd_blob, uint64_t u64_pssd_
     u64_lcl_cnt = 0;
     while(u64_lcl_cnt < u64_pssd_blob_length)
         {
-        ft_printf("%02x",ptr_u8_pssd_blob[u64_lcl_cnt]);
+        ft_printf("%02x", ptr_u8_pssd_blob[u64_lcl_cnt]);
 
         /**
         * Checking for overflow
@@ -521,32 +521,7 @@ void Fv__print_variable_in_bits(void *ptr_vd_pssd_variable, uint64_t u64_pssd_va
         if(u64_lcl_cnt != 0)
             ft_printf(" ");
 
-        if((((uint8_t *) ptr_vd_pssd_variable)[u64_lcl_cnt] & FIRST_BIT) != FALSE)
-            ft_printf("1");
-        else
-            ft_printf("0");
-
-        if((((uint8_t *) ptr_vd_pssd_variable)[u64_lcl_cnt] & SECOND_BIT) != FALSE)
-            ft_printf("1");
-        else
-            ft_printf("0");
-
-        if((((uint8_t *) ptr_vd_pssd_variable)[u64_lcl_cnt] & THIRD_BIT) != FALSE)
-            ft_printf("1");
-        else
-            ft_printf("0");
-
-        if((((uint8_t *) ptr_vd_pssd_variable)[u64_lcl_cnt] & FOURTH_BIT) != FALSE)
-            ft_printf("1");
-        else
-            ft_printf("0");
-
-        if((((uint8_t *) ptr_vd_pssd_variable)[u64_lcl_cnt] & FIFTH_BIT) != FALSE)
-            ft_printf("1");
-        else
-            ft_printf("0");
-
-        if((((uint8_t *) ptr_vd_pssd_variable)[u64_lcl_cnt] & SIXTH_BIT) != FALSE)
+        if((((uint8_t *) ptr_vd_pssd_variable)[u64_lcl_cnt] & EIGHTH_BIT) != FALSE)
             ft_printf("1");
         else
             ft_printf("0");
@@ -556,7 +531,32 @@ void Fv__print_variable_in_bits(void *ptr_vd_pssd_variable, uint64_t u64_pssd_va
         else
             ft_printf("0");
 
-        if((((uint8_t *) ptr_vd_pssd_variable)[u64_lcl_cnt] & EIGHTH_BIT) != FALSE)
+        if((((uint8_t *) ptr_vd_pssd_variable)[u64_lcl_cnt] & SIXTH_BIT) != FALSE)
+            ft_printf("1");
+        else
+            ft_printf("0");
+
+        if((((uint8_t *) ptr_vd_pssd_variable)[u64_lcl_cnt] & FIFTH_BIT) != FALSE)
+            ft_printf("1");
+        else
+            ft_printf("0");
+
+        if((((uint8_t *) ptr_vd_pssd_variable)[u64_lcl_cnt] & FOURTH_BIT) != FALSE)
+            ft_printf("1");
+        else
+            ft_printf("0");
+
+        if((((uint8_t *) ptr_vd_pssd_variable)[u64_lcl_cnt] & THIRD_BIT) != FALSE)
+            ft_printf("1");
+        else
+            ft_printf("0");
+
+        if((((uint8_t *) ptr_vd_pssd_variable)[u64_lcl_cnt] & SECOND_BIT) != FALSE)
+            ft_printf("1");
+        else
+            ft_printf("0");
+
+        if((((uint8_t *) ptr_vd_pssd_variable)[u64_lcl_cnt] & FIRST_BIT) != FALSE)
             ft_printf("1");
         else
             ft_printf("0");
@@ -648,32 +648,7 @@ void Fv__print_bits_block(void *ptr_vd_pssd_block, uint64_t u64_pssd_block_lengt
         if((u64_lcl_cnt % 8) != 0)
             ft_printf(" ");
 
-        if((((uint8_t *) ptr_vd_pssd_block)[u64_lcl_cnt] & FIRST_BIT) != FALSE)
-            ft_printf("1");
-        else
-            ft_printf("0");
-
-        if((((uint8_t *) ptr_vd_pssd_block)[u64_lcl_cnt] & SECOND_BIT) != FALSE)
-            ft_printf("1");
-        else
-            ft_printf("0");
-
-        if((((uint8_t *) ptr_vd_pssd_block)[u64_lcl_cnt] & THIRD_BIT) != FALSE)
-            ft_printf("1");
-        else
-            ft_printf("0");
-
-        if((((uint8_t *) ptr_vd_pssd_block)[u64_lcl_cnt] & FOURTH_BIT) != FALSE)
-            ft_printf("1");
-        else
-            ft_printf("0");
-
-        if((((uint8_t *) ptr_vd_pssd_block)[u64_lcl_cnt] & FIFTH_BIT) != FALSE)
-            ft_printf("1");
-        else
-            ft_printf("0");
-
-        if((((uint8_t *) ptr_vd_pssd_block)[u64_lcl_cnt] & SIXTH_BIT) != FALSE)
+        if((((uint8_t *) ptr_vd_pssd_block)[u64_lcl_cnt] & EIGHTH_BIT) != FALSE)
             ft_printf("1");
         else
             ft_printf("0");
@@ -683,7 +658,32 @@ void Fv__print_bits_block(void *ptr_vd_pssd_block, uint64_t u64_pssd_block_lengt
         else
             ft_printf("0");
 
-        if((((uint8_t *) ptr_vd_pssd_block)[u64_lcl_cnt] & EIGHTH_BIT) != FALSE)
+        if((((uint8_t *) ptr_vd_pssd_block)[u64_lcl_cnt] & SIXTH_BIT) != FALSE)
+            ft_printf("1");
+        else
+            ft_printf("0");
+
+        if((((uint8_t *) ptr_vd_pssd_block)[u64_lcl_cnt] & FIFTH_BIT) != FALSE)
+            ft_printf("1");
+        else
+            ft_printf("0");
+
+        if((((uint8_t *) ptr_vd_pssd_block)[u64_lcl_cnt] & FOURTH_BIT) != FALSE)
+            ft_printf("1");
+        else
+            ft_printf("0");
+
+        if((((uint8_t *) ptr_vd_pssd_block)[u64_lcl_cnt] & THIRD_BIT) != FALSE)
+            ft_printf("1");
+        else
+            ft_printf("0");
+
+        if((((uint8_t *) ptr_vd_pssd_block)[u64_lcl_cnt] & SECOND_BIT) != FALSE)
+            ft_printf("1");
+        else
+            ft_printf("0");
+
+        if((((uint8_t *) ptr_vd_pssd_block)[u64_lcl_cnt] & FIRST_BIT) != FALSE)
             ft_printf("1");
         else
             ft_printf("0");
@@ -1060,16 +1060,16 @@ uint8_t Fu8__string_to_array(uint8_t *ptr_u8_pssd_str, int32_t *ptr_s32_pssd_pro
         } 
 
     /**
-    * Check if the address of the number of program argumnet to return is correctly pointing passed as an argument of the function
+    * Check if the address of the number of program argument to return is correctly pointing passed as an argument of the function
     */
     if(ptr_s32_pssd_program_argument_number == NULL)
         {
         /**
-        * Treat the case when the address of the number of program argumnet to return is not correctly pointing passed as an argument of the function
+        * Treat the case when the address of the number of program argument to return is not correctly pointing passed as an argument of the function
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the address of the number of program argumnet to return is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the address of the number of program argument to return is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
@@ -1081,14 +1081,14 @@ uint8_t Fu8__string_to_array(uint8_t *ptr_u8_pssd_str, int32_t *ptr_s32_pssd_pro
         #endif
 
         /**
-        * Return failure to indicate the address of the number of program argumnet to return is not correctly pointing passed as an argument of the function
+        * Return failure to indicate the address of the number of program argument to return is not correctly pointing passed as an argument of the function
         */
         return (RETURN_FAILURE);
         }
     else
         {
         /**
-        * Treat the case when the address of the number of program argumnet to return is correctly pointing passed as an argument of the function
+        * Treat the case when the address of the number of program argument to return is correctly pointing passed as an argument of the function
         */
         }
 
@@ -1708,4 +1708,24 @@ uint8_t Fu8__string_to_array(uint8_t *ptr_u8_pssd_str, int32_t *ptr_s32_pssd_pro
     (*ptr_dbl_ptr_u8_pssd_program_arguments)[s32_pssd_program_argument_number] = NULL;
 
     return (RETURN_SUCCESS);
+    }
+
+uint8_t Fu8__get_bit(uint8_t *ptr_u8_pssd_bit_array, uint64_t u64_pssd_index)
+    {
+    return ((ptr_u8_pssd_bit_array[u64_pssd_index / 8] & (1 << (7 - (u64_pssd_index % 8)))) != 0);
+    }
+
+void    Fu8__set_bit(uint8_t *ptr_u8_pssd_bit_array, uint64_t u64_pssd_index, uint8_t u8_pssd_value)
+    {
+    uint8_t u8_lcl_position_in_byte;
+
+    u8_lcl_position_in_byte = (7 - (u64_pssd_index % 8));
+    if(u8_pssd_value == 0)
+        {
+        ptr_u8_pssd_bit_array[u64_pssd_index / 8] &= ~(1 << u8_lcl_position_in_byte);
+        }
+    else
+        {
+        ptr_u8_pssd_bit_array[u64_pssd_index / 8] |= (1 << u8_lcl_position_in_byte);
+        }
     }

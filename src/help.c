@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-    #include "ssl.h"
+#include "ssl.h"
 
 void    fv__usage(void)
     {
@@ -366,12 +366,48 @@ void    fv__command_option_help(void)
         }
 
     /**
-    * Display all the cipher commands
+    * Display all the des commands
     */ 
     u8_lcl_cnt = 0;
     while(u8_lcl_cnt < DES_COMMAND_NUMBER)
         {
         ft_printf("%s\n", des_command_name[u8_lcl_cnt]);
+
+        /**
+        * Checking for overflow
+        */
+        if(u8_lcl_cnt < UINT8_MAX)
+            {
+            u8_lcl_cnt++;
+            }
+        else
+            {
+            #ifdef DEVELOPEMENT
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            #endif
+
+            #ifdef DEMO
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            #endif
+
+            #ifdef PRODUCTION
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+            #endif
+
+            /**
+            * Return a failure to indicate the counter variable overflow
+            */ 
+            return ;
+            } 
+        }
+
+    /**
+    * Display all the des3 commands
+    */ 
+    u8_lcl_cnt = 0;
+    while(u8_lcl_cnt < DES3_COMMAND_NUMBER)
+        {
+        ft_printf("%s\n", des3_command_name[u8_lcl_cnt]);
 
         /**
         * Checking for overflow

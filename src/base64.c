@@ -12,6 +12,37 @@
 
 #include "ssl.h"
 
+/**
+* BASE64
+*/
+const   uint8_t *base64_simple_options[BASE64_SIMPLE_OPTION_NUMBER] =
+    {
+    (uint8_t *) "-e",
+    (uint8_t *) "-d",
+    (uint8_t *) "-h",
+    };
+
+const   uint8_t *base64_argument_options[BASE64_ARGUMENT_OPTION_NUMBER] =
+    {
+    (uint8_t *) "-i",
+    (uint8_t *) "-o",
+    };
+
+const   uint8_t *base64_command_name[BASE64_COMMAND_NUMBER] =
+    {
+    (uint8_t *) "base64"
+    };
+
+const   uint8_t *base64_uppercase_command_name[BASE64_COMMAND_NUMBER] =
+    {
+    (uint8_t *) "BASE64"
+    };
+
+uint8_t (*const base64_command_function[BASE64_COMMAND_NUMBER])(blob_t *ptr_sstc_pssd_blob_input, blob_t *ptr_sstc_pssd_blob_output, uint8_t u8_pssd_encode_flag) =
+    {
+    Fu8_base64,
+    };
+
 uint8_t Fu8_base64_encode(blob_t *ptr_sstc_pssd_blob_input, blob_t *ptr_sstc_pssd_blob_output)
     {
     /**
@@ -288,10 +319,13 @@ uint8_t Fu8_base64_encode(blob_t *ptr_sstc_pssd_blob_input, blob_t *ptr_sstc_pss
 
             u8_lcl_actual_data_to_encode[2] = 0;
 
-            /**
-            * Setting the last input element are not present
-            */ 
-            u8_lcl_two_last_input_element_not_present = 2;
+            if(u8_lcl_two_last_input_element_not_present == 0)
+                {
+                /**
+                * Setting the last input element are not present
+                */ 
+                u8_lcl_two_last_input_element_not_present = 2;
+                }
             }
 
         /**
@@ -654,7 +688,7 @@ uint8_t Fu8_base64_encode(blob_t *ptr_sstc_pssd_blob_input, blob_t *ptr_sstc_pss
         /**
         * Check if the last two input element are not present
         */
-        if(u8_lcl_two_last_input_element_not_present == 2)
+        if(u8_lcl_two_last_input_element_not_present > 0)
             {
             /**
             * Treat the case when the last two input element are not present
@@ -1820,12 +1854,12 @@ uint8_t Fu8_base64(blob_t *ptr_sstc_pssd_blob_input, blob_t *ptr_sstc_pssd_blob_
     u8_lcl_return_from_function = RETURN_FAILURE;
 
     /**
-    * Check if the encode flag passed in argumnet of the function is false
+    * Check if the encode flag passed in argument of the function is false
     */
     if(u8_pssd_encode_flag == FALSE)
         {
         /**
-        * Treat the case when the encode flag passed in argumnet of the function is false
+        * Treat the case when the encode flag passed in argument of the function is false
         */
 
         /**
@@ -1870,7 +1904,7 @@ uint8_t Fu8_base64(blob_t *ptr_sstc_pssd_blob_input, blob_t *ptr_sstc_pssd_blob_
     else
         {
         /**
-        * Treat the case when the encode flag passed in argumnet of the function is true
+        * Treat the case when the encode flag passed in argument of the function is true
         */
 
         /**
@@ -1912,6 +1946,427 @@ uint8_t Fu8_base64(blob_t *ptr_sstc_pssd_blob_input, blob_t *ptr_sstc_pssd_blob_
             */
             }
         }
+
+    return (RETURN_SUCCESS);
+    }
+
+void    fv__base64_help(argument_t *ptr_sstc_pssd_argument)
+    {
+    /**
+    * Assertion of argument
+    */
+
+    /**
+    * Check if the structure argument is correctly pointing passed as an argument of the function
+    */
+    if(ptr_sstc_pssd_argument == NULL)
+        {
+        /**
+        * Treat the case when the structure argument is not correctly pointing passed as an argument of the function
+        */
+
+        #ifdef DEVELOPEMENT
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        #endif
+
+        #ifdef DEMO
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        #endif
+
+        #ifdef PRODUCTION
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+        #endif
+
+        /**
+        * Return failure to indicate the structure argument is not correctly pointing passed as an argument of the function
+        */
+        return;
+        }
+    else
+        {
+        /**
+        * Treat the case when the structure argument is correctly pointing passed as an argument of the function
+        */
+        }
+
+    /**
+    * Check if the structure argument passed in argument of the function is not already initialized
+    */
+    if((ptr_sstc_pssd_argument->u8_global_status_ & FIRST_BIT) == FALSE)
+        {
+        /**
+        * Treat the case when the structure argument passed in argument of the function is not already initialized
+        */
+
+        #ifdef DEVELOPEMENT
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
+        #endif
+
+        #ifdef DEMO
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        #endif
+
+        #ifdef PRODUCTION
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+        #endif
+
+        /**
+        * Return failure to indicate the structure argument passed in argument of the function is not already initialized
+        */
+        return;
+        }
+    else
+        {
+        /**
+        * Treat the case when  the structure argument passed in argument of the function is already initialized as expected
+        */
+        }
+
+    /**
+    * Check if the command type of the structure argument passed in argument of the function is not a command base64 type
+    */
+    if(ptr_sstc_pssd_argument->e_command_type_ != TYPE_OF_PROGRAM_OPTION_BASE64)
+        {
+        /**
+        * Treat the case when the command type of the structure argument passed in argument of the function is not a command base64 type
+        */
+
+        #ifdef DEVELOPEMENT
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the command type of the structure argument passed in argument of the function is not a command base64 type\n", __FILE__, __func__, __LINE__);
+        #endif
+
+        #ifdef DEMO
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        #endif
+
+        #ifdef PRODUCTION
+        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        #endif
+
+        /**
+        * Return failure to indicate the command type of the structure argument passed in argument of the function is not a command base64 type
+        */
+        return;
+        }
+    else
+        {
+        /**
+        * Treat the case when the command type of the structure argument passed in argument of the function is a command base64 type
+        */
+        }
+
+    ft_printf("Usage: %s [options]\n\nValid options are:\n", ptr_sstc_pssd_argument->dbl_ptr_u8_addr_command_name_list_[ptr_sstc_pssd_argument->u8_command_]);
+    ft_printf(" -d, decode mode\n");
+    ft_printf(" -e, encode mode (default)\n");
+    ft_printf(" -i, input file\n");
+    ft_printf(" -o, output file\n");
+    ft_printf(" -h, display this help\n");
+    }
+
+uint8_t Fu8__add_new_line_after_every_64_character(blob_t *ptr_sstc_pssd_blob)
+    {
+    /**
+    * Assertion of argument
+    */
+
+    /**
+    * Check if the pointer to the structure blob is correctly pointing passed as an argument of the function
+    */
+    if(ptr_sstc_pssd_blob == NULL)
+        {
+        /**
+        * Treat the case when the pointer to the structure blob is not correctly pointing passed as an argument of the function
+        */
+
+        #ifdef DEVELOPEMENT
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the pointer to the structure blob is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        #endif
+
+        #ifdef DEMO
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        #endif
+
+        #ifdef PRODUCTION
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+        #endif
+
+        /**
+        * Return failure to indicate the pointer to the structure blob is not correctly pointing passed as an argument of the function
+        */
+        return (RETURN_FAILURE);
+        }
+    else
+        {
+        /**
+        * Treat the case when the pointer to the structure blob is correctly pointing passed as an argument of the function
+        */
+        }
+
+    /**
+    * Check if the structure blob passed as an argument to the function is not already initialized
+    */
+    if((ptr_sstc_pssd_blob->u8_global_status_ & FIRST_BIT) == FALSE)
+        {
+        /**
+        * Treat the case when the structure blob passed as an argument to the function is not already initialized
+        */
+
+        #ifdef DEVELOPEMENT
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure blob passed as an argument to the function is not already initialized\n", __FILE__, __func__, __LINE__);
+        #endif
+
+        #ifdef DEMO
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        #endif
+
+        #ifdef PRODUCTION
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+        #endif
+
+        /**
+        * Return failure to indicate the structure blob passed as an argument to the function is not already initialized
+        */
+        return (RETURN_FAILURE);
+        }
+    else
+        {
+        /**
+        * Treat the case when  the structure blob passed as an argument to the function is initialized as expected
+        */
+        }
+
+    /**
+    * Check if the length of the data blob passed in argument of the function is zero
+    */
+    if(ptr_sstc_pssd_blob->u64_length_data_blob_ == 0)
+        {
+        /**
+        * Treat the case when the length of the data blob passed in argument of the function is zero
+        */
+
+        return (RETURN_SUCCESS);
+        }
+    else
+        {
+        /**
+        * Treat the case when the length of the data blob passed in argument of the function is not zero
+        */
+        } 
+
+    /**
+    * Creation of local variable
+    */
+    uint64_t  u64_lcl_cnt;
+    uint64_t  u64_lcl_new_data_length;
+    uint64_t  u64_lcl_number_of_new_line_to_add;
+    uint64_t  u64_lcl_pos_new_data_blob;
+    uint8_t  *ptr_u8_lcl_new_data;
+
+    /**
+    * Initialization of local variable
+    */
+    ptr_u8_lcl_new_data               = NULL;
+    u64_lcl_cnt                       = 0;
+    u64_lcl_new_data_length           = 0;
+    u64_lcl_number_of_new_line_to_add = 0;
+    u64_lcl_pos_new_data_blob         = 0;
+
+    /**
+    * Getting the number of new line to add
+    */
+    u64_lcl_number_of_new_line_to_add = (ptr_sstc_pssd_blob->u64_length_data_blob_ / LENGTH_BASE64_OUTPUT_BLOCK) + ((ptr_sstc_pssd_blob->u64_length_data_blob_ % LENGTH_BASE64_OUTPUT_BLOCK) != 0);
+
+    /**
+    * Check if the addition of the length of the data blob with the number of new line to add overflow
+    */
+    if(ptr_sstc_pssd_blob->u64_length_data_blob_ > (UINT64_MAX - u64_lcl_number_of_new_line_to_add))
+        {
+        /**
+        * Treat the case when the addition of the length of the data blob with the number of new line to add overflow
+        */
+
+        #ifdef DEVELOPEMENT
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the addition of the length of the data blob with the number of new line to add overflow\n", __FILE__, __func__, __LINE__);
+        #endif
+
+        #ifdef DEMO
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        #endif
+
+        #ifdef PRODUCTION
+        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        #endif
+
+        /**
+        * Return failure to indicate the addition of the length of the data blob with the number of new line to add overflow
+        */
+        return (RETURN_FAILURE);
+        }
+    else
+        {
+        /**
+        * Treat the case when the addition of the length of the data blob with the number of new line to add not overflow
+        */
+
+        u64_lcl_new_data_length = ptr_sstc_pssd_blob->u64_length_data_blob_ + u64_lcl_number_of_new_line_to_add;
+        }
+
+    /**
+    * Allocating the new data blob
+    */
+    ptr_u8_lcl_new_data = NULL;
+    ptr_u8_lcl_new_data = (uint8_t *) malloc(sizeof(uint8_t) * u64_lcl_new_data_length);
+
+    /**
+    * Check if the allocation of the new data blob failed
+    */
+    if(ptr_u8_lcl_new_data == NULL)
+        {
+        /**
+        * Treat the case when the allocation of the new data blob failed
+        */
+
+        #ifdef DEVELOPEMENT
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The allocation of the new data blob failed\n", __FILE__, __func__, __LINE__);
+        #endif
+
+        #ifdef DEMO
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        #endif
+
+        #ifdef PRODUCTION
+        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        #endif
+
+        /**
+        * Return failure to indicate the allocation of the new data blob failed
+        */
+        return (RETURN_FAILURE);
+        }
+    else
+        {
+        /**
+        * Treat the case when the allocation of the new data blob succeeded
+        */
+        }
+
+    /**
+    * Copying the content of the blob passed in argument of the function to the new data blob and adding the new line every 64 character
+    */
+    u64_lcl_pos_new_data_blob = 0;
+    u64_lcl_cnt               = 0;
+    while((u64_lcl_cnt < ptr_sstc_pssd_blob->u64_length_data_blob_) && (u64_lcl_pos_new_data_blob < u64_lcl_new_data_length))
+        {
+        if((u64_lcl_cnt != 0) && ((u64_lcl_cnt % LENGTH_BASE64_OUTPUT_BLOCK) == 0))
+            {
+            ptr_u8_lcl_new_data[u64_lcl_pos_new_data_blob] = '\n';
+
+            /**
+            * Checking for overflow
+            */
+            if(u64_lcl_pos_new_data_blob < UINT64_MAX)
+                {
+                u64_lcl_pos_new_data_blob++;
+                }
+            else
+                {
+                #ifdef DEVELOPEMENT
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                #endif
+
+                #ifdef DEMO
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                #endif
+
+                #ifdef PRODUCTION
+                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                #endif
+
+                (void) free(ptr_u8_lcl_new_data);
+                ptr_u8_lcl_new_data = NULL;
+
+                /**
+                * Return a failure to indicate the counter variable overflow
+                */ 
+                return (RETURN_FAILURE);
+                } 
+            }
+
+        ptr_u8_lcl_new_data[u64_lcl_pos_new_data_blob] = ptr_sstc_pssd_blob->ptr_u8_data_blob_[u64_lcl_cnt];
+
+        /**
+        * Checking for overflow
+        */
+        if(u64_lcl_pos_new_data_blob < UINT64_MAX)
+            {
+            u64_lcl_pos_new_data_blob++;
+            }
+        else
+            {
+            #ifdef DEVELOPEMENT
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            #endif
+
+            #ifdef DEMO
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            #endif
+
+            #ifdef PRODUCTION
+            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            #endif
+
+            (void) free(ptr_u8_lcl_new_data);
+            ptr_u8_lcl_new_data = NULL;
+
+            /**
+            * Return a failure to indicate the counter variable overflow
+            */ 
+            return (RETURN_FAILURE);
+            } 
+
+        /**
+        * Checking for overflow
+        */
+        if(u64_lcl_cnt < UINT64_MAX)
+            {
+            u64_lcl_cnt++;
+            }
+        else
+            {
+            #ifdef DEVELOPEMENT
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            #endif
+
+            #ifdef DEMO
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            #endif
+
+            #ifdef PRODUCTION
+            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            #endif
+
+            (void) free(ptr_u8_lcl_new_data);
+            ptr_u8_lcl_new_data = NULL;
+
+            /**
+            * Return a failure to indicate the counter variable overflow
+            */ 
+            return (RETURN_FAILURE);
+            } 
+        }
+
+    ptr_u8_lcl_new_data[u64_lcl_pos_new_data_blob] = '\n';
+
+    (void) free(ptr_sstc_pssd_blob->ptr_u8_data_blob_);
+    ptr_sstc_pssd_blob->ptr_u8_data_blob_ = NULL;
+
+    ptr_sstc_pssd_blob->ptr_u8_data_blob_     = ptr_u8_lcl_new_data;
+    ptr_sstc_pssd_blob->u64_length_data_blob_ = u64_lcl_new_data_length;
+
+    /**
+    * Setting the structure blob to input set
+    */
+    ptr_sstc_pssd_blob->u8_global_status_ |= SECOND_BIT;
 
     return (RETURN_SUCCESS);
     }
@@ -1989,6 +2444,39 @@ uint8_t Fu8__execute_base64_command(argument_t *ptr_sstc_pssd_argument)
         }
 
     /**
+    * Check if the command type of the structure argument passed in argument of the function is not a command base64 type
+    */
+    if(ptr_sstc_pssd_argument->e_command_type_ != TYPE_OF_PROGRAM_OPTION_BASE64)
+        {
+        /**
+        * Treat the case when the command type of the structure argument passed in argument of the function is not a command base64 type
+        */
+
+        #ifdef DEVELOPEMENT
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the command type of the structure argument passed in argument of the function is not a command base64 type\n", __FILE__, __func__, __LINE__);
+        #endif
+
+        #ifdef DEMO
+        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        #endif
+
+        #ifdef PRODUCTION
+        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        #endif
+
+        /**
+        * Return failure to indicate the command type of the structure argument passed in argument of the function is not a command base64 type
+        */
+        return (RETURN_FAILURE);
+        }
+    else
+        {
+        /**
+        * Treat the case when the command type of the structure argument passed in argument of the function is a command base64 type
+        */
+        } 
+
+    /**
     * Check if the command type passed in the structure argument passed in the argument of the function does not exist
     */
     if(ptr_sstc_pssd_argument->u8_command_ >= ptr_sstc_pssd_argument->u8_command_number_)
@@ -2027,15 +2515,40 @@ uint8_t Fu8__execute_base64_command(argument_t *ptr_sstc_pssd_argument)
     blob_t   sstc_lcl_blob_input;
     blob_t   sstc_lcl_blob_output;
     int32_t  s32_lcl_file_descriptor;
+    int32_t  s32_lcl_return_from_function;
     uint8_t  u8_lcl_return_from_function;
 
     /**
     * Initialization of local variable
     */
     s32_lcl_file_descriptor                = 0;
+    s32_lcl_return_from_function           = 0;
     sstc_lcl_blob_input.u8_global_status_  = 0;
     sstc_lcl_blob_output.u8_global_status_ = 0;
     u8_lcl_return_from_function            = 0;
+
+    /**
+    * Check if the flag help is set
+    */
+    if(ptr_sstc_pssd_argument->ptr_u8_simple_options_[BASE64_HELP] != FALSE)
+        {
+        /**
+        * Treat the case when the flag help is set
+        */
+
+        /**
+        * Display the help for base64
+        */
+        (void) fv__base64_help(ptr_sstc_pssd_argument);
+
+        return (RETURN_SUCCESS);
+        }
+    else
+        {
+        /**
+        * Treat the case when the flag help is not set
+        */
+        } 
 
     /**
     * Initialize the structure blob
@@ -2105,6 +2618,45 @@ uint8_t Fu8__execute_base64_command(argument_t *ptr_sstc_pssd_argument)
             #ifdef PRODUCTION
             fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
+
+            /**
+            * Closing the structure blob
+            */
+            u8_lcl_return_from_function = RETURN_FAILURE;
+            u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_blob_input);
+
+            /**
+            * Check if function to close the structure blob succeeded
+            */
+            if(u8_lcl_return_from_function != RETURN_SUCCESS)
+                {
+                /**
+                * Treat the case when the function to close the structure blob failed
+                */
+
+                #ifdef DEVELOPEMENT
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob failed\n", __FILE__, __func__, __LINE__);
+                #endif
+
+                #ifdef DEMO
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                #endif
+
+                #ifdef PRODUCTION
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+                #endif
+
+                /**
+                * Return failure to indicate the function to close the structure blob failed
+                */
+                return (RETURN_FAILURE);
+                }
+            else
+                {
+                /**
+                * Treat the case when function to close the structure blob suucceeded
+                */
+                }
 
             /**
             * Return failure to indicate the argument data string input in the structure argument is not correctly pointing
@@ -2216,6 +2768,45 @@ uint8_t Fu8__execute_base64_command(argument_t *ptr_sstc_pssd_argument)
             #endif
 
             /**
+            * Closing the input file
+            */
+            s32_lcl_return_from_function = RETURN_FAILURE;
+            s32_lcl_return_from_function = close(s32_lcl_file_descriptor);
+
+            /**
+            * Check if function to close the input file succeeded
+            */
+            if(s32_lcl_return_from_function < 0)
+                {
+                /**
+                * Treat the case when the function to close the input file failed
+                */
+
+                #ifdef DEVELOPEMENT
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input file  failed\n", __FILE__, __func__, __LINE__);
+                #endif
+
+                #ifdef DEMO
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                #endif
+
+                #ifdef PRODUCTION
+                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                #endif
+
+                /**
+                * Return failure to indicate the function to close the input file failed
+                */
+                return (RETURN_FAILURE);
+                }
+            else
+                {
+                /**
+                * Treat the case when function to close the input file suucceeded
+                */
+                } 
+
+            /**
             * Return failure to indicate the function to set the input blob in the structure input data to the value of the standard input failed
             */
             return (RETURN_FAILURE);
@@ -2226,6 +2817,84 @@ uint8_t Fu8__execute_base64_command(argument_t *ptr_sstc_pssd_argument)
             * Treat the case when function to set the input blob in the structure input data to the value of the standard input suucceeded
             */
             }
+
+        /**
+        * Closing the input file
+        */
+        s32_lcl_return_from_function = RETURN_FAILURE;
+        s32_lcl_return_from_function = close(s32_lcl_file_descriptor);
+
+        /**
+        * Check if function to close the input file succeeded
+        */
+        if(s32_lcl_return_from_function < 0)
+            {
+            /**
+            * Treat the case when the function to close the input file failed
+            */
+
+            #ifdef DEVELOPEMENT
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input file  failed\n", __FILE__, __func__, __LINE__);
+            #endif
+
+            #ifdef DEMO
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            #endif
+
+            #ifdef PRODUCTION
+            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            #endif
+
+            /**
+            * Closing the structure blob
+            */
+            u8_lcl_return_from_function = RETURN_FAILURE;
+            u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_blob_input);
+
+            /**
+            * Check if function to close the structure blob succeeded
+            */
+            if(u8_lcl_return_from_function != RETURN_SUCCESS)
+                {
+                /**
+                * Treat the case when the function to close the structure blob failed
+                */
+
+                #ifdef DEVELOPEMENT
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob failed\n", __FILE__, __func__, __LINE__);
+                #endif
+
+                #ifdef DEMO
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                #endif
+
+                #ifdef PRODUCTION
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+                #endif
+
+                /**
+                * Return failure to indicate the function to close the structure blob failed
+                */
+                return (RETURN_FAILURE);
+                }
+            else
+                {
+                /**
+                * Treat the case when function to close the structure blob suucceeded
+                */
+                }
+
+            /**
+            * Return failure to indicate the function to close the input file failed
+            */
+            return (RETURN_FAILURE);
+            }
+        else
+            {
+            /**
+            * Treat the case when function to close the input file suucceeded
+            */
+            } 
         }
     else
         {
@@ -2259,6 +2928,45 @@ uint8_t Fu8__execute_base64_command(argument_t *ptr_sstc_pssd_argument)
             #ifdef PRODUCTION
             ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
+
+            /**
+            * Closing the structure blob
+            */
+            u8_lcl_return_from_function = RETURN_FAILURE;
+            u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_blob_input);
+
+            /**
+            * Check if function to close the structure blob succeeded
+            */
+            if(u8_lcl_return_from_function != RETURN_SUCCESS)
+                {
+                /**
+                * Treat the case when the function to close the structure blob failed
+                */
+
+                #ifdef DEVELOPEMENT
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob failed\n", __FILE__, __func__, __LINE__);
+                #endif
+
+                #ifdef DEMO
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                #endif
+
+                #ifdef PRODUCTION
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+                #endif
+
+                /**
+                * Return failure to indicate the function to close the structure blob failed
+                */
+                return (RETURN_FAILURE);
+                }
+            else
+                {
+                /**
+                * Treat the case when function to close the structure blob suucceeded
+                */
+                }
 
             /**
             * Return failure to indicate the function to set the input blob in the structure input data to the value of the standard input failed
@@ -2299,6 +3007,45 @@ uint8_t Fu8__execute_base64_command(argument_t *ptr_sstc_pssd_argument)
         #ifdef PRODUCTION
         ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
+
+        /**
+        * Closing the structure blob
+        */
+        u8_lcl_return_from_function = RETURN_FAILURE;
+        u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_blob_input);
+
+        /**
+        * Check if function to close the structure blob succeeded
+        */
+        if(u8_lcl_return_from_function != RETURN_SUCCESS)
+            {
+            /**
+            * Treat the case when the function to close the structure blob failed
+            */
+
+            #ifdef DEVELOPEMENT
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob failed\n", __FILE__, __func__, __LINE__);
+            #endif
+
+            #ifdef DEMO
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            #endif
+
+            #ifdef PRODUCTION
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+            #endif
+
+            /**
+            * Return failure to indicate the function to close the structure blob failed
+            */
+            return (RETURN_FAILURE);
+            }
+        else
+            {
+            /**
+            * Treat the case when function to close the structure blob suucceeded
+            */
+            }
 
         /**
         * Return failure to indicate the function to init the structure blob failed
@@ -2374,6 +3121,45 @@ uint8_t Fu8__execute_base64_command(argument_t *ptr_sstc_pssd_argument)
                 #ifdef PRODUCTION
                 ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
                 #endif
+
+                /**
+                * Closing the structure blob
+                */
+                u8_lcl_return_from_function = RETURN_FAILURE;
+                u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_blob_output);
+
+                /**
+                * Check if function to close the structure blob succeeded
+                */
+                if(u8_lcl_return_from_function != RETURN_SUCCESS)
+                    {
+                    /**
+                    * Treat the case when the function to close the structure blob failed
+                    */
+
+                    #ifdef DEVELOPEMENT
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob failed\n", __FILE__, __func__, __LINE__);
+                    #endif
+
+                    #ifdef DEMO
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    #endif
+
+                    #ifdef PRODUCTION
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+                    #endif
+
+                    /**
+                    * Return failure to indicate the function to close the structure blob failed
+                    */
+                    return (RETURN_FAILURE);
+                    }
+                else
+                    {
+                    /**
+                    * Treat the case when function to close the structure blob suucceeded
+                    */
+                    }
 
                 /**
                 * Return failure to indicate the function to close the structure blob failed
@@ -2499,6 +3285,45 @@ uint8_t Fu8__execute_base64_command(argument_t *ptr_sstc_pssd_argument)
                 #endif
 
                 /**
+                * Closing the structure blob
+                */
+                u8_lcl_return_from_function = RETURN_FAILURE;
+                u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_blob_output);
+
+                /**
+                * Check if function to close the structure blob succeeded
+                */
+                if(u8_lcl_return_from_function != RETURN_SUCCESS)
+                    {
+                    /**
+                    * Treat the case when the function to close the structure blob failed
+                    */
+
+                    #ifdef DEVELOPEMENT
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob failed\n", __FILE__, __func__, __LINE__);
+                    #endif
+
+                    #ifdef DEMO
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    #endif
+
+                    #ifdef PRODUCTION
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+                    #endif
+
+                    /**
+                    * Return failure to indicate the function to close the structure blob failed
+                    */
+                    return (RETURN_FAILURE);
+                    }
+                else
+                    {
+                    /**
+                    * Treat the case when function to close the structure blob suucceeded
+                    */
+                    }
+
+                /**
                 * Return failure to indicate the function to close the structure blob failed
                 */
                 return (RETURN_FAILURE);
@@ -2590,6 +3415,45 @@ uint8_t Fu8__execute_base64_command(argument_t *ptr_sstc_pssd_argument)
         #endif
 
         /**
+        * Closing the structure blob
+        */
+        u8_lcl_return_from_function = RETURN_FAILURE;
+        u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_blob_output);
+
+        /**
+        * Check if function to close the structure blob succeeded
+        */
+        if(u8_lcl_return_from_function != RETURN_SUCCESS)
+            {
+            /**
+            * Treat the case when the function to close the structure blob failed
+            */
+
+            #ifdef DEVELOPEMENT
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob failed\n", __FILE__, __func__, __LINE__);
+            #endif
+
+            #ifdef DEMO
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            #endif
+
+            #ifdef PRODUCTION
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+            #endif
+
+            /**
+            * Return failure to indicate the function to close the structure blob failed
+            */
+            return (RETURN_FAILURE);
+            }
+        else
+            {
+            /**
+            * Treat the case when function to close the structure blob suucceeded
+            */
+            }
+
+        /**
         * Return failure to indicate the function to close the structure blob failed
         */
         return (RETURN_FAILURE);
@@ -2600,6 +3464,100 @@ uint8_t Fu8__execute_base64_command(argument_t *ptr_sstc_pssd_argument)
         * Treat the case when function to close the structure blob suucceeded
         */
         }
+
+    /**
+    * Check if the option encode is set
+    */
+    if(ptr_sstc_pssd_argument->ptr_u8_simple_options_[BASE64_DECODE] == FALSE)
+        {
+        /**
+        * Treat the case when the option encode is set
+        */
+
+        /**
+        * Adding the formating for the output of the base 64
+        */
+        u8_lcl_return_from_function = RETURN_FAILURE;
+        u8_lcl_return_from_function = Fu8__add_new_line_after_every_64_character(&sstc_lcl_blob_output);
+
+        /**
+        * Check if function to add the formating for the output of the base 64 succeeded
+        */
+        if(u8_lcl_return_from_function != RETURN_SUCCESS)
+            {
+            /**
+            * Treat the case when the function to add the formating for the output of the base 64 failed
+            */
+
+            #ifdef DEVELOPEMENT
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to add the formating for the output of the base 64  failed\n", __FILE__, __func__, __LINE__);
+            #endif
+
+            #ifdef DEMO
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            #endif
+
+            #ifdef PRODUCTION
+            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            #endif
+
+            /**
+            * Closing the structure blob
+            */
+            u8_lcl_return_from_function = RETURN_FAILURE;
+            u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_blob_output);
+
+            /**
+            * Check if function to close the structure blob succeeded
+            */
+            if(u8_lcl_return_from_function != RETURN_SUCCESS)
+                {
+                /**
+                * Treat the case when the function to close the structure blob failed
+                */
+
+                #ifdef DEVELOPEMENT
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob failed\n", __FILE__, __func__, __LINE__);
+                #endif
+
+                #ifdef DEMO
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                #endif
+
+                #ifdef PRODUCTION
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+                #endif
+
+                /**
+                * Return failure to indicate the function to close the structure blob failed
+                */
+                return (RETURN_FAILURE);
+                }
+            else
+                {
+                /**
+                * Treat the case when function to close the structure blob suucceeded
+                */
+                }
+
+            /**
+            * Return failure to indicate the function to add the formating for the output of the base 64 failed
+            */
+            return (RETURN_FAILURE);
+            }
+        else
+            {
+            /**
+            * Treat the case when function to add the formating for the output of the base 64 succeeded
+            */
+            } 
+        }
+    else
+        {
+        /**
+        * Treat the case when the option encode is not set
+        */
+        } 
 
     /**
     * Display the result of the command passed in argument of the program
@@ -2690,7 +3648,7 @@ uint8_t Fu8__execute_base64_command(argument_t *ptr_sstc_pssd_argument)
         * Openning the output file
         */
         s32_lcl_file_descriptor = -1;
-        s32_lcl_file_descriptor = open((char *) ptr_sstc_pssd_argument->dbl_ptr_u8_argument_option_value_str_[BASE64_OUTPUT], O_WRONLY);
+        s32_lcl_file_descriptor = open((char *) ptr_sstc_pssd_argument->dbl_ptr_u8_argument_option_value_str_[BASE64_OUTPUT], O_CREAT | O_TRUNC | O_WRONLY, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 
         /**
         * Check if the openning of the output file failed
@@ -2784,6 +3742,45 @@ uint8_t Fu8__execute_base64_command(argument_t *ptr_sstc_pssd_argument)
             #endif
 
             /**
+            * Closing the output file
+            */
+            s32_lcl_return_from_function = RETURN_FAILURE;
+            s32_lcl_return_from_function = close(s32_lcl_file_descriptor);
+
+            /**
+            * Check if function to close the output file succeeded
+            */
+            if(s32_lcl_return_from_function < 0)
+                {
+                /**
+                * Treat the case when the function to close the output file failed
+                */
+
+                #ifdef DEVELOPEMENT
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the output file  failed\n", __FILE__, __func__, __LINE__);
+                #endif
+
+                #ifdef DEMO
+                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                #endif
+
+                #ifdef PRODUCTION
+                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                #endif
+
+                /**
+                * Return failure to indicate the function to close the output file failed
+                */
+                return (RETURN_FAILURE);
+                }
+            else
+                {
+                /**
+                * Treat the case when function to close the output file suucceeded
+                */
+                } 
+
+            /**
             * Closing the structure blob
             */
             u8_lcl_return_from_function = RETURN_FAILURE;
@@ -2833,6 +3830,84 @@ uint8_t Fu8__execute_base64_command(argument_t *ptr_sstc_pssd_argument)
             * Treat the case when function to write the content of the output structure blob to the output file suucceeded
             */
             }
+
+        /**
+        * Closing the output file
+        */
+        s32_lcl_return_from_function = RETURN_FAILURE;
+        s32_lcl_return_from_function = close(s32_lcl_file_descriptor);
+
+        /**
+        * Check if function to close the output file succeeded
+        */
+        if(s32_lcl_return_from_function < 0)
+            {
+            /**
+            * Treat the case when the function to close the output file failed
+            */
+
+            #ifdef DEVELOPEMENT
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the output file  failed\n", __FILE__, __func__, __LINE__);
+            #endif
+
+            #ifdef DEMO
+            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            #endif
+
+            #ifdef PRODUCTION
+            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            #endif
+
+            /**
+            * Closing the structure blob
+            */
+            u8_lcl_return_from_function = RETURN_FAILURE;
+            u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_blob_output);
+
+            /**
+            * Check if function to close the structure blob succeeded
+            */
+            if(u8_lcl_return_from_function != RETURN_SUCCESS)
+                {
+                /**
+                * Treat the case when the function to close the structure blob failed
+                */
+
+                #ifdef DEVELOPEMENT
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob failed\n", __FILE__, __func__, __LINE__);
+                #endif
+
+                #ifdef DEMO
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                #endif
+
+                #ifdef PRODUCTION
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
+                #endif
+
+                /**
+                * Return failure to indicate the function to close the structure blob failed
+                */
+                return (RETURN_FAILURE);
+                }
+            else
+                {
+                /**
+                * Treat the case when function to close the structure blob suucceeded
+                */
+                }
+
+            /**
+            * Return failure to indicate the function to close the output file failed
+            */
+            return (RETURN_FAILURE);
+            }
+        else
+            {
+            /**
+            * Treat the case when function to close the output file suucceeded
+            */
+            } 
         }
     else
         {

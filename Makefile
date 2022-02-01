@@ -19,6 +19,10 @@ LIB_DIRECTORY	=	./libft/
 BUILD_DIRECTORY	=	build
 
 SRC_FILE_NAME	=	main.c			\
+					des.c			\
+					des3.c			\
+					base64.c		\
+					hash.c			\
 					command_type.c	\
 					exec.c			\
 					argument.c		\
@@ -35,8 +39,6 @@ SRC_FILE_NAME	=	main.c			\
 					rmd320.c		\
 					blob.c			\
 					whirlpool.c		\
-					hash.c			\
-					base64.c		\
 
 SRC			=	$(addprefix $(SRC_DIRECTORY),$(SRC_FILE_NAME))
 
