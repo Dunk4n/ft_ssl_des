@@ -219,15 +219,15 @@ void    Fv__des_shift_half_key(uint8_t *ptr_u8_pssd_half_key, uint8_t u8_pssd_ro
             else
                 {
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -255,15 +255,15 @@ void    Fv__des_shift_half_key(uint8_t *ptr_u8_pssd_half_key, uint8_t u8_pssd_ro
             else
                 {
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -285,15 +285,15 @@ void    Fv__des_shift_half_key(uint8_t *ptr_u8_pssd_half_key, uint8_t u8_pssd_ro
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -320,15 +320,15 @@ uint8_t Fu8_get_des_sub_key(des_t *ptr_cstc_pssd_des, uint64_t ptr_u64_pssd_subk
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -353,15 +353,15 @@ uint8_t Fu8_get_des_sub_key(des_t *ptr_cstc_pssd_des, uint64_t ptr_u64_pssd_subk
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -408,15 +408,15 @@ uint8_t Fu8_get_des_sub_key(des_t *ptr_cstc_pssd_des, uint64_t ptr_u64_pssd_subk
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -457,15 +457,15 @@ uint8_t Fu8_get_des_sub_key(des_t *ptr_cstc_pssd_des, uint64_t ptr_u64_pssd_subk
             else
                 {
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -485,15 +485,15 @@ uint8_t Fu8_get_des_sub_key(des_t *ptr_cstc_pssd_des, uint64_t ptr_u64_pssd_subk
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -522,15 +522,15 @@ uint8_t Fu8__des_feistel_function(uint32_t u32_pssd_half_block, uint64_t u64_pss
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the pointer to the feistel result is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the pointer to the feistel result is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -583,15 +583,15 @@ uint8_t Fu8__des_feistel_function(uint32_t u32_pssd_half_block, uint64_t u64_pss
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -717,15 +717,15 @@ uint8_t Fu8__des_feistel_function(uint32_t u32_pssd_half_block, uint64_t u64_pss
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -753,15 +753,15 @@ uint8_t Fu8__des_feistel_function(uint32_t u32_pssd_half_block, uint64_t u64_pss
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -790,15 +790,15 @@ uint8_t Fu8__des_encode_block(uint64_t u64_pssd_block, uint64_t ptr_u64_pssd_sub
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the pointer to the encoded block to return is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the pointer to the encoded block to return is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -851,15 +851,15 @@ uint8_t Fu8__des_encode_block(uint64_t u64_pssd_block, uint64_t ptr_u64_pssd_sub
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -897,15 +897,15 @@ uint8_t Fu8__des_encode_block(uint64_t u64_pssd_block, uint64_t ptr_u64_pssd_sub
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the result of the feistel function with the right part of the block and the actual sub key passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the result of the feistel function with the right part of the block and the actual sub key passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -941,15 +941,15 @@ uint8_t Fu8__des_encode_block(uint64_t u64_pssd_block, uint64_t ptr_u64_pssd_sub
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -982,15 +982,15 @@ uint8_t Fu8__des_encode_block(uint64_t u64_pssd_block, uint64_t ptr_u64_pssd_sub
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -1019,15 +1019,15 @@ uint8_t Fu8__get_u64_from_ascii_hexa_str(uint64_t *ptr_u64_pssd_hex_value, uint8
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the hex value to return is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the hex value to return is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -1052,15 +1052,15 @@ uint8_t Fu8__get_u64_from_ascii_hexa_str(uint64_t *ptr_u64_pssd_hex_value, uint8
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the string to convert is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the string to convert is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -1140,15 +1140,15 @@ uint8_t Fu8__get_u64_from_ascii_hexa_str(uint64_t *ptr_u64_pssd_hex_value, uint8
             else
                 {
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -1198,15 +1198,15 @@ uint8_t Fu8__get_u64_from_ascii_hexa_str(uint64_t *ptr_u64_pssd_hex_value, uint8
                 else
                     {
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     /**
@@ -1245,15 +1245,15 @@ uint8_t Fu8__get_u64_from_ascii_hexa_str(uint64_t *ptr_u64_pssd_hex_value, uint8
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -1322,15 +1322,15 @@ uint8_t Fu8__init_structure_des(des_t *ptr_sstc_pssd_des)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -1355,15 +1355,15 @@ uint8_t Fu8__init_structure_des(des_t *ptr_sstc_pssd_des)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is already initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is already initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -1430,15 +1430,15 @@ uint8_t Fu8__init_structure_des(des_t *ptr_sstc_pssd_des)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init the blob input data in the structure des passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init the blob input data in the structure des passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -1470,15 +1470,15 @@ uint8_t Fu8__init_structure_des(des_t *ptr_sstc_pssd_des)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init the blob password in the structure des passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init the blob password in the structure des passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -1497,15 +1497,15 @@ uint8_t Fu8__init_structure_des(des_t *ptr_sstc_pssd_des)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the blob input data in the structure des passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the blob input data in the structure des passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -1553,15 +1553,15 @@ uint8_t Fu8__close_structure_des(des_t *ptr_sstc_pssd_des)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -1586,15 +1586,15 @@ uint8_t Fu8__close_structure_des(des_t *ptr_sstc_pssd_des)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -1648,15 +1648,15 @@ uint8_t Fu8__close_structure_des(des_t *ptr_sstc_pssd_des)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the blob input data in the structure des passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the blob input data in the structure des passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -1675,15 +1675,15 @@ uint8_t Fu8__close_structure_des(des_t *ptr_sstc_pssd_des)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the blob password in the structure des passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the blob password in the structure des passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -1726,15 +1726,15 @@ uint8_t Fu8__close_structure_des(des_t *ptr_sstc_pssd_des)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the blob password in the structure des passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the blob password in the structure des passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -1790,15 +1790,15 @@ void    Fv__display_structure_des(des_t *ptr_sstc_pssd_des)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -1823,15 +1823,15 @@ void    Fv__display_structure_des(des_t *ptr_sstc_pssd_des)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -1970,15 +1970,15 @@ uint8_t Fu8__des_get_block(des_t *ptr_sstc_pssd_des)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -2003,15 +2003,15 @@ uint8_t Fu8__des_get_block(des_t *ptr_sstc_pssd_des)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -2036,15 +2036,15 @@ uint8_t Fu8__des_get_block(des_t *ptr_sstc_pssd_des)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure blob input data in the structure des passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure blob input data in the structure des passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -2069,15 +2069,15 @@ uint8_t Fu8__des_get_block(des_t *ptr_sstc_pssd_des)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the data in the structure blob input data in the structure des passed in argument of the function is not correctly pointing\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the data in the structure blob input data in the structure des passed in argument of the function is not correctly pointing\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -2102,15 +2102,15 @@ uint8_t Fu8__des_get_block(des_t *ptr_sstc_pssd_des)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the position in the input data is after the end of the input data\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the position in the input data is after the end of the input data\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -2209,15 +2209,15 @@ uint8_t Fu8__des_get_block(des_t *ptr_sstc_pssd_des)
             else
                 {
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -2253,15 +2253,15 @@ uint8_t Fu8__get_salt_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pssd_ar
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -2286,15 +2286,15 @@ uint8_t Fu8__get_salt_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pssd_ar
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -2385,15 +2385,15 @@ uint8_t Fu8__get_salt_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pssd_ar
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the dynamic array of simple options in the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the dynamic array of simple options in the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -2450,15 +2450,15 @@ uint8_t Fu8__get_salt_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pssd_ar
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the next block from the input  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the next block from the input  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -2513,15 +2513,15 @@ uint8_t Fu8__get_salt_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pssd_ar
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the next block from the input  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the next block from the input  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -2600,15 +2600,15 @@ uint8_t Fu8__get_salt_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pssd_ar
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the value of the salt from the argument  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the value of the salt from the argument  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -2673,15 +2673,15 @@ uint8_t Fu8__get_salt_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pssd_ar
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to fill the salt to return with random value  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to fill the salt to return with random value  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -2717,15 +2717,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -2750,15 +2750,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -2884,15 +2884,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to load the value of the option password in the structure des  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to load the value of the option password in the structure des  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -2925,15 +2925,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
             else
                 {
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -2965,15 +2965,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to open the tty for reading the password  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to open the tty for reading the password  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -3006,15 +3006,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the status of the terminal  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the status of the terminal  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -3033,15 +3033,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -3087,15 +3087,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the status of the terminal to no echo  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the status of the terminal to no echo  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -3114,15 +3114,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -3165,15 +3165,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the password from stdin  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the password from stdin  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -3192,15 +3192,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -3243,15 +3243,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the content of the password to the blob in the structure des  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the content of the password to the blob in the structure des  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             u64_lcl_cnt = 0;
@@ -3269,15 +3269,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
                 else
                     {
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     /**
@@ -3296,15 +3296,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
                         */
 
                         #ifdef DEVELOPEMENT
-                        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
                         #endif
 
                         #ifdef DEMO
-                        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                         #endif
 
                         #ifdef PRODUCTION
-                        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                         #endif
 
                         /**
@@ -3345,15 +3345,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -3395,15 +3395,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
             else
                 {
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -3422,15 +3422,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
                     */
 
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     /**
@@ -3484,15 +3484,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the password from stdin  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the password from stdin  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -3511,15 +3511,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
                     */
 
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     /**
@@ -3564,15 +3564,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
                 else
                     {
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     u64_lcl_cnt = 0;
@@ -3590,15 +3590,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
                         else
                             {
                             #ifdef DEVELOPEMENT
-                            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                             #endif
 
                             #ifdef DEMO
-                            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                             #endif
 
                             #ifdef PRODUCTION
-                            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                             #endif
 
                             /**
@@ -3617,15 +3617,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
                                 */
 
                                 #ifdef DEVELOPEMENT
-                                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
+                                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
                                 #endif
 
                                 #ifdef DEMO
-                                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                                 #endif
 
                                 #ifdef PRODUCTION
-                                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                                 #endif
 
                                 /**
@@ -3666,15 +3666,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
                         */
 
                         #ifdef DEVELOPEMENT
-                        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
                         #endif
 
                         #ifdef DEMO
-                        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                         #endif
 
                         #ifdef PRODUCTION
-                        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                         #endif
 
                         /**
@@ -3759,15 +3759,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
                     else
                         {
                         #ifdef DEVELOPEMENT
-                        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                         #endif
 
                         #ifdef DEMO
-                        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                         #endif
 
                         #ifdef PRODUCTION
-                        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                         #endif
 
                         /**
@@ -3786,15 +3786,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
                             */
 
                             #ifdef DEVELOPEMENT
-                            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
+                            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
                             #endif
 
                             #ifdef DEMO
-                            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                             #endif
 
                             #ifdef PRODUCTION
-                            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                             #endif
 
                             /**
@@ -3832,15 +3832,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
                 else
                     {
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     /**
@@ -3859,15 +3859,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
                         */
 
                         #ifdef DEVELOPEMENT
-                        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
                         #endif
 
                         #ifdef DEMO
-                        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                         #endif
 
                         #ifdef PRODUCTION
-                        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                         #endif
 
                         /**
@@ -3915,15 +3915,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the status of the terminal to the previous setting  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the status of the terminal to the previous setting  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -3942,15 +3942,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -3993,15 +3993,15 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the tty after reading the password  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -4020,3315 +4020,6 @@ uint8_t Fu8__get_password_des(des_t *ptr_sstc_pssd_des, argument_t *ptr_sstc_pss
     return (RETURN_SUCCESS);
     }
 
-//uint8_t Fu8__hmac_sha256(blob_t *ptr_sstc_pssd_password, uint8_t *ptr_u8_pssd_key, uint64_t u64_pssd_key_length, uint8_t *ptr_u8_pssd_block_to_return)
-//    {
-//    /**
-//    * Assertion of argument
-//    */
-//
-//    /**
-//    * Check if the blob password is correctly pointing passed as an argument of the function
-//    */
-//    if(ptr_sstc_pssd_password == NULL)
-//        {
-//        /**
-//        * Treat the case when the blob password is not correctly pointing passed as an argument of the function
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the blob password is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the blob password is not correctly pointing passed as an argument of the function
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the blob password is correctly pointing passed as an argument of the function
-//        */
-//        }
-//
-//    /**
-//    * Check if the blob password passed in argument of the function is not initialized
-//    */
-//    if((ptr_sstc_pssd_password->u8_global_status_ & FIRST_BIT) == FALSE)
-//        {
-//        /**
-//        * Treat the case when the blob password passed in argument of the function is not initialized
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the blob password passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the blob password passed in argument of the function is not initialized
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the blob password passed in argument of the function is initialized
-//        */
-//        }
-//
-//    /**
-//    * Check if the data of the blob password passed in argument of the function is not set
-//    */
-//    if((ptr_sstc_pssd_password->u8_global_status_ & SECOND_BIT) == FALSE)
-//        {
-//        /**
-//        * Treat the case when the data of the blob password passed in argument of the function is not set
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the data of the blob password passed in argument of the function is not set\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the data of the blob password passed in argument of the function is not set
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the data of the blob password passed in argument of the function is set
-//        */
-//        }
-//
-//    /**
-//    * Check if the array representing the key is correctly pointing passed as an argument of the function
-//    */
-//    if(ptr_u8_pssd_key == NULL)
-//        {
-//        /**
-//        * Treat the case when the array representing the key is not correctly pointing passed as an argument of the function
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the array representing the key is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the array representing the key is not correctly pointing passed as an argument of the function
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the array representing the key is correctly pointing passed as an argument of the function
-//        */
-//        }
-//
-//    /**
-//    * Check if the length of the array representing the key passed in argument of the function is zero
-//    */
-//    if(u64_pssd_key_length == 0)
-//        {
-//        /**
-//        * Treat the case when the length of the array representing the key passed in argument of the function is zero
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the length of the array representing the key passed in argument of the function is zero\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the length of the array representing the key passed in argument of the function is zero
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the length of the array representing the key passed in argument of the function is not zero
-//        */
-//        }
-//
-//    /**
-//    * Check if the block to return is correctly pointing passed as an argument of the function
-//    */
-//    if(ptr_u8_pssd_block_to_return == NULL)
-//        {
-//        /**
-//        * Treat the case when the block to return is not correctly pointing passed as an argument of the function
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the block to return is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the block to return is not correctly pointing passed as an argument of the function
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the block to return is correctly pointing passed as an argument of the function
-//        */
-//        } 
-//
-//    /**
-//    * Check if the length of the output in byte of sha256 is zero
-//    */
-//    if(SHA256_OUTPUT_LENGTH_BYTE == 0)
-//        {
-//        /**
-//        * Treat the case when the length of the output in byte of sha256 is zero
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the length of the output in byte of sha256 is zero\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the length of the output in byte of sha256 is zero
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the length of the output in byte of sha256 is not zero
-//        */
-//        } 
-//
-//    /**
-//    * Creation of local variable
-//    */
-//    blob_t   sstc_lcl_digest;
-//    blob_t   sstc_lcl_input;
-//    blob_t   sstc_lcl_key;
-//    uint64_t u32_lcl_cnt;
-//    uint8_t  u8_lcl_inner_padding[HMACK_BLOCK_LENGTH];
-//    uint8_t  u8_lcl_outer_padding[HMACK_BLOCK_LENGTH];
-//    uint8_t  u8_lcl_return_from_function;
-//
-//    /**
-//    * Initialization of local variable
-//    */
-//    sstc_lcl_digest.u8_global_status_ = 0;
-//    sstc_lcl_input.u8_global_status_  = 0;
-//    sstc_lcl_key.u8_global_status_    = 0;
-//    u32_lcl_cnt                       = 0;
-//    u8_lcl_return_from_function       = RETURN_FAILURE;
-//
-//    u32_lcl_cnt = 0;
-//    while(u32_lcl_cnt < HMACK_BLOCK_LENGTH)
-//        {
-//        u8_lcl_inner_padding[u32_lcl_cnt] = 0;
-//
-//        /**
-//        * Checking for overflow
-//        */
-//        if(u32_lcl_cnt < UINT32_MAX)
-//            {
-//            u32_lcl_cnt++;
-//            }
-//        else
-//            {
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Return a failure to indicate the counter variable overflow
-//            */ 
-//            return (RETURN_FAILURE);
-//            } 
-//        }
-//
-//    u32_lcl_cnt = 0;
-//    while(u32_lcl_cnt < HMACK_BLOCK_LENGTH)
-//        {
-//        u8_lcl_outer_padding[u32_lcl_cnt] = 0;
-//
-//        /**
-//        * Checking for overflow
-//        */
-//        if(u32_lcl_cnt < UINT32_MAX)
-//            {
-//            u32_lcl_cnt++;
-//            }
-//        else
-//            {
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Return a failure to indicate the counter variable overflow
-//            */ 
-//            return (RETURN_FAILURE);
-//            } 
-//        }
-//
-//    /**
-//    * Init the input blob
-//    */
-//    sstc_lcl_input.u8_global_status_ = 0;
-//    u8_lcl_return_from_function      = RETURN_FAILURE;
-//    u8_lcl_return_from_function      = Fu8__structure_blob_init(&sstc_lcl_input);
-//
-//    /**
-//    * Check if function to init the input blob succeeded
-//    */
-//    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//        {
-//        /**
-//        * Treat the case when the function to init the input blob failed
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init the input blob  failed\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the function to init the input blob failed
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when function to init the input blob succeeded
-//        */
-//        }
-//
-//    /**
-//    * Init the key blob
-//    */
-//    sstc_lcl_key.u8_global_status_ = 0;
-//    u8_lcl_return_from_function    = RETURN_FAILURE;
-//    u8_lcl_return_from_function    = Fu8__structure_blob_init(&sstc_lcl_key);
-//
-//    /**
-//    * Check if function to init the key blob succeeded
-//    */
-//    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//        {
-//        /**
-//        * Treat the case when the function to init the key blob failed
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init the key blob  failed\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Close the input blob
-//        */
-//        u8_lcl_return_from_function = RETURN_FAILURE;
-//        u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_input);
-//
-//        /**
-//        * Check if function to close the input blob succeeded
-//        */
-//        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//            {
-//            /**
-//            * Treat the case when the function to close the input blob failed
-//            */
-//
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input blob  failed\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Return failure to indicate the function to close the input blob failed
-//            */
-//            return (RETURN_FAILURE);
-//            }
-//        else
-//            {
-//            /**
-//            * Treat the case when function to close the input blob succeeded
-//            */
-//            }
-//
-//        /**
-//        * Return failure to indicate the function to init the key blob failed
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when function to init the key blob succeeded
-//        */
-//        }
-//
-//    /**
-//    * Check if the length of the key passed in argument of the function is bigger than the hmack block
-//    */
-//    if(u64_pssd_key_length > HMACK_BLOCK_LENGTH)
-//        {
-//        /**
-//        * Treat the case when the length of the key passed in argument of the function is bigger than the hmack block
-//        */
-//
-//        /**
-//        * Load the data of the key passed in argument of the function to the input blob
-//        */
-//        u8_lcl_return_from_function = RETURN_FAILURE;
-//        u8_lcl_return_from_function = Fu8__load_raw_blob_in_structure_blob(&sstc_lcl_input, ptr_u8_pssd_key, u64_pssd_key_length);
-//
-//        /**
-//        * Check if function to load the data of the key passed in argument of the function to the input blob succeeded
-//        */
-//        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//            {
-//            /**
-//            * Treat the case when the function to load the data of the key passed in argument of the function to the input blob failed
-//            */
-//
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to load the data of the key passed in argument of the function to the input blob  failed\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Close the key blob
-//            */
-//            u8_lcl_return_from_function = RETURN_FAILURE;
-//            u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_key);
-//
-//            /**
-//            * Check if function to close the key blob succeeded
-//            */
-//            if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//                {
-//                /**
-//                * Treat the case when the function to close the key blob failed
-//                */
-//
-//                #ifdef DEVELOPEMENT
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the key blob  failed\n", __FILE__, __func__, __LINE__);
-//                #endif
-//
-//                #ifdef DEMO
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//                #endif
-//
-//                #ifdef PRODUCTION
-//                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//                #endif
-//
-//                /**
-//                * Close the input blob
-//                */
-//                u8_lcl_return_from_function = RETURN_FAILURE;
-//                u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_input);
-//
-//                /**
-//                * Check if function to close the input blob succeeded
-//                */
-//                if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//                    {
-//                    /**
-//                    * Treat the case when the function to close the input blob failed
-//                    */
-//
-//                    #ifdef DEVELOPEMENT
-//                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input blob  failed\n", __FILE__, __func__, __LINE__);
-//                    #endif
-//
-//                    #ifdef DEMO
-//                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//                    #endif
-//
-//                    #ifdef PRODUCTION
-//                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//                    #endif
-//
-//                    /**
-//                    * Return failure to indicate the function to close the input blob failed
-//                    */
-//                    return (RETURN_FAILURE);
-//                    }
-//                else
-//                    {
-//                    /**
-//                    * Treat the case when function to close the input blob succeeded
-//                    */
-//                    }
-//
-//                /**
-//                * Return failure to indicate the function to close the key blob failed
-//                */
-//                return (RETURN_FAILURE);
-//                }
-//            else
-//                {
-//                /**
-//                * Treat the case when function to close the key blob succeeded
-//                */
-//                }
-//
-//            /**
-//            * Close the input blob
-//            */
-//            u8_lcl_return_from_function = RETURN_FAILURE;
-//            u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_input);
-//
-//            /**
-//            * Check if function to close the input blob succeeded
-//            */
-//            if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//                {
-//                /**
-//                * Treat the case when the function to close the input blob failed
-//                */
-//
-//                #ifdef DEVELOPEMENT
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input blob  failed\n", __FILE__, __func__, __LINE__);
-//                #endif
-//
-//                #ifdef DEMO
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//                #endif
-//
-//                #ifdef PRODUCTION
-//                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//                #endif
-//
-//                /**
-//                * Return failure to indicate the function to close the input blob failed
-//                */
-//                return (RETURN_FAILURE);
-//                }
-//            else
-//                {
-//                /**
-//                * Treat the case when function to close the input blob succeeded
-//                */
-//                }
-//
-//            /**
-//            * Return failure to indicate the function to load the data of the key passed in argument of the function to the input blob failed
-//            */
-//            return (RETURN_FAILURE);
-//            }
-//        else
-//            {
-//            /**
-//            * Treat the case when function to load the data of the key passed in argument of the function to the input blob succeeded
-//            */
-//            }
-//
-//        /**
-//        * Hash the key passed in argument of the function with sha256
-//        */
-//        u8_lcl_return_from_function = RETURN_FAILURE;
-//        u8_lcl_return_from_function = Fu8__sha256(&sstc_lcl_input, &sstc_lcl_key);
-//
-//        /**
-//        * Check if function to hash the key passed in argument of the function with sha256 succeeded
-//        */
-//        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//            {
-//            /**
-//            * Treat the case when the function to hash the key passed in argument of the function with sha256 failed
-//            */
-//
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to hash the key passed in argument of the function with sha256  failed\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Close the key blob
-//            */
-//            u8_lcl_return_from_function = RETURN_FAILURE;
-//            u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_key);
-//
-//            /**
-//            * Check if function to close the key blob succeeded
-//            */
-//            if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//                {
-//                /**
-//                * Treat the case when the function to close the key blob failed
-//                */
-//
-//                #ifdef DEVELOPEMENT
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the key blob  failed\n", __FILE__, __func__, __LINE__);
-//                #endif
-//
-//                #ifdef DEMO
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//                #endif
-//
-//                #ifdef PRODUCTION
-//                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//                #endif
-//
-//                /**
-//                * Close the input blob
-//                */
-//                u8_lcl_return_from_function = RETURN_FAILURE;
-//                u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_input);
-//
-//                /**
-//                * Check if function to close the input blob succeeded
-//                */
-//                if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//                    {
-//                    /**
-//                    * Treat the case when the function to close the input blob failed
-//                    */
-//
-//                    #ifdef DEVELOPEMENT
-//                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input blob  failed\n", __FILE__, __func__, __LINE__);
-//                    #endif
-//
-//                    #ifdef DEMO
-//                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//                    #endif
-//
-//                    #ifdef PRODUCTION
-//                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//                    #endif
-//
-//                    /**
-//                    * Return failure to indicate the function to close the input blob failed
-//                    */
-//                    return (RETURN_FAILURE);
-//                    }
-//                else
-//                    {
-//                    /**
-//                    * Treat the case when function to close the input blob succeeded
-//                    */
-//                    }
-//
-//                /**
-//                * Return failure to indicate the function to close the key blob failed
-//                */
-//                return (RETURN_FAILURE);
-//                }
-//            else
-//                {
-//                /**
-//                * Treat the case when function to close the key blob succeeded
-//                */
-//                }
-//
-//            /**
-//            * Close the input blob
-//            */
-//            u8_lcl_return_from_function = RETURN_FAILURE;
-//            u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_input);
-//
-//            /**
-//            * Check if function to close the input blob succeeded
-//            */
-//            if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//                {
-//                /**
-//                * Treat the case when the function to close the input blob failed
-//                */
-//
-//                #ifdef DEVELOPEMENT
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input blob  failed\n", __FILE__, __func__, __LINE__);
-//                #endif
-//
-//                #ifdef DEMO
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//                #endif
-//
-//                #ifdef PRODUCTION
-//                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//                #endif
-//
-//                /**
-//                * Return failure to indicate the function to close the input blob failed
-//                */
-//                return (RETURN_FAILURE);
-//                }
-//            else
-//                {
-//                /**
-//                * Treat the case when function to close the input blob succeeded
-//                */
-//                }
-//
-//            /**
-//            * Return failure to indicate the function to hash the key passed in argument of the function with sha256 failed
-//            */
-//            return (RETURN_FAILURE);
-//            }
-//        else
-//            {
-//            /**
-//            * Treat the case when function to hash the key passed in argument of the function with sha256 succeeded
-//            */
-//            } 
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the length of the key passed in argument of the function is not bigger than the hmack block
-//        */
-//
-//        /**
-//        * Load the data of the key passed in argument of the function to the key blob
-//        */
-//        u8_lcl_return_from_function = RETURN_FAILURE;
-//        u8_lcl_return_from_function = Fu8__load_raw_blob_in_structure_blob(&sstc_lcl_key, ptr_u8_pssd_key, u64_pssd_key_length);
-//
-//        /**
-//        * Check if function to load the data of the key passed in argument of the function to the key blob succeeded
-//        */
-//        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//            {
-//            /**
-//            * Treat the case when the function to load the data of the key passed in argument of the function to the key blob failed
-//            */
-//
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to load the data of the key passed in argument of the function to the key blob  failed\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Close the key blob
-//            */
-//            u8_lcl_return_from_function = RETURN_FAILURE;
-//            u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_key);
-//
-//            /**
-//            * Check if function to close the key blob succeeded
-//            */
-//            if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//                {
-//                /**
-//                * Treat the case when the function to close the key blob failed
-//                */
-//
-//                #ifdef DEVELOPEMENT
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the key blob  failed\n", __FILE__, __func__, __LINE__);
-//                #endif
-//
-//                #ifdef DEMO
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//                #endif
-//
-//                #ifdef PRODUCTION
-//                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//                #endif
-//
-//                /**
-//                * Close the input blob
-//                */
-//                u8_lcl_return_from_function = RETURN_FAILURE;
-//                u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_input);
-//
-//                /**
-//                * Check if function to close the input blob succeeded
-//                */
-//                if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//                    {
-//                    /**
-//                    * Treat the case when the function to close the input blob failed
-//                    */
-//
-//                    #ifdef DEVELOPEMENT
-//                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input blob  failed\n", __FILE__, __func__, __LINE__);
-//                    #endif
-//
-//                    #ifdef DEMO
-//                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//                    #endif
-//
-//                    #ifdef PRODUCTION
-//                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//                    #endif
-//
-//                    /**
-//                    * Return failure to indicate the function to close the input blob failed
-//                    */
-//                    return (RETURN_FAILURE);
-//                    }
-//                else
-//                    {
-//                    /**
-//                    * Treat the case when function to close the input blob succeeded
-//                    */
-//                    }
-//
-//                /**
-//                * Return failure to indicate the function to close the key blob failed
-//                */
-//                return (RETURN_FAILURE);
-//                }
-//            else
-//                {
-//                /**
-//                * Treat the case when function to close the key blob succeeded
-//                */
-//                }
-//
-//            /**
-//            * Close the input blob
-//            */
-//            u8_lcl_return_from_function = RETURN_FAILURE;
-//            u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_input);
-//
-//            /**
-//            * Check if function to close the input blob succeeded
-//            */
-//            if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//                {
-//                /**
-//                * Treat the case when the function to close the input blob failed
-//                */
-//
-//                #ifdef DEVELOPEMENT
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input blob  failed\n", __FILE__, __func__, __LINE__);
-//                #endif
-//
-//                #ifdef DEMO
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//                #endif
-//
-//                #ifdef PRODUCTION
-//                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//                #endif
-//
-//                /**
-//                * Return failure to indicate the function to close the input blob failed
-//                */
-//                return (RETURN_FAILURE);
-//                }
-//            else
-//                {
-//                /**
-//                * Treat the case when function to close the input blob succeeded
-//                */
-//                }
-//
-//            /**
-//            * Return failure to indicate the function to load the data of the key passed in argument of the function to the key blob failed
-//            */
-//            return (RETURN_FAILURE);
-//            }
-//        else
-//            {
-//            /**
-//            * Treat the case when function to load the data of the key passed in argument of the function to the key blob succeeded
-//            */
-//            }
-//        }
-//
-//    /**
-//    * Setting the key to the inner padding array and the outer padding array
-//    */
-//    u32_lcl_cnt = 0;
-//    while(u32_lcl_cnt < HMACK_BLOCK_LENGTH)
-//        {
-//        if((uint64_t) u32_lcl_cnt < sstc_lcl_key.u64_length_data_blob_)
-//            {
-//            u8_lcl_inner_padding[u32_lcl_cnt] = sstc_lcl_key.ptr_u8_data_blob_[u32_lcl_cnt] ^ HMACK_INNER_PADDING_VALUE;
-//            u8_lcl_outer_padding[u32_lcl_cnt] = sstc_lcl_key.ptr_u8_data_blob_[u32_lcl_cnt] ^ HMACK_OUTER_PADDING_VALUE;
-//            }
-//        else
-//            {
-//            u8_lcl_inner_padding[u32_lcl_cnt] = HMACK_INNER_PADDING_VALUE;
-//            u8_lcl_outer_padding[u32_lcl_cnt] = HMACK_OUTER_PADDING_VALUE;
-//            }
-//
-//        /**
-//        * Checking for overflow
-//        */
-//        if(u32_lcl_cnt < UINT32_MAX)
-//            {
-//            u32_lcl_cnt++;
-//            }
-//        else
-//            {
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Close the key blob
-//            */
-//            u8_lcl_return_from_function = RETURN_FAILURE;
-//            u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_key);
-//
-//            /**
-//            * Check if function to close the key blob succeeded
-//            */
-//            if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//                {
-//                /**
-//                * Treat the case when the function to close the key blob failed
-//                */
-//
-//                #ifdef DEVELOPEMENT
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the key blob  failed\n", __FILE__, __func__, __LINE__);
-//                #endif
-//
-//                #ifdef DEMO
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//                #endif
-//
-//                #ifdef PRODUCTION
-//                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//                #endif
-//
-//                /**
-//                * Return failure to indicate the function to close the key blob failed
-//                */
-//                return (RETURN_FAILURE);
-//                }
-//            else
-//                {
-//                /**
-//                * Treat the case when function to close the key blob succeeded
-//                */
-//                }
-//
-//            /**
-//            * Close the input blob
-//            */
-//            u8_lcl_return_from_function = RETURN_FAILURE;
-//            u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_input);
-//
-//            /**
-//            * Check if function to close the input blob succeeded
-//            */
-//            if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//                {
-//                /**
-//                * Treat the case when the function to close the input blob failed
-//                */
-//
-//                #ifdef DEVELOPEMENT
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input blob  failed\n", __FILE__, __func__, __LINE__);
-//                #endif
-//
-//                #ifdef DEMO
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//                #endif
-//
-//                #ifdef PRODUCTION
-//                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//                #endif
-//
-//                /**
-//                * Return failure to indicate the function to close the input blob failed
-//                */
-//                return (RETURN_FAILURE);
-//                }
-//            else
-//                {
-//                /**
-//                * Treat the case when function to close the input blob succeeded
-//                */
-//                }
-//
-//            /**
-//            * Return a failure to indicate the counter variable overflow
-//            */ 
-//            return (RETURN_FAILURE);
-//            } 
-//        }
-//
-//    /**
-//    * Close the key blob
-//    */
-//    u8_lcl_return_from_function = RETURN_FAILURE;
-//    u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_key);
-//
-//    /**
-//    * Check if function to close the key blob succeeded
-//    */
-//    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//        {
-//        /**
-//        * Treat the case when the function to close the key blob failed
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the key blob  failed\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Close the input blob
-//        */
-//        u8_lcl_return_from_function = RETURN_FAILURE;
-//        u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_input);
-//
-//        /**
-//        * Check if function to close the input blob succeeded
-//        */
-//        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//            {
-//            /**
-//            * Treat the case when the function to close the input blob failed
-//            */
-//
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input blob  failed\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Return failure to indicate the function to close the input blob failed
-//            */
-//            return (RETURN_FAILURE);
-//            }
-//        else
-//            {
-//            /**
-//            * Treat the case when function to close the input blob succeeded
-//            */
-//            }
-//
-//        /**
-//        * Return failure to indicate the function to close the key blob failed
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when function to close the key blob succeeded
-//        */
-//        }
-//
-//    /**
-//    * Init the structure blob digest
-//    */
-//    sstc_lcl_digest.u8_global_status_ = 0;
-//    u8_lcl_return_from_function       = RETURN_FAILURE;
-//    u8_lcl_return_from_function       = Fu8__structure_blob_init(&sstc_lcl_digest);
-//
-//    /**
-//    * Check if function to init the structure blob digest succeeded
-//    */
-//    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//        {
-//        /**
-//        * Treat the case when the function to init the structure blob digest failed
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init the structure blob digest  failed\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Close the input blob
-//        */
-//        u8_lcl_return_from_function = RETURN_FAILURE;
-//        u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_input);
-//
-//        /**
-//        * Check if function to close the input blob succeeded
-//        */
-//        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//            {
-//            /**
-//            * Treat the case when the function to close the input blob failed
-//            */
-//
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input blob  failed\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Return failure to indicate the function to close the input blob failed
-//            */
-//            return (RETURN_FAILURE);
-//            }
-//        else
-//            {
-//            /**
-//            * Treat the case when function to close the input blob succeeded
-//            */
-//            }
-//
-//        /**
-//        * Return failure to indicate the function to init the structure blob digest failed
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when function to init the structure blob digest succeeded
-//        */
-//        }
-//
-//    /**
-//    * Concat the inner padding array and the password passed in argument of the function
-//    */
-//    u8_lcl_return_from_function = RETURN_FAILURE;
-//    u8_lcl_return_from_function = Fu8__concat_load_two_raw_blob_in_structure_blob(&sstc_lcl_input, u8_lcl_inner_padding, HMACK_BLOCK_LENGTH, ptr_sstc_pssd_password->ptr_u8_data_blob_, ptr_sstc_pssd_password->u64_length_data_blob_);
-//
-//    /**
-//    * Check if function to concat the inner padding array and the password passed in argument of the function succeeded
-//    */
-//    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//        {
-//        /**
-//        * Treat the case when the function to concat the inner padding array and the password passed in argument of the function failed
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to concat the inner padding array and the password passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Close the input blob
-//        */
-//        u8_lcl_return_from_function = RETURN_FAILURE;
-//        u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_input);
-//
-//        /**
-//        * Check if function to close the input blob succeeded
-//        */
-//        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//            {
-//            /**
-//            * Treat the case when the function to close the input blob failed
-//            */
-//
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input blob  failed\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Close the structure blob digest
-//            */
-//            u8_lcl_return_from_function = RETURN_FAILURE;
-//            u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_digest);
-//
-//            /**
-//            * Check if function to close the structure blob digest succeeded
-//            */
-//            if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//                {
-//                /**
-//                * Treat the case when the function to close the structure blob digest failed
-//                */
-//
-//                #ifdef DEVELOPEMENT
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob digest  failed\n", __FILE__, __func__, __LINE__);
-//                #endif
-//
-//                #ifdef DEMO
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//                #endif
-//
-//                #ifdef PRODUCTION
-//                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//                #endif
-//
-//                /**
-//                * Return failure to indicate the function to close the structure blob digest failed
-//                */
-//                return (RETURN_FAILURE);
-//                }
-//            else
-//                {
-//                /**
-//                * Treat the case when function to close the structure blob digest succeeded
-//                */
-//                }
-//
-//            /**
-//            * Return failure to indicate the function to close the input blob failed
-//            */
-//            return (RETURN_FAILURE);
-//            }
-//        else
-//            {
-//            /**
-//            * Treat the case when function to close the input blob succeeded
-//            */
-//            }
-//
-//        /**
-//        * Close the structure blob digest
-//        */
-//        u8_lcl_return_from_function = RETURN_FAILURE;
-//        u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_digest);
-//
-//        /**
-//        * Check if function to close the structure blob digest succeeded
-//        */
-//        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//            {
-//            /**
-//            * Treat the case when the function to close the structure blob digest failed
-//            */
-//
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob digest  failed\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Return failure to indicate the function to close the structure blob digest failed
-//            */
-//            return (RETURN_FAILURE);
-//            }
-//        else
-//            {
-//            /**
-//            * Treat the case when function to close the structure blob digest succeeded
-//            */
-//            }
-//
-//        /**
-//        * Return failure to indicate the function to concat the inner padding array and the password passed in argument of the function failed
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when function to concat the inner padding array and the password passed in argument of the function succeeded
-//        */
-//        }
-//
-//    /**
-//    * Hash the concatenation of the inner paddind array with the password passed in argument of the function whith sha256
-//    */
-//    u8_lcl_return_from_function = RETURN_FAILURE;
-//    u8_lcl_return_from_function = Fu8__sha256(&sstc_lcl_input, &sstc_lcl_digest);
-//
-//    /**
-//    * Check if function to hash the concatenation of the inner paddind array with the password passed in argument of the function whith sha256 succeeded
-//    */
-//    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//        {
-//        /**
-//        * Treat the case when the function to hash the concatenation of the inner paddind array with the password passed in argument of the function whith sha256 failed
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to hash the concatenation of the inner paddind array with the password passed in argument of the function whith sha256  failed\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Close the input blob
-//        */
-//        u8_lcl_return_from_function = RETURN_FAILURE;
-//        u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_input);
-//
-//        /**
-//        * Check if function to close the input blob succeeded
-//        */
-//        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//            {
-//            /**
-//            * Treat the case when the function to close the input blob failed
-//            */
-//
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input blob  failed\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Close the structure blob digest
-//            */
-//            u8_lcl_return_from_function = RETURN_FAILURE;
-//            u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_digest);
-//
-//            /**
-//            * Check if function to close the structure blob digest succeeded
-//            */
-//            if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//                {
-//                /**
-//                * Treat the case when the function to close the structure blob digest failed
-//                */
-//
-//                #ifdef DEVELOPEMENT
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob digest  failed\n", __FILE__, __func__, __LINE__);
-//                #endif
-//
-//                #ifdef DEMO
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//                #endif
-//
-//                #ifdef PRODUCTION
-//                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//                #endif
-//
-//                /**
-//                * Return failure to indicate the function to close the structure blob digest failed
-//                */
-//                return (RETURN_FAILURE);
-//                }
-//            else
-//                {
-//                /**
-//                * Treat the case when function to close the structure blob digest succeeded
-//                */
-//                }
-//
-//            /**
-//            * Return failure to indicate the function to close the input blob failed
-//            */
-//            return (RETURN_FAILURE);
-//            }
-//        else
-//            {
-//            /**
-//            * Treat the case when function to close the input blob succeeded
-//            */
-//            }
-//
-//        /**
-//        * Close the structure blob digest
-//        */
-//        u8_lcl_return_from_function = RETURN_FAILURE;
-//        u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_digest);
-//
-//        /**
-//        * Check if function to close the structure blob digest succeeded
-//        */
-//        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//            {
-//            /**
-//            * Treat the case when the function to close the structure blob digest failed
-//            */
-//
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob digest  failed\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Return failure to indicate the function to close the structure blob digest failed
-//            */
-//            return (RETURN_FAILURE);
-//            }
-//        else
-//            {
-//            /**
-//            * Treat the case when function to close the structure blob digest succeeded
-//            */
-//            }
-//
-//        /**
-//        * Return failure to indicate the function to hash the concatenation of the inner paddind array with the password passed in argument of the function whith sha256 failed
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when function to hash the concatenation of the inner paddind array with the password passed in argument of the function whith sha256 succeeded
-//        */
-//        } 
-//
-//    /**
-//    * Concat the outer paddind array with the digest
-//    */
-//    u8_lcl_return_from_function = RETURN_FAILURE;
-//    u8_lcl_return_from_function = Fu8__concat_load_two_raw_blob_in_structure_blob(&sstc_lcl_input, u8_lcl_outer_padding, HMACK_BLOCK_LENGTH, sstc_lcl_digest.ptr_u8_data_blob_, sstc_lcl_digest.u64_length_data_blob_);
-//
-//    /**
-//    * Check if function to Concat the outer paddind array with the digest succeeded
-//    */
-//    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//        {
-//        /**
-//        * Treat the case when the function to Concat the outer paddind array with the digest failed
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to Concat the outer paddind array with the digest  failed\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Close the input blob
-//        */
-//        u8_lcl_return_from_function = RETURN_FAILURE;
-//        u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_input);
-//
-//        /**
-//        * Check if function to close the input blob succeeded
-//        */
-//        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//            {
-//            /**
-//            * Treat the case when the function to close the input blob failed
-//            */
-//
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input blob  failed\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Close the structure blob digest
-//            */
-//            u8_lcl_return_from_function = RETURN_FAILURE;
-//            u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_digest);
-//
-//            /**
-//            * Check if function to close the structure blob digest succeeded
-//            */
-//            if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//                {
-//                /**
-//                * Treat the case when the function to close the structure blob digest failed
-//                */
-//
-//                #ifdef DEVELOPEMENT
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob digest  failed\n", __FILE__, __func__, __LINE__);
-//                #endif
-//
-//                #ifdef DEMO
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//                #endif
-//
-//                #ifdef PRODUCTION
-//                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//                #endif
-//
-//                /**
-//                * Return failure to indicate the function to close the structure blob digest failed
-//                */
-//                return (RETURN_FAILURE);
-//                }
-//            else
-//                {
-//                /**
-//                * Treat the case when function to close the structure blob digest succeeded
-//                */
-//                }
-//
-//            /**
-//            * Return failure to indicate the function to close the input blob failed
-//            */
-//            return (RETURN_FAILURE);
-//            }
-//        else
-//            {
-//            /**
-//            * Treat the case when function to close the input blob succeeded
-//            */
-//            }
-//
-//        /**
-//        * Close the structure blob digest
-//        */
-//        u8_lcl_return_from_function = RETURN_FAILURE;
-//        u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_digest);
-//
-//        /**
-//        * Check if function to close the structure blob digest succeeded
-//        */
-//        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//            {
-//            /**
-//            * Treat the case when the function to close the structure blob digest failed
-//            */
-//
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob digest  failed\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Return failure to indicate the function to close the structure blob digest failed
-//            */
-//            return (RETURN_FAILURE);
-//            }
-//        else
-//            {
-//            /**
-//            * Treat the case when function to close the structure blob digest succeeded
-//            */
-//            }
-//
-//        /**
-//        * Return failure to indicate the function to Concat the outer paddind array with the digest failed
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when function to Concat the outer paddind array with the digest succeeded
-//        */
-//        } 
-//
-//    /**
-//    * Hash the concatenation of the outer paddind array with the digest whith sha256
-//    */
-//    u8_lcl_return_from_function = RETURN_FAILURE;
-//    u8_lcl_return_from_function = Fu8__sha256(&sstc_lcl_input, &sstc_lcl_digest);
-//
-//    /**
-//    * Check if function to hash the concatenation of the outer paddind array with the digest whith sha256 succeeded
-//    */
-//    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//        {
-//        /**
-//        * Treat the case when the function to hash the concatenation of the outer paddind array with the digest whith sha256 failed
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to hash the concatenation of the outer paddind array with the digest whith sha256  failed\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Close the input blob
-//        */
-//        u8_lcl_return_from_function = RETURN_FAILURE;
-//        u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_input);
-//
-//        /**
-//        * Check if function to close the input blob succeeded
-//        */
-//        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//            {
-//            /**
-//            * Treat the case when the function to close the input blob failed
-//            */
-//
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input blob  failed\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Close the structure blob digest
-//            */
-//            u8_lcl_return_from_function = RETURN_FAILURE;
-//            u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_digest);
-//
-//            /**
-//            * Check if function to close the structure blob digest succeeded
-//            */
-//            if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//                {
-//                /**
-//                * Treat the case when the function to close the structure blob digest failed
-//                */
-//
-//                #ifdef DEVELOPEMENT
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob digest  failed\n", __FILE__, __func__, __LINE__);
-//                #endif
-//
-//                #ifdef DEMO
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//                #endif
-//
-//                #ifdef PRODUCTION
-//                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//                #endif
-//
-//                /**
-//                * Return failure to indicate the function to close the structure blob digest failed
-//                */
-//                return (RETURN_FAILURE);
-//                }
-//            else
-//                {
-//                /**
-//                * Treat the case when function to close the structure blob digest succeeded
-//                */
-//                }
-//
-//            /**
-//            * Return failure to indicate the function to close the input blob failed
-//            */
-//            return (RETURN_FAILURE);
-//            }
-//        else
-//            {
-//            /**
-//            * Treat the case when function to close the input blob succeeded
-//            */
-//            }
-//
-//        /**
-//        * Close the structure blob digest
-//        */
-//        u8_lcl_return_from_function = RETURN_FAILURE;
-//        u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_digest);
-//
-//        /**
-//        * Check if function to close the structure blob digest succeeded
-//        */
-//        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//            {
-//            /**
-//            * Treat the case when the function to close the structure blob digest failed
-//            */
-//
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob digest  failed\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Return failure to indicate the function to close the structure blob digest failed
-//            */
-//            return (RETURN_FAILURE);
-//            }
-//        else
-//            {
-//            /**
-//            * Treat the case when function to close the structure blob digest succeeded
-//            */
-//            }
-//
-//        /**
-//        * Return failure to indicate the function to hash the concatenation of the outer paddind array with the digest whith sha256 failed
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when function to hash the concatenation of the outer paddind array with the digest whith sha256 succeeded
-//        */
-//        } 
-//
-//    /**
-//    * Close the input blob
-//    */
-//    u8_lcl_return_from_function = RETURN_FAILURE;
-//    u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_input);
-//
-//    /**
-//    * Check if function to close the input blob succeeded
-//    */
-//    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//        {
-//        /**
-//        * Treat the case when the function to close the input blob failed
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input blob  failed\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Close the structure blob digest
-//        */
-//        u8_lcl_return_from_function = RETURN_FAILURE;
-//        u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_digest);
-//
-//        /**
-//        * Check if function to close the structure blob digest succeeded
-//        */
-//        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//            {
-//            /**
-//            * Treat the case when the function to close the structure blob digest failed
-//            */
-//
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob digest  failed\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Return failure to indicate the function to close the structure blob digest failed
-//            */
-//            return (RETURN_FAILURE);
-//            }
-//        else
-//            {
-//            /**
-//            * Treat the case when function to close the structure blob digest succeeded
-//            */
-//            }
-//
-//        /**
-//        * Return failure to indicate the function to close the input blob failed
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when function to close the input blob succeeded
-//        */
-//        }
-//
-//    /**
-//    * Setting the content of the digest to the block to return
-//    */
-//    u32_lcl_cnt = 0;
-//    while(u32_lcl_cnt < SHA256_OUTPUT_LENGTH_BYTE)
-//        {
-//        if(u32_lcl_cnt < sstc_lcl_digest.u64_length_data_blob_)
-//            {
-//            ptr_u8_pssd_block_to_return[u32_lcl_cnt] = sstc_lcl_digest.ptr_u8_data_blob_[u32_lcl_cnt];
-//            }
-//        else
-//            {
-//            ptr_u8_pssd_block_to_return[u32_lcl_cnt] = 0;
-//            }
-//
-//        /**
-//        * Checking for overflow
-//        */
-//        if(u32_lcl_cnt < UINT32_MAX)
-//            {
-//            u32_lcl_cnt++;
-//            }
-//        else
-//            {
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Close the structure blob digest
-//            */
-//            u8_lcl_return_from_function = RETURN_FAILURE;
-//            u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_digest);
-//
-//            /**
-//            * Check if function to close the structure blob digest succeeded
-//            */
-//            if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//                {
-//                /**
-//                * Treat the case when the function to close the structure blob digest failed
-//                */
-//
-//                #ifdef DEVELOPEMENT
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob digest  failed\n", __FILE__, __func__, __LINE__);
-//                #endif
-//
-//                #ifdef DEMO
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//                #endif
-//
-//                #ifdef PRODUCTION
-//                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//                #endif
-//
-//                /**
-//                * Return failure to indicate the function to close the structure blob digest failed
-//                */
-//                return (RETURN_FAILURE);
-//                }
-//            else
-//                {
-//                /**
-//                * Treat the case when function to close the structure blob digest succeeded
-//                */
-//                }
-//
-//            /**
-//            * Return a failure to indicate the counter variable overflow
-//            */ 
-//            return (RETURN_FAILURE);
-//            } 
-//        }
-//
-//    /**
-//    * Close the structure blob digest
-//    */
-//    u8_lcl_return_from_function = RETURN_FAILURE;
-//    u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_digest);
-//
-//    /**
-//    * Check if function to close the structure blob digest succeeded
-//    */
-//    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//        {
-//        /**
-//        * Treat the case when the function to close the structure blob digest failed
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob digest  failed\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the function to close the structure blob digest failed
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when function to close the structure blob digest succeeded
-//        */
-//        }
-//
-//    return (RETURN_SUCCESS);
-//    }
-//
-//uint8_t Fu8__calculate_block_pbkdf2_hmac_sha256(blob_t *ptr_sstc_pssd_password, uint8_t *ptr_u8_pssd_salt, uint64_t u64_pssd_salt_length, uint64_t u64_pssd_iteration, uint32_t u32_pssd_block_index, uint8_t *ptr_u8_pssd_actual_block)
-//    {
-//    /**
-//    * Assertion of argument
-//    */
-//
-//    /**
-//    * Check if the blob password is correctly pointing passed as an argument of the function
-//    */
-//    if(ptr_sstc_pssd_password == NULL)
-//        {
-//        /**
-//        * Treat the case when the blob password is not correctly pointing passed as an argument of the function
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the blob password is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the blob password is not correctly pointing passed as an argument of the function
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the blob password is correctly pointing passed as an argument of the function
-//        */
-//        }
-//
-//    /**
-//    * Check if the blob password passed in argument of the function is not initialized
-//    */
-//    if((ptr_sstc_pssd_password->u8_global_status_ & FIRST_BIT) == FALSE)
-//        {
-//        /**
-//        * Treat the case when the blob password passed in argument of the function is not initialized
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the blob password passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the blob password passed in argument of the function is not initialized
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the blob password passed in argument of the function is initialized
-//        */
-//        }
-//
-//    /**
-//    * Check if the data of the blob password passed in argument of the function is not set
-//    */
-//    if((ptr_sstc_pssd_password->u8_global_status_ & SECOND_BIT) == FALSE)
-//        {
-//        /**
-//        * Treat the case when the data of the blob password passed in argument of the function is not set
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the data of the blob password passed in argument of the function is not set\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the data of the blob password passed in argument of the function is not set
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the data of the blob password passed in argument of the function is set
-//        */
-//        }
-//
-//    /**
-//    * Check if the array representing the salt is correctly pointing passed as an argument of the function
-//    */
-//    if(ptr_u8_pssd_salt == NULL)
-//        {
-//        /**
-//        * Treat the case when the array representing the salt is not correctly pointing passed as an argument of the function
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the array representing the salt is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the array representing the salt is not correctly pointing passed as an argument of the function
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the array representing the salt is correctly pointing passed as an argument of the function
-//        */
-//        }
-//
-//    /**
-//    * Check if the length of the array representing the salt passed in argument of the function is zero
-//    */
-//    if(u64_pssd_salt_length == 0)
-//        {
-//        /**
-//        * Treat the case when the length of the array representing the salt passed in argument of the function is zero
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the length of the array representing the salt passed in argument of the function is zero\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the length of the array representing the salt passed in argument of the function is zero
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the length of the array representing the salt passed in argument of the function is not zero
-//        */
-//        }
-//
-//    /**
-//    * Check if the number of iteration passed in argument of the function is zero
-//    */
-//    if(u64_pssd_iteration == 0)
-//        {
-//        /**
-//        * Treat the case when the number of iteration passed in argument of the function is zero
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the number of iteration passed in argument of the function is zero\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the number of iteration passed in argument of the function is zero
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the number of iteration passed in argument of the function is not zero
-//        */
-//        }
-//
-//    /**
-//    * Check if the length of the output in byte of sha256 is zero
-//    */
-//    if(SHA256_OUTPUT_LENGTH_BYTE == 0)
-//        {
-//        /**
-//        * Treat the case when the length of the output in byte of sha256 is zero
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the length of the output in byte of sha256 is zero\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the length of the output in byte of sha256 is zero
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the length of the output in byte of sha256 is not zero
-//        */
-//        } 
-//
-//    /**
-//    * Creation of local variable
-//    */
-//    blob_t   sstc_lcl_blob;
-//    uint64_t u32_lcl_cnt;
-//    uint64_t u32_lcl_pos_in_block;
-//    uint8_t  u8_lcl_hmac_sha256_block_actual[SHA256_OUTPUT_LENGTH_BYTE];
-//    uint8_t  u8_lcl_hmac_sha256_block_next[SHA256_OUTPUT_LENGTH_BYTE];
-//    uint8_t  u8_lcl_return_from_function;
-//
-//    /**
-//    * Initialization of local variable
-//    */
-//    sstc_lcl_blob.u8_global_status_ = 0;
-//    u32_lcl_cnt                     = 0;
-//    u32_lcl_pos_in_block            = 0;
-//    u8_lcl_return_from_function     = RETURN_FAILURE;
-//
-//    u32_lcl_cnt = 0;
-//    while(u32_lcl_cnt < SHA256_OUTPUT_LENGTH_BYTE)
-//        {
-//        u8_lcl_hmac_sha256_block_actual[u32_lcl_cnt] = 0;
-//
-//        /**
-//        * Checking for overflow
-//        */
-//        if(u32_lcl_cnt < UINT32_MAX)
-//            {
-//            u32_lcl_cnt++;
-//            }
-//        else
-//            {
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Return a failure to indicate the counter variable overflow
-//            */ 
-//            return (RETURN_FAILURE);
-//            } 
-//        }
-//
-//    u32_lcl_cnt = 0;
-//    while(u32_lcl_cnt < SHA256_OUTPUT_LENGTH_BYTE)
-//        {
-//        u8_lcl_hmac_sha256_block_next[u32_lcl_cnt] = 0;
-//
-//        /**
-//        * Checking for overflow
-//        */
-//        if(u32_lcl_cnt < UINT32_MAX)
-//            {
-//            u32_lcl_cnt++;
-//            }
-//        else
-//            {
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Return a failure to indicate the counter variable overflow
-//            */ 
-//            return (RETURN_FAILURE);
-//            } 
-//        }
-//
-//    /**
-//    * Initialize the local blob
-//    */
-//    sstc_lcl_blob.u8_global_status_ = 0;
-//    u8_lcl_return_from_function     = RETURN_FAILURE;
-//    u8_lcl_return_from_function     = Fu8__structure_blob_init(&sstc_lcl_blob);
-//
-//    /**
-//    * Check if function to init the local blob succeeded
-//    */
-//    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//        {
-//        /**
-//        * Treat the case when the function to init the local blob failed
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init the local blob  failed\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the function to init the local blob failed
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when function to init the local blob succeeded
-//        */
-//        }
-//
-//    /**
-//    * Concat the salt and the index of the block
-//    */
-//    u8_lcl_return_from_function = RETURN_FAILURE;
-//    u8_lcl_return_from_function = Fu8__concat_load_two_raw_blob_in_structure_blob(&sstc_lcl_blob, ptr_u8_pssd_salt, u64_pssd_salt_length, (uint8_t *) &u32_pssd_block_index, sizeof(uint32_t));
-//
-//    /**
-//    * Check if function to concat the salt and the index of the block succeeded
-//    */
-//    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//        {
-//        /**
-//        * Treat the case when the function to concat the salt and the index of the block failed
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to concat the salt and the index of the block  failed\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//    /**
-//    * Closing the local blob
-//    */
-//    u8_lcl_return_from_function = RETURN_FAILURE;
-//    u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_blob);
-//
-//    /**
-//    * Check if function to close the local blob succeeded
-//    */
-//    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//        {
-//        /**
-//        * Treat the case when the function to close the local blob failed
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the local blob  failed\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the function to close the local blob failed
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when function to close the local blob succeeded
-//        */
-//        }
-//
-//        /**
-//        * Return failure to indicate the function to concat the salt and the index of the block failed
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when function to concat the salt and the index of the block succeeded
-//        */
-//        }
-//
-//    /**
-//    * Getting the result of the pseudorandom function hmac sha256
-//    */
-//    u8_lcl_return_from_function = RETURN_FAILURE;
-//    u8_lcl_return_from_function = Fu8__hmac_sha256(ptr_sstc_pssd_password, sstc_lcl_blob.ptr_u8_data_blob_, sstc_lcl_blob.u64_length_data_blob_, u8_lcl_hmac_sha256_block_actual);
-//
-//    /**
-//    * Check if function to get the result of the pseudorandom function hmac sha256 succeeded
-//    */
-//    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//        {
-//        /**
-//        * Treat the case when the function to get the result of the pseudorandom function hmac sha256 failed
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the result of the pseudorandom function hmac sha256  failed\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//    /**
-//    * Closing the local blob
-//    */
-//    u8_lcl_return_from_function = RETURN_FAILURE;
-//    u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_blob);
-//
-//    /**
-//    * Check if function to close the local blob succeeded
-//    */
-//    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//        {
-//        /**
-//        * Treat the case when the function to close the local blob failed
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the local blob  failed\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the function to close the local blob failed
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when function to close the local blob succeeded
-//        */
-//        }
-//
-//        /**
-//        * Return failure to indicate the function to get the result of the pseudorandom function hmac sha256 failed
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when function to get the result of the pseudorandom function hmac sha256 succeeded
-//        */
-//        } 
-//
-//    /**
-//    * Closing the local blob
-//    */
-//    u8_lcl_return_from_function = RETURN_FAILURE;
-//    u8_lcl_return_from_function = Fu8__structure_blob_close(&sstc_lcl_blob);
-//
-//    /**
-//    * Check if function to close the local blob succeeded
-//    */
-//    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//        {
-//        /**
-//        * Treat the case when the function to close the local blob failed
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the local blob  failed\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the function to close the local blob failed
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when function to close the local blob succeeded
-//        */
-//        }
-//
-//    u32_lcl_cnt = 0;
-//    while(u32_lcl_cnt < u64_pssd_iteration)
-//        {
-//        /**
-//        * Getting the result of the pseudorandom function hmac sha256
-//        */
-//        u8_lcl_return_from_function = RETURN_FAILURE;
-//        u8_lcl_return_from_function = Fu8__hmac_sha256(ptr_sstc_pssd_password, u8_lcl_hmac_sha256_block_actual, SHA256_OUTPUT_LENGTH_BYTE, u8_lcl_hmac_sha256_block_next);
-//
-//        /**
-//        * Check if function to get the result of the pseudorandom function hmac sha256 succeeded
-//        */
-//        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//            {
-//            /**
-//            * Treat the case when the function to get the result of the pseudorandom function hmac sha256 failed
-//            */
-//
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the result of the pseudorandom function hmac sha256  failed\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Return failure to indicate the function to get the result of the pseudorandom function hmac sha256 failed
-//            */
-//            return (RETURN_FAILURE);
-//            }
-//        else
-//            {
-//            /**
-//            * Treat the case when function to get the result of the pseudorandom function hmac sha256 succeeded
-//            */
-//            }
-//
-//        /**
-//        * XOR the actual block of derivated key and the next block of derivated key
-//        */
-//        u32_lcl_pos_in_block = 0;
-//        while(u32_lcl_pos_in_block < SHA256_OUTPUT_LENGTH_BYTE)
-//            {
-//            u8_lcl_hmac_sha256_block_actual[u32_lcl_pos_in_block] = (u8_lcl_hmac_sha256_block_actual[u32_lcl_pos_in_block] ^ u8_lcl_hmac_sha256_block_next[u32_lcl_pos_in_block]);
-//
-//            /**
-//            * Checking for overflow
-//            */
-//            if(u32_lcl_pos_in_block < UINT32_MAX)
-//                {
-//                u32_lcl_pos_in_block++;
-//                }
-//            else
-//                {
-//                #ifdef DEVELOPEMENT
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
-//                #endif
-//
-//                #ifdef DEMO
-//                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//                #endif
-//
-//                #ifdef PRODUCTION
-//                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//                #endif
-//
-//                /**
-//                * Return a failure to indicate the counter variable overflow
-//                */ 
-//                return (RETURN_FAILURE);
-//                } 
-//            }
-//
-//        /**
-//        * Checking for overflow
-//        */
-//        if(u32_lcl_cnt < UINT32_MAX)
-//            {
-//            u32_lcl_cnt++;
-//            }
-//        else
-//            {
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Return a failure to indicate the counter variable overflow
-//            */ 
-//            return (RETURN_FAILURE);
-//            } 
-//        }
-//
-//    /**
-//    * Filling the actual block to return passed in argument of the function with the content of the calculed actual block
-//    */
-//    u32_lcl_cnt = 0;
-//    while(u32_lcl_cnt < SHA256_OUTPUT_LENGTH_BYTE)
-//        {
-//        ptr_u8_pssd_actual_block[u32_lcl_cnt] = u8_lcl_hmac_sha256_block_actual[u32_lcl_cnt];
-//
-//        /**
-//        * Checking for overflow
-//        */
-//        if(u32_lcl_cnt < UINT32_MAX)
-//            {
-//            u32_lcl_cnt++;
-//            }
-//        else
-//            {
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Return a failure to indicate the counter variable overflow
-//            */ 
-//            return (RETURN_FAILURE);
-//            } 
-//        }
-//
-//    u32_lcl_cnt = 0;
-//    while(u32_lcl_cnt < SHA256_OUTPUT_LENGTH_BYTE)
-//        {
-//        u8_lcl_hmac_sha256_block_actual[u32_lcl_cnt] = 0;
-//
-//        /**
-//        * Checking for overflow
-//        */
-//        if(u32_lcl_cnt < UINT32_MAX)
-//            {
-//            u32_lcl_cnt++;
-//            }
-//        else
-//            {
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Return a failure to indicate the counter variable overflow
-//            */ 
-//            return (RETURN_FAILURE);
-//            } 
-//        }
-//
-//    u32_lcl_cnt = 0;
-//    while(u32_lcl_cnt < SHA256_OUTPUT_LENGTH_BYTE)
-//        {
-//        u8_lcl_hmac_sha256_block_next[u32_lcl_cnt] = 0;
-//
-//        /**
-//        * Checking for overflow
-//        */
-//        if(u32_lcl_cnt < UINT32_MAX)
-//            {
-//            u32_lcl_cnt++;
-//            }
-//        else
-//            {
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Return a failure to indicate the counter variable overflow
-//            */ 
-//            return (RETURN_FAILURE);
-//            } 
-//        }
-//
-//    return (RETURN_SUCCESS);
-//    }
-//
-//uint8_t Fu8__pbkdf2_hmac_sha256(blob_t *ptr_sstc_pssd_password, uint8_t *ptr_u8_pssd_salt, uint64_t u64_pssd_salt_length, uint64_t u64_pssd_iteration, uint64_t u64_pssd_derived_key_length, blob_t *ptr_sstc_pssd_derived_key_to_return)
-//    {
-//    /**
-//    * Assertion of argument
-//    */
-//
-//    /**
-//    * Check if the blob password is correctly pointing passed as an argument of the function
-//    */
-//    if(ptr_sstc_pssd_password == NULL)
-//        {
-//        /**
-//        * Treat the case when the blob password is not correctly pointing passed as an argument of the function
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the blob password is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the blob password is not correctly pointing passed as an argument of the function
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the blob password is correctly pointing passed as an argument of the function
-//        */
-//        }
-//
-//    /**
-//    * Check if the blob password passed in argument of the function is not initialized
-//    */
-//    if((ptr_sstc_pssd_password->u8_global_status_ & FIRST_BIT) == FALSE)
-//        {
-//        /**
-//        * Treat the case when the blob password passed in argument of the function is not initialized
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the blob password passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the blob password passed in argument of the function is not initialized
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the blob password passed in argument of the function is initialized
-//        */
-//        }
-//
-//    /**
-//    * Check if the data of the blob password passed in argument of the function is not set
-//    */
-//    if((ptr_sstc_pssd_password->u8_global_status_ & SECOND_BIT) == FALSE)
-//        {
-//        /**
-//        * Treat the case when the data of the blob password passed in argument of the function is not set
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the data of the blob password passed in argument of the function is not set\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the data of the blob password passed in argument of the function is not set
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the data of the blob password passed in argument of the function is set
-//        */
-//        }
-//
-//    /**
-//    * Check if the array representing the salt is correctly pointing passed as an argument of the function
-//    */
-//    if(ptr_u8_pssd_salt == NULL)
-//        {
-//        /**
-//        * Treat the case when the array representing the salt is not correctly pointing passed as an argument of the function
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the array representing the salt is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the array representing the salt is not correctly pointing passed as an argument of the function
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the array representing the salt is correctly pointing passed as an argument of the function
-//        */
-//        }
-//
-//    /**
-//    * Check if the length of the array representing the salt passed in argument of the function is zero
-//    */
-//    if(u64_pssd_salt_length == 0)
-//        {
-//        /**
-//        * Treat the case when the length of the array representing the salt passed in argument of the function is zero
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the length of the array representing the salt passed in argument of the function is zero\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the length of the array representing the salt passed in argument of the function is zero
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the length of the array representing the salt passed in argument of the function is not zero
-//        */
-//        }
-//
-//    /**
-//    * Check if the number of iteration passed in argument of the function is zero
-//    */
-//    if(u64_pssd_iteration == 0)
-//        {
-//        /**
-//        * Treat the case when the number of iteration passed in argument of the function is zero
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the number of iteration passed in argument of the function is zero\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the number of iteration passed in argument of the function is zero
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the number of iteration passed in argument of the function is not zero
-//        */
-//        }
-//
-//    /**
-//    * Check if the length of the derived key passed in argument of the function is zero
-//    */
-//    if(u64_pssd_derived_key_length == 0)
-//        {
-//        /**
-//        * Treat the case when the length of the derived key passed in argument of the function is zero
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the length of the derived key passed in argument of the function is zero\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the length of the derived key passed in argument of the function is zero
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the length of the derived key passed in argument of the function is not zero
-//        */
-//        }
-//
-//    /**
-//    * Check if the length of the derived key passed in argument of the function bigger than the authorized value
-//    */
-//    if(u64_pssd_derived_key_length > (UINT32_MAX * SHA256_OUTPUT_LENGTH_BYTE))
-//        {
-//        /**
-//        * Treat the case when the length of the derived key passed in argument of the function bigger than the authorized value
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the length of the derived key passed in argument of the function bigger than the authorized value\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the length of the derived key passed in argument of the function bigger than the authorized value
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the length of the derived key passed in argument of the function not bigger than the authorized value
-//        */
-//        }
-//
-//    /**
-//    * Check if the derived key blob to return is correctly pointing passed as an argument of the function
-//    */
-//    if(ptr_sstc_pssd_derived_key_to_return == NULL)
-//        {
-//        /**
-//        * Treat the case when the derived key blob to return is not correctly pointing passed as an argument of the function
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the derived key blob to return is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the derived key blob to return is not correctly pointing passed as an argument of the function
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the derived key blob to return is correctly pointing passed as an argument of the function
-//        */
-//        }
-//
-//    /**
-//    * Check if the derived key blob to return passed in argument of the function is not initialized
-//    */
-//    if((ptr_sstc_pssd_derived_key_to_return->u8_global_status_ & FIRST_BIT) == FALSE)
-//        {
-//        /**
-//        * Treat the case when the derived key blob to return passed in argument of the function is not initialized
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the derived key blob to return passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the derived key blob to return passed in argument of the function is not initialized
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the derived key blob to return passed in argument of the function is initialized
-//        */
-//        }
-//
-//    /**
-//    * Check if the length of the output in byte of sha256 is zero
-//    */
-//    if(SHA256_OUTPUT_LENGTH_BYTE == 0)
-//        {
-//        /**
-//        * Treat the case when the length of the output in byte of sha256 is zero
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the length of the output in byte of sha256 is zero\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the length of the output in byte of sha256 is zero
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when the length of the output in byte of sha256 is not zero
-//        */
-//        } 
-//
-//    /**
-//    * Creation of local variable
-//    */
-//    uint64_t u32_lcl_cnt;
-//    uint64_t u64_lcl_nbr_block_derived_key;
-//    uint8_t  u8_lcl_return_from_function;
-//
-//    /**
-//    * Initialization of local variable
-//    */
-//    u32_lcl_cnt                   = 0;
-//    u64_lcl_nbr_block_derived_key = 0;
-//    u8_lcl_return_from_function   = RETURN_FAILURE;
-//
-//    /**
-//    * Calculate the number of block of the derived key
-//    */
-//    if((u64_pssd_derived_key_length % SHA256_OUTPUT_LENGTH_BYTE) != 0)
-//        {
-//        u64_lcl_nbr_block_derived_key = u64_pssd_derived_key_length / SHA256_OUTPUT_LENGTH_BYTE + 1;
-//        }
-//    else
-//        {
-//        u64_lcl_nbr_block_derived_key = u64_pssd_derived_key_length / SHA256_OUTPUT_LENGTH_BYTE;
-//        }
-//
-//    /**
-//    * Setting the data size of the blob representing the derived key to return to the number of byte in the requested for the actual derived key
-//    */
-//    u8_lcl_return_from_function = RETURN_FAILURE;
-//    u8_lcl_return_from_function = Fu8__resize_data_in_structure_blob(ptr_sstc_pssd_derived_key_to_return, (u64_lcl_nbr_block_derived_key * SHA256_OUTPUT_LENGTH_BYTE));
-//
-//    /**
-//    * Check if function to set the data size of the blob representing the derived key to return to the number of byte in the requested for the actual derived key succeeded
-//    */
-//    if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//        {
-//        /**
-//        * Treat the case when the function to set the data size of the blob representing the derived key to return to the number of byte in the requested for the actual derived key failed
-//        */
-//
-//        #ifdef DEVELOPEMENT
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the data size of the blob representing the derived key to return to the number of byte in the requested for the actual derived key  failed\n", __FILE__, __func__, __LINE__);
-//        #endif
-//
-//        #ifdef DEMO
-//        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//        #endif
-//
-//        #ifdef PRODUCTION
-//        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//        #endif
-//
-//        /**
-//        * Return failure to indicate the function to set the data size of the blob representing the derived key to return to the number of byte in the requested for the actual derived key failed
-//        */
-//        return (RETURN_FAILURE);
-//        }
-//    else
-//        {
-//        /**
-//        * Treat the case when function to set the data size of the blob representing the derived key to return to the number of byte in the requested for the actual derived key succeeded
-//        */
-//        } 
-//
-//    /**
-//    * Compute all the block of the derived key
-//    */
-//    u32_lcl_cnt = 0;
-//    while(u32_lcl_cnt < u64_lcl_nbr_block_derived_key)
-//        {
-//        /**
-//        * Calculate the actual block of the derivated key
-//        */
-//        u8_lcl_return_from_function = RETURN_FAILURE;
-//        u8_lcl_return_from_function = Fu8__calculate_block_pbkdf2_hmac_sha256(ptr_sstc_pssd_password, ptr_u8_pssd_salt, u64_pssd_salt_length, u64_pssd_iteration, u32_lcl_cnt + 1, (ptr_sstc_pssd_derived_key_to_return->ptr_u8_data_blob_ + (u32_lcl_cnt * SHA256_OUTPUT_LENGTH_BYTE)));
-//
-//        /**
-//        * Check if function to calculate the actual block of the derivated key succeeded
-//        */
-//        if(u8_lcl_return_from_function != RETURN_SUCCESS)
-//            {
-//            /**
-//            * Treat the case when the function to calculate the actual block of the derivated key failed
-//            */
-//
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to calculate the actual block of the derivated key  failed\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Return failure to indicate the function to calculate the actual block of the derivated key failed
-//            */
-//            return (RETURN_FAILURE);
-//            }
-//        else
-//            {
-//            /**
-//            * Treat the case when function to calculate the actual block of the derivated key succeeded
-//            */
-//            }
-//
-//        /**
-//        * Checking for overflow
-//        */
-//        if(u32_lcl_cnt < UINT32_MAX)
-//            {
-//            u32_lcl_cnt++;
-//            }
-//        else
-//            {
-//            #ifdef DEVELOPEMENT
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
-//            #endif
-//
-//            #ifdef DEMO
-//            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
-//            #endif
-//
-//            #ifdef PRODUCTION
-//            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
-//            #endif
-//
-//            /**
-//            * Return a failure to indicate the counter variable overflow
-//            */ 
-//            return (RETURN_FAILURE);
-//            } 
-//        }
-//
-//    return (RETURN_SUCCESS);
-//    }
-
 uint8_t Fu8_des_ecb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
     {
     /**
@@ -7345,15 +4036,15 @@ uint8_t Fu8_des_ecb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -7378,15 +4069,15 @@ uint8_t Fu8_des_ecb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -7411,15 +4102,15 @@ uint8_t Fu8_des_ecb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -7444,15 +4135,15 @@ uint8_t Fu8_des_ecb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob passed as an argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob passed as an argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -7502,15 +4193,15 @@ uint8_t Fu8_des_ecb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to generate the sub key  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to generate the sub key  failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -7554,15 +4245,15 @@ uint8_t Fu8_des_ecb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
             else
                 {
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -7602,15 +4293,15 @@ uint8_t Fu8_des_ecb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the next block of clear data  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the next block of clear data  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -7670,15 +4361,15 @@ uint8_t Fu8_des_ecb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the number of readen bytes is not a multiple of eight\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the number of readen bytes is not a multiple of eight\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -7715,15 +4406,15 @@ uint8_t Fu8_des_ecb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
                     else
                         {
                         #ifdef DEVELOPEMENT
-                        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                         #endif
 
                         #ifdef DEMO
-                        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                         #endif
 
                         #ifdef PRODUCTION
-                        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                         #endif
 
                         /**
@@ -7760,15 +4451,15 @@ uint8_t Fu8_des_ecb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to encode the actual not encoded block  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to encode the actual not encoded block  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -7799,15 +4490,15 @@ uint8_t Fu8_des_ecb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to add to the end of the output blob the actual encoded block  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to add to the end of the output blob the actual encoded block  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -7856,15 +4547,15 @@ uint8_t Fu8_des_ecb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the length of the output blob is smaller than the number of padding bytes\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the length of the output blob is smaller than the number of padding bytes\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -7894,15 +4585,15 @@ uint8_t Fu8_des_ecb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
                     */
 
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to Remove the padding bytes of the output blob  failed\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to Remove the padding bytes of the output blob  failed\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     /**
@@ -7951,15 +4642,15 @@ uint8_t Fu8_des_cbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -7984,15 +4675,15 @@ uint8_t Fu8_des_cbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -8017,15 +4708,15 @@ uint8_t Fu8_des_cbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -8050,15 +4741,15 @@ uint8_t Fu8_des_cbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob passed as an argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob passed as an argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -8110,15 +4801,15 @@ uint8_t Fu8_des_cbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to generate the sub key  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to generate the sub key  failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -8162,15 +4853,15 @@ uint8_t Fu8_des_cbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
             else
                 {
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -8212,15 +4903,15 @@ uint8_t Fu8_des_cbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the next block of clear data  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the next block of clear data  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -8280,15 +4971,15 @@ uint8_t Fu8_des_cbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the number of readen bytes is not a multiple of eight\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the number of readen bytes is not a multiple of eight\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -8325,15 +5016,15 @@ uint8_t Fu8_des_cbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
                     else
                         {
                         #ifdef DEVELOPEMENT
-                        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                         #endif
 
                         #ifdef DEMO
-                        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                         #endif
 
                         #ifdef PRODUCTION
-                        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                         #endif
 
                         /**
@@ -8391,15 +5082,15 @@ uint8_t Fu8_des_cbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to encode the actual not encoded block  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to encode the actual not encoded block  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -8453,15 +5144,15 @@ uint8_t Fu8_des_cbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to add to the end of the output blob the actual encoded block  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to add to the end of the output blob the actual encoded block  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -8510,15 +5201,15 @@ uint8_t Fu8_des_cbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the length of the output blob is smaller than the number of padding bytes\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the length of the output blob is smaller than the number of padding bytes\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -8548,15 +5239,15 @@ uint8_t Fu8_des_cbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
                     */
 
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to Remove the padding bytes of the output blob  failed\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to Remove the padding bytes of the output blob  failed\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     /**
@@ -8610,15 +5301,15 @@ uint8_t Fu8_des_cfb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -8643,15 +5334,15 @@ uint8_t Fu8_des_cfb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -8676,15 +5367,15 @@ uint8_t Fu8_des_cfb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -8709,15 +5400,15 @@ uint8_t Fu8_des_cfb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob passed as an argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob passed as an argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -8765,15 +5456,15 @@ uint8_t Fu8_des_cfb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to generate the sub key  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to generate the sub key  failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -8810,15 +5501,15 @@ uint8_t Fu8_des_cfb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the next block of clear data  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the next block of clear data  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -8852,15 +5543,15 @@ uint8_t Fu8_des_cfb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to encode the actual not encoded block  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to encode the actual not encoded block  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -8915,15 +5606,15 @@ uint8_t Fu8_des_cfb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to add to the end of the output blob the actual encoded block  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to add to the end of the output blob the actual encoded block  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -8963,15 +5654,15 @@ uint8_t Fu8_des_ofb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -8996,15 +5687,15 @@ uint8_t Fu8_des_ofb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -9029,15 +5720,15 @@ uint8_t Fu8_des_ofb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -9062,15 +5753,15 @@ uint8_t Fu8_des_ofb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob passed as an argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob passed as an argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -9118,15 +5809,15 @@ uint8_t Fu8_des_ofb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to generate the sub key  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to generate the sub key  failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -9163,15 +5854,15 @@ uint8_t Fu8_des_ofb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the next block of clear data  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the next block of clear data  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -9205,15 +5896,15 @@ uint8_t Fu8_des_ofb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to encode the actual not encoded block  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to encode the actual not encoded block  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -9248,15 +5939,15 @@ uint8_t Fu8_des_ofb(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to add to the end of the output blob the actual encoded block  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to add to the end of the output blob the actual encoded block  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -9296,15 +5987,15 @@ uint8_t Fu8_des_pcbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -9329,15 +6020,15 @@ uint8_t Fu8_des_pcbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -9362,15 +6053,15 @@ uint8_t Fu8_des_pcbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -9395,15 +6086,15 @@ uint8_t Fu8_des_pcbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob passed as an argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob passed as an argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -9457,15 +6148,15 @@ uint8_t Fu8_des_pcbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to generate the sub key  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to generate the sub key  failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -9509,15 +6200,15 @@ uint8_t Fu8_des_pcbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output
             else
                 {
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -9558,15 +6249,15 @@ uint8_t Fu8_des_pcbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the next block of clear data  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the next block of clear data  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -9626,15 +6317,15 @@ uint8_t Fu8_des_pcbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the number of readen bytes is not a multiple of eight\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the number of readen bytes is not a multiple of eight\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -9671,15 +6362,15 @@ uint8_t Fu8_des_pcbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output
                     else
                         {
                         #ifdef DEVELOPEMENT
-                        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                         #endif
 
                         #ifdef DEMO
-                        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                         #endif
 
                         #ifdef PRODUCTION
-                        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                         #endif
 
                         /**
@@ -9739,15 +6430,15 @@ uint8_t Fu8_des_pcbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to encode the actual not encoded block  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to encode the actual not encoded block  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -9803,15 +6494,15 @@ uint8_t Fu8_des_pcbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to add to the end of the output blob the actual encoded block  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to add to the end of the output blob the actual encoded block  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -9860,15 +6551,15 @@ uint8_t Fu8_des_pcbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the length of the output blob is smaller than the number of padding bytes\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the length of the output blob is smaller than the number of padding bytes\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -9898,15 +6589,15 @@ uint8_t Fu8_des_pcbc(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output
                     */
 
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to Remove the padding bytes of the output blob  failed\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to Remove the padding bytes of the output blob  failed\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     /**
@@ -9960,15 +6651,15 @@ uint8_t Fu8_des_ctr(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -9993,15 +6684,15 @@ uint8_t Fu8_des_ctr(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -10026,15 +6717,15 @@ uint8_t Fu8_des_ctr(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -10059,15 +6750,15 @@ uint8_t Fu8_des_ctr(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob passed as an argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the output blob passed as an argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -10115,15 +6806,15 @@ uint8_t Fu8_des_ctr(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to generate the sub key  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to generate the sub key  failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -10160,15 +6851,15 @@ uint8_t Fu8_des_ctr(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the next block of clear data  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the next block of clear data  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -10202,15 +6893,15 @@ uint8_t Fu8_des_ctr(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to encode the actual not encoded block  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to encode the actual not encoded block  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -10243,15 +6934,15 @@ uint8_t Fu8_des_ctr(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to add to the end of the output blob the actual encoded block  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to add to the end of the output blob the actual encoded block  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -10276,15 +6967,15 @@ uint8_t Fu8_des_ctr(des_t *ptr_cstc_pssd_des, blob_t *ptr_sstc_pssd_blob_output)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -10318,15 +7009,15 @@ uint8_t Fu8__pbkdf_sha256(blob_t *ptr_sstc_pssd_password, uint64_t u64_pssd_salt
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the blob password is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the blob password is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -10351,15 +7042,15 @@ uint8_t Fu8__pbkdf_sha256(blob_t *ptr_sstc_pssd_password, uint64_t u64_pssd_salt
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the blob password passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the blob password passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -10384,15 +7075,15 @@ uint8_t Fu8__pbkdf_sha256(blob_t *ptr_sstc_pssd_password, uint64_t u64_pssd_salt
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the data of the blob password passed in argument of the function is not set\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the data of the blob password passed in argument of the function is not set\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -10417,15 +7108,15 @@ uint8_t Fu8__pbkdf_sha256(blob_t *ptr_sstc_pssd_password, uint64_t u64_pssd_salt
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the number of iteration passed in argument of the function is zero\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the number of iteration passed in argument of the function is zero\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -10450,15 +7141,15 @@ uint8_t Fu8__pbkdf_sha256(blob_t *ptr_sstc_pssd_password, uint64_t u64_pssd_salt
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the derived key blob to return is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the derived key blob to return is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -10483,15 +7174,15 @@ uint8_t Fu8__pbkdf_sha256(blob_t *ptr_sstc_pssd_password, uint64_t u64_pssd_salt
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the derived key blob to return passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the derived key blob to return passed in argument of the function is not initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -10537,15 +7228,15 @@ uint8_t Fu8__pbkdf_sha256(blob_t *ptr_sstc_pssd_password, uint64_t u64_pssd_salt
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init the structure blob input  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init the structure blob input  failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -10576,15 +7267,15 @@ uint8_t Fu8__pbkdf_sha256(blob_t *ptr_sstc_pssd_password, uint64_t u64_pssd_salt
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to concat the password and the salt  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to concat the password and the salt  failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -10603,15 +7294,15 @@ uint8_t Fu8__pbkdf_sha256(blob_t *ptr_sstc_pssd_password, uint64_t u64_pssd_salt
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob input  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob input  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -10654,15 +7345,15 @@ uint8_t Fu8__pbkdf_sha256(blob_t *ptr_sstc_pssd_password, uint64_t u64_pssd_salt
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the digest of the password and the salt from the hash function sha256  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the digest of the password and the salt from the hash function sha256  failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -10681,15 +7372,15 @@ uint8_t Fu8__pbkdf_sha256(blob_t *ptr_sstc_pssd_password, uint64_t u64_pssd_salt
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob input  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob input  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -10738,15 +7429,15 @@ uint8_t Fu8__pbkdf_sha256(blob_t *ptr_sstc_pssd_password, uint64_t u64_pssd_salt
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the content of the previous derived key to the input blob to calculate the new derived key  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the content of the previous derived key to the input blob to calculate the new derived key  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -10765,15 +7456,15 @@ uint8_t Fu8__pbkdf_sha256(blob_t *ptr_sstc_pssd_password, uint64_t u64_pssd_salt
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob input  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob input  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -10816,15 +7507,15 @@ uint8_t Fu8__pbkdf_sha256(blob_t *ptr_sstc_pssd_password, uint64_t u64_pssd_salt
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the digest of the previous derived key to calculate the new derived key  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the digest of the previous derived key to calculate the new derived key  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -10843,15 +7534,15 @@ uint8_t Fu8__pbkdf_sha256(blob_t *ptr_sstc_pssd_password, uint64_t u64_pssd_salt
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob input  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob input  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -10888,15 +7579,15 @@ uint8_t Fu8__pbkdf_sha256(blob_t *ptr_sstc_pssd_password, uint64_t u64_pssd_salt
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -10915,15 +7606,15 @@ uint8_t Fu8__pbkdf_sha256(blob_t *ptr_sstc_pssd_password, uint64_t u64_pssd_salt
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob input  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob input  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -10961,15 +7652,15 @@ uint8_t Fu8__pbkdf_sha256(blob_t *ptr_sstc_pssd_password, uint64_t u64_pssd_salt
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob input  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob input  failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -11003,15 +7694,15 @@ uint8_t Fu8__des_get_key_and_init_vector(des_t *ptr_sstc_pssd_des, argument_t *p
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -11036,15 +7727,15 @@ uint8_t Fu8__des_get_key_and_init_vector(des_t *ptr_sstc_pssd_des, argument_t *p
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure des passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -11097,15 +7788,15 @@ uint8_t Fu8__des_get_key_and_init_vector(des_t *ptr_sstc_pssd_des, argument_t *p
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init the structure blob representing the derived key  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init the structure blob representing the derived key  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -11136,15 +7827,15 @@ uint8_t Fu8__des_get_key_and_init_vector(des_t *ptr_sstc_pssd_des, argument_t *p
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to compute the derivated key of the des encryption  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to compute the derivated key of the des encryption  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -11163,15 +7854,15 @@ uint8_t Fu8__des_get_key_and_init_vector(des_t *ptr_sstc_pssd_des, argument_t *p
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob representing the derived key  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob representing the derived key  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -11208,15 +7899,15 @@ uint8_t Fu8__des_get_key_and_init_vector(des_t *ptr_sstc_pssd_des, argument_t *p
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the length of the derivated key is lower than the length of the requested derived key\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the length of the derivated key is lower than the length of the requested derived key\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -11235,15 +7926,15 @@ uint8_t Fu8__des_get_key_and_init_vector(des_t *ptr_sstc_pssd_des, argument_t *p
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob representing the derived key  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob representing the derived key  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -11292,15 +7983,15 @@ uint8_t Fu8__des_get_key_and_init_vector(des_t *ptr_sstc_pssd_des, argument_t *p
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob representing the derived key  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structure blob representing the derived key  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -11337,15 +8028,15 @@ uint8_t Fu8__des_get_key_and_init_vector(des_t *ptr_sstc_pssd_des, argument_t *p
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the value of the key from the argument  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the value of the key from the argument  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -11430,15 +8121,15 @@ uint8_t Fu8__des_get_key_and_init_vector(des_t *ptr_sstc_pssd_des, argument_t *p
                     */
 
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the value of the init vector from the argument  failed\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the value of the init vector from the argument  failed\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     /**
@@ -11498,15 +8189,15 @@ uint8_t Fu8__des_get_key_and_init_vector(des_t *ptr_sstc_pssd_des, argument_t *p
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the actual des mode need init vector and it is not given\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the actual des mode need init vector and it is not given\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 ft_fprintf(STDERR_FILENO, "iv undefined\n");
@@ -11610,15 +8301,15 @@ void    fv__des_help(argument_t *ptr_sstc_pssd_argument)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the command type of the structure argument passed in argument of the function is not a command des type\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the command type of the structure argument passed in argument of the function is not a command des type\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -11728,15 +8419,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the command type of the structure argument passed in argument of the function is not a command des type\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the command type of the structure argument passed in argument of the function is not a command des type\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -11845,15 +8536,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init the structre des  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to init the structre des  failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -11893,15 +8584,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the password  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the password  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -11920,15 +8611,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -11980,15 +8671,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -12040,15 +8731,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the argument data string input in the structure argument is not correctly pointing\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the argument data string input in the structure argument is not correctly pointing\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -12067,15 +8758,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -12133,15 +8824,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -12190,15 +8881,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to load the content of the input file to the input blob in the structure des  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to load the content of the input file to the input blob in the structure des  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -12217,15 +8908,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input file  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input file  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -12244,15 +8935,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                     */
 
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     /**
@@ -12295,15 +8986,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -12346,15 +9037,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input file  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the input file  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -12373,15 +9064,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -12432,15 +9123,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to load the content from the standard input to the input blob in the structure des  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to load the content from the standard input to the input blob in the structure des  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -12459,15 +9150,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -12547,15 +9238,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -12598,15 +9289,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to load the content of the input to converting is to base 64  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to load the content of the input to converting is to base 64  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -12625,15 +9316,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -12754,15 +9445,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to convert the input to base64  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to convert the input to base64  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -12781,15 +9472,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -12937,15 +9628,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -13004,15 +9695,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get salt for the actual des  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get salt for the actual des  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -13031,15 +9722,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -13091,15 +9782,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -13149,15 +9840,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the key and the init vector for the des encryption  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the key and the init vector for the des encryption  failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -13176,15 +9867,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -13236,15 +9927,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -13299,15 +9990,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             else
                 {
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -13337,15 +10028,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             else
                 {
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -13384,15 +10075,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 else
                     {
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     /**
@@ -13460,15 +10151,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -13539,15 +10230,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the magic number salt and the salt in the output blob failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the magic number salt and the salt in the output blob failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -13605,15 +10296,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                     */
 
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     /**
@@ -13664,15 +10355,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to exec the actual des mode function  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to exec the actual des mode function  failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -13691,15 +10382,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -13860,15 +10551,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -13989,15 +10680,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to load the content of the output to converting is to base 64  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to load the content of the output to converting is to base 64  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -14016,15 +10707,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -14301,15 +10992,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to convert the output to base64  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to convert the output to base64  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -14328,15 +11019,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -14613,15 +11304,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to format the output in base64  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to format the output in base64  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -14640,15 +11331,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -14952,15 +11643,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -15091,15 +11782,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the argument data string output in the structure argument is not correctly pointing\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the argument data string output in the structure argument is not correctly pointing\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -15118,15 +11809,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -15269,15 +11960,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -15395,15 +12086,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to write the content of the output structure blob to the output file failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to write the content of the output structure blob to the output file failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -15422,15 +12113,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the output file  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the output file  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -15449,15 +12140,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                     */
 
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     /**
@@ -15578,15 +12269,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -15707,15 +12398,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the output file  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the output file  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -15734,15 +12425,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -15869,15 +12560,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to write the data of the output structure blob to the standard output failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to write the data of the output structure blob to the standard output failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -15896,15 +12587,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -16053,15 +12744,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -16104,15 +12795,15 @@ uint8_t Fu8__execute_des_command(argument_t *ptr_sstc_pssd_argument)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to close the structre des  failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
