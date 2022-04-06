@@ -28,15 +28,15 @@ uint8_t Fu8__is_hash_type(argument_t *ptr_sstc_pssd_argument, uint8_t *ptr_u8_ps
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -94,15 +94,15 @@ uint8_t Fu8__is_hash_type(argument_t *ptr_sstc_pssd_argument, uint8_t *ptr_u8_ps
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the command name is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the command name is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -127,15 +127,15 @@ uint8_t Fu8__is_hash_type(argument_t *ptr_sstc_pssd_argument, uint8_t *ptr_u8_ps
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the pointer to the answer to set is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the pointer to the answer to set is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -204,15 +204,15 @@ uint8_t Fu8__is_hash_type(argument_t *ptr_sstc_pssd_argument, uint8_t *ptr_u8_ps
         else
             {
             #ifdef DEVELOPEMENT
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -241,15 +241,15 @@ uint8_t Fu8__is_base64_type(argument_t *ptr_sstc_pssd_argument, uint8_t *ptr_u8_
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -307,15 +307,15 @@ uint8_t Fu8__is_base64_type(argument_t *ptr_sstc_pssd_argument, uint8_t *ptr_u8_
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the command name is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the command name is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -340,15 +340,15 @@ uint8_t Fu8__is_base64_type(argument_t *ptr_sstc_pssd_argument, uint8_t *ptr_u8_
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the pointer to the answer to set is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the pointer to the answer to set is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -417,15 +417,15 @@ uint8_t Fu8__is_base64_type(argument_t *ptr_sstc_pssd_argument, uint8_t *ptr_u8_
         else
             {
             #ifdef DEVELOPEMENT
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -454,15 +454,15 @@ uint8_t Fu8__is_des_type(argument_t *ptr_sstc_pssd_argument, uint8_t *ptr_u8_pss
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -520,15 +520,15 @@ uint8_t Fu8__is_des_type(argument_t *ptr_sstc_pssd_argument, uint8_t *ptr_u8_pss
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the command name is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the command name is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -553,15 +553,15 @@ uint8_t Fu8__is_des_type(argument_t *ptr_sstc_pssd_argument, uint8_t *ptr_u8_pss
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the pointer to the answer to set is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the pointer to the answer to set is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -630,15 +630,15 @@ uint8_t Fu8__is_des_type(argument_t *ptr_sstc_pssd_argument, uint8_t *ptr_u8_pss
         else
             {
             #ifdef DEVELOPEMENT
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -667,15 +667,15 @@ uint8_t Fu8__is_des3_type(argument_t *ptr_sstc_pssd_argument, uint8_t *ptr_u8_ps
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -733,15 +733,15 @@ uint8_t Fu8__is_des3_type(argument_t *ptr_sstc_pssd_argument, uint8_t *ptr_u8_ps
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the command name is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the command name is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -766,15 +766,15 @@ uint8_t Fu8__is_des3_type(argument_t *ptr_sstc_pssd_argument, uint8_t *ptr_u8_ps
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the pointer to the answer to set is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the pointer to the answer to set is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -843,15 +843,15 @@ uint8_t Fu8__is_des3_type(argument_t *ptr_sstc_pssd_argument, uint8_t *ptr_u8_ps
         else
             {
             #ifdef DEVELOPEMENT
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -885,15 +885,15 @@ uint8_t Fu8__find_command_type(argument_t *ptr_sstc_pssd_argument, int32_t s32_p
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -951,15 +951,15 @@ uint8_t Fu8__find_command_type(argument_t *ptr_sstc_pssd_argument, int32_t s32_p
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the number of program argument to parse passed in argument of the function is zero\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the number of program argument to parse passed in argument of the function is zero\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -984,15 +984,15 @@ uint8_t Fu8__find_command_type(argument_t *ptr_sstc_pssd_argument, int32_t s32_p
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the array of program argument to parse is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the array of program argument to parse is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -1037,15 +1037,15 @@ uint8_t Fu8__find_command_type(argument_t *ptr_sstc_pssd_argument, int32_t s32_p
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to find if the actual command is a hash command type failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to find if the actual command is a hash command type failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -1087,15 +1087,15 @@ uint8_t Fu8__find_command_type(argument_t *ptr_sstc_pssd_argument, int32_t s32_p
             */
 
             #ifdef DEVELOPEMENT
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the structure argument passed in argument of the function to hash command type setting failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the structure argument passed in argument of the function to hash command type setting failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -1137,15 +1137,15 @@ uint8_t Fu8__find_command_type(argument_t *ptr_sstc_pssd_argument, int32_t s32_p
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to find if the actual command is a base64 command type failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to find if the actual command is a base64 command type failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -1187,15 +1187,15 @@ uint8_t Fu8__find_command_type(argument_t *ptr_sstc_pssd_argument, int32_t s32_p
             */
 
             #ifdef DEVELOPEMENT
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the structure argument passed in argument of the function to base64 command type setting failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the structure argument passed in argument of the function to base64 command type setting failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -1237,15 +1237,15 @@ uint8_t Fu8__find_command_type(argument_t *ptr_sstc_pssd_argument, int32_t s32_p
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to find if the actual command is a des command type failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to find if the actual command is a des command type failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -1287,15 +1287,15 @@ uint8_t Fu8__find_command_type(argument_t *ptr_sstc_pssd_argument, int32_t s32_p
             */
 
             #ifdef DEVELOPEMENT
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the structure argument passed in argument of the function to des command type setting failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the structure argument passed in argument of the function to des command type setting failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -1337,15 +1337,15 @@ uint8_t Fu8__find_command_type(argument_t *ptr_sstc_pssd_argument, int32_t s32_p
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to find if the actual command is a des3 command type failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to find if the actual command is a des3 command type failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -1387,15 +1387,15 @@ uint8_t Fu8__find_command_type(argument_t *ptr_sstc_pssd_argument, int32_t s32_p
             */
 
             #ifdef DEVELOPEMENT
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the structure argument passed in argument of the function to des3 command type setting failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to set the structure argument passed in argument of the function to des3 command type setting failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -1442,15 +1442,15 @@ uint8_t Fu8__find_command_type(argument_t *ptr_sstc_pssd_argument, int32_t s32_p
         */
 
         #ifdef DEVELOPEMENT
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to display invalid command message failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to display invalid command message failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        ft_fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
